@@ -44,7 +44,9 @@ function IngredientRoot(props) {
     const [selectedIngredients, setSelectedIngredients] = useState([]);
 
     function selectIngredient(name) {
-        setSelectedIngredients(prevState => prevState.concat([name]));
+        setSelectedIngredients(prevState =>
+            prevState.indexOf(name) === -1 ? prevState.concat([name]) : prevState
+        );
     }
 
     return (
