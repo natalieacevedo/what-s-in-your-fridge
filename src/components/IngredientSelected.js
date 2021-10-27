@@ -1,22 +1,19 @@
 import React from "react";
 
-function IngredientSelected({noFilter, cambiarFilter,selected}) {
+function IngredientSelected({ingredients}) {
 
-    // noFilter.forEach(el => el.estado = selected).filter(el => el.estado !== false);
-    
-    //  noFilter.forEach(el => el.estado = selected)
-    
-    // cambiarFilter(a);
-    // console.log(noFilter);
-
+    console.log(ingredients);
 
 
     return (
-        <div>soy yo</div>
+        <div>
+            {ingredients.map(el => <span>{`${el} `}</span>)
+
+            }
+        </div>
     )
     
-
-}
+};
 
 
 
