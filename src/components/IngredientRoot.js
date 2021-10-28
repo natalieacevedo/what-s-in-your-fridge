@@ -38,7 +38,7 @@ const allFood = [
 ];
 
 
-function IngredientRoot(props) {
+function IngredientRoot() {
     //its gonna  change when we have the search, search its going get the ingredients from the api and call setIngredientList
     const [ingredientList, setIngredientList] = useState(allFood);
     //the ones are gonna be displayed after the list
@@ -50,11 +50,17 @@ function IngredientRoot(props) {
         );
     }
 
+    function removeIngredient(name) {
+        console.log(name);
+        setSelectedIngredients(prevState => 
+           prevState.filter(el => el !== name))
+    };
+
     return (
         <div>
             <Navbar />
             <IngredientList ingredients={ingredientList} selectedIngredients={selectedIngredients} selectIngredient={selectIngredient} />
-            <IngredientSelected ingredients={selectedIngredients}/>
+            <IngredientSelected ingredients={selectedIngredients}removeIngredient={removeIngredient}/>
         </div>
 
     )

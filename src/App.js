@@ -5,11 +5,6 @@ import Navbar from "./components/Navbar";
 import Recipes from './components/Recipes';
 
 
-
-
-
-
-
 function App() {
   
   return (
@@ -22,7 +17,7 @@ function App() {
       <Home />
       </Route>     
       <Route path='/ingredientRoot'>
-      <IngredientRoot name="natita"/>
+      <IngredientRoot/>
       </Route>     
       <Route path='/recipes'>
       <Recipes />
