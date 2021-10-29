@@ -8,8 +8,8 @@ const Home = () => {
       <div class="div2">
         <img
           src="https://trello.com/1/cards/61718dc0f612505e8ac74380/attachments/61718dd8fec2405241a934c8/download/first_idea_logo.png"
-          alt="fridge"
-          width="100%"
+          alt="What's in your fridge?"
+          width="140%"
           height="100%"
         />
       </div>
