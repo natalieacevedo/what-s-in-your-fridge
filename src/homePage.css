@@ -22,6 +22,12 @@
 .div3 {
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
 /*  BUTTON from here */
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
