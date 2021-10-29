@@ -3,6 +3,8 @@ import IngredientList from "./IngredientList";
 import IngredientSelected from "./IngredientSelected";
 import { useState } from 'react';
 import Navbar from "./Navbar";
+import IngredientSearch from "./IngredientSearch";
+import IngredientsList from "./IngredientList";
 
 
 
@@ -56,9 +58,20 @@ function IngredientRoot() {
            prevState.filter(el => el !== name))
     };
 
+    function filteringIngredients(name) {
+      
+
+       setIngredientList(allFood.filter(el => el.name.includes(name)));
+
+    }
+
+
+
+
     return (
         <div>
             <Navbar />
+            <IngredientSearch filteringIngredients={filteringIngredients}/>
             <IngredientList ingredients={ingredientList} selectedIngredients={selectedIngredients} selectIngredient={selectIngredient} />
             <IngredientSelected ingredients={selectedIngredients}removeIngredient={removeIngredient}/>
         </div>
