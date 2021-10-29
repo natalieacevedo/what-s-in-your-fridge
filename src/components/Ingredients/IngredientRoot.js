@@ -1,10 +1,9 @@
 import React from "react";
 import IngredientList from "./IngredientList";
+import IngredientSearch from "./IngredientSearch";
 import IngredientSelected from "./IngredientSelected";
 import { useState } from 'react';
-import Navbar from "./Navbar";
-import IngredientSearch from "./IngredientSearch";
-import IngredientsList from "./IngredientList";
+import Navbar1 from "../Navbar/Navbar";
 
 
 
@@ -70,9 +69,14 @@ function IngredientRoot() {
 
     return (
         <div>
-            <Navbar />
-            <IngredientSearch filteringIngredients={filteringIngredients}/>
-            <IngredientList ingredients={ingredientList} selectedIngredients={selectedIngredients} selectIngredient={selectIngredient} />
+            <Navbar1 />
+             <IngredientSearch filteringIngredients={filteringIngredients}/>
+            <IngredientList
+                ingredients={ingredientList}
+                selectedIngredients={selectedIngredients}
+                selectIngredient={selectIngredient}
+                removeIngredient={removeIngredient}
+            />
             <IngredientSelected ingredients={selectedIngredients}removeIngredient={removeIngredient}/>
         </div>
 
