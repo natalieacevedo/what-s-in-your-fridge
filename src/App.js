@@ -4,6 +4,7 @@ import IngredientRoot from "./components/IngredientRoot";
 import Navbar from "./components/Navbar";
 import Recipes from "./components/Recipes";
 import "./homePage.css";
+import "./Liststyle.scss";
 
 function App() {
   return (
