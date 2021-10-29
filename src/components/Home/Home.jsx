@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -22,7 +21,7 @@ const Home = () => {
               <NavLink
                 className="button1"
                 activeClassName="active"
-                to="/ingredientRoot"
+                to="/ingredients/ingredientRoot"
               >
                 Check Ingredients
               </NavLink>

@@ -2,7 +2,7 @@ import React from "react";
 import IngredientList from "./IngredientList";
 import IngredientSelected from "./IngredientSelected";
 import { useState } from 'react';
-import Navbar from "./Navbar";
+import Navbar1 from "../Navbar/Navbar";
 
 
 
@@ -58,7 +58,7 @@ function IngredientRoot() {
 
     return (
         <div>
-            <Navbar />
+            <Navbar1 />
             <IngredientList ingredients={ingredientList} selectedIngredients={selectedIngredients} selectIngredient={selectIngredient} />
             <IngredientSelected ingredients={selectedIngredients}removeIngredient={removeIngredient}/>
         </div>

@@ -1,11 +1,13 @@
 import React from 'react'
-import Navbar from './Navbar';
+import Navbar1 from '../Navbar/Navbar';
+
+
 
 
 const Recipes = () => {
   return (
 <>
-<Navbar />
+<Navbar1 />
   <h2>Recipes</h2>
   </>
   );
