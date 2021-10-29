@@ -4,6 +4,7 @@ import IngredientRoot from "./components//Ingredients/IngredientRoot";
 import Recipes from './components/Recipes/Recipes';
 import "./homePage.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import "./Liststyle.scss";
 
 
 

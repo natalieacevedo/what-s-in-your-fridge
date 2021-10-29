@@ -22,6 +22,12 @@
 .div3 {
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
 /*  BUTTON from here */
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
@@ -47,7 +53,7 @@ a.btn {
   text-decoration: none;
   color: #fff;
   position: relative;
-  background: red;
+  background: rgb(226, 3, 3);
   border-radius: 15px;
   padding: 8px 20px;
   margin: 0;
@@ -63,15 +69,16 @@ a.btn .wave {
   position: absolute;
   top: 0;
   left: 50%;
-  background: red;
+  background: rgb(236, 45, 45);
   width: 500px;
   height: 500px;
   margin-left: -250px;
   margin-top: -480px;
   transform-origin: 50% 49%;
   border-radius: 43%;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 24px 2px rgba(58, 53, 53, 0.14),
+    0 6px 30px 5px rgba(58, 53, 53, 0.14),
+    0 8px 10px -5px rgba(58, 53, 53, 0.14);
   animation: drift 8000ms infinite linear;
 }
 
