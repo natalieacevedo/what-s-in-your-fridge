@@ -5,10 +5,18 @@ function IngredientsList({
   ingredients,
   selectedIngredients,
   selectIngredient,
+  removeIngredient
 }) {
   const items = ingredients.map((el) => {
+    
     let selected = selectedIngredients.indexOf(el.name) !== -1;
-    const onClick = () => selectIngredient(el.name);
+    const onClick = () => {
+      if (selected) {
+        return removeIngredient(el.name)
+      } else {
+        return selectIngredient(el.name)
+      }      
+    };
     return (
       <IngredientListItem
         name={el.name}
@@ -17,7 +25,7 @@ function IngredientsList({
       />
     );
   });
-  console.log(selectedIngredients);
+ 
   return (
     <div>
       <h1>Choose Ingredients Please</h1>

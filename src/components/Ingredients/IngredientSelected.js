@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 function IngredientSelected({ ingredients,removeIngredient}) {
     
-    
+   
 
 
 
