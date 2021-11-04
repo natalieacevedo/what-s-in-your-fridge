@@ -1,11 +1,10 @@
 import React from "react";
+import axios from 'axios';
 import IngredientList from "./IngredientList";
 import IngredientSearch from "./IngredientSearch";
 import IngredientSelected from "./IngredientSelected";
 import { useState } from 'react';
 import Navbar1 from "../Navbar/Navbar";
-
-
 
 const allFood = [
     { name: 'tomato' },
@@ -52,25 +51,25 @@ function IngredientRoot() {
     }
 
     function removeIngredient(name) {
-        console.log(name);
         setSelectedIngredients(prevState => 
            prevState.filter(el => el !== name))
     };
 
-    function filteringIngredients(name) {
-      
+    function searchIngredients(foodItem) {
+        axios
+            .get(`https://api.spoonacular.com/food/ingredients/search?apiKey=361ef8a3714d4e02a1d85d38a8bcca93&query=${foodItem}&number=10`)
+            .then((response) => {
+                return response.data;
+            })
+            .then((data) => {
+                setIngredientList(data.results);
+            });
 
-       setIngredientList(allFood.filter(el => el.name.includes(name)));
-
-    }
-
-
-
-
+    };
     return (
         <div>
             <Navbar1 />
-             <IngredientSearch filteringIngredients={filteringIngredients}/>
+             <IngredientSearch searchIngredients={searchIngredients}/>
             <IngredientList
                 ingredients={ingredientList}
                 selectedIngredients={selectedIngredients}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState} from 'react';
 
-function IngredientSearch({filteringIngredients}) {
+function IngredientSearch({searchIngredients}) {
     
     const [userInput, changeUserInput] = useState('');
    
@@ -12,7 +12,7 @@ function IngredientSearch({filteringIngredients}) {
                 type="text"
                 onChange={(e) => changeUserInput(e.target.value)}
             />
-            <button onClick={() => filteringIngredients(userInput)}>Get Recipes</button>
+            <button onClick={() => searchIngredients(userInput)}>Search Ingredients</button>
             
         </div>
     )
