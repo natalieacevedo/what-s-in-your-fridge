@@ -5,6 +5,7 @@ import Recipes from './components/Recipes/Recipes';
 import "./homePage.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./Liststyle.scss";
+//import { useState } from 'react';
 
 
 
@@ -12,6 +13,9 @@ import "./Liststyle.scss";
 
 
 function App() {
+
+
+
   
   return (
       <Router>
@@ -19,8 +23,8 @@ function App() {
       
     <Switch>
       <Route exact path='/' component={Home}/>    
-      <Route path='/ingredients/ingredientRoot' component={IngredientRoot}/>
-      <Route path='/recipes' component={Recipes} />
+      <Route path='/ingredients' component={IngredientRoot}/>
+      <Route path='/recipes/:ingredients' component={Recipes} />
     </Switch>
     </div>
       </Router>

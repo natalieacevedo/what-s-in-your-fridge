@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 
 function IngredientSelected({ ingredients,removeIngredient}) {
-    
-   
-
+    const history = useHistory();
+    console.log(ingredients)
 
 
     return (
@@ -19,14 +19,12 @@ function IngredientSelected({ ingredients,removeIngredient}) {
                     }}>{el}</li>)
             }
             </ul>
+
+            <button onClick={() => history.push(`/recipes/${ingredients.join(',')}`) } >Get your delicious Recipes</button>
         </div>
     )
     
 };
-
-
-
-
 
 
 

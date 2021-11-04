@@ -40,6 +40,7 @@ const allFood = [
 
 function IngredientRoot() {
     //its gonna  change when we have the search, search its going get the ingredients from the api and call setIngredientList
+
     const [ingredientList, setIngredientList] = useState(allFood);
     //the ones are gonna be displayed after the list
     const [selectedIngredients, setSelectedIngredients] = useState([]);
@@ -83,3 +84,4 @@ function IngredientRoot() {
 }
 
 export default IngredientRoot;
+
