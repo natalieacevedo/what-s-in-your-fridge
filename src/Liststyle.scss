@@ -68,10 +68,10 @@ $blue: red;
   }
   100% {
     top: 50%;
-    height: 15px;
-    width: 15px;
-    margin-left: -8.5px;
-    margin-top: -7.5px;
+    height: 12px;
+    width: 12px;
+    margin-left: -6.7px;
+    margin-top: -6px;
   }
 }
 @keyframes checkOut {
@@ -107,7 +107,7 @@ input#circle-input {
   display: none;
   &:checked + label {
     &#circle-cont {
-      /* overflow: hidden; */
+      /*   overflow: hidden; */
       #circle {
         background: $blue;
         animation: checkIn 1s forwards linear 0s 1;
@@ -126,6 +126,7 @@ label {
     float: left;
     overflow: visible;
     margin-left: 50%;
+    margin-top: -20px;
     #circle {
       background: rgba(0, 0, 0, 0);
       position: absolute;

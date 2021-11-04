@@ -31,9 +31,7 @@ function IngredientListItem({ name, selected, onClick }) {
     <div id="container">
       <ul>
         <li key={name} onClick={onClick}>
-          <label for="circle-input" id="label-name">
-            {name}
-          </label>
+          <label>{name}</label>
           <input id="circle-input" type="checkbox" checked={selected} />
           <label for="circle-input" id="circle-cont">
             <div id="circle"></div>
