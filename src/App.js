@@ -13,11 +13,9 @@ import "./Navbar.css";
 
 function App() {
 
-  
   return (
       <Router>
     <div>
-      
     <Switch>
       <Route exact path='/' component={Home}/>    
       <Route path='/ingredients' component={IngredientRoot}/>

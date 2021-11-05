@@ -8,10 +8,6 @@ import  { Card }  from 'react-bootstrap';
 import RecipePop from './RecipePop';
 import Footer from "../footer/Footer";
 
-
-
-
-
 const Recipes = (props) => {
 
   const [recipes, updateRecipes] = useState([]);
