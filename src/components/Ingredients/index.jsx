@@ -38,23 +38,23 @@ const allFood = [
 ];
 
 function IngredientRoot() {
-    //its gonna  change when we have the search, search its going get the ingredients from the api and call setIngredientList
+  //its gonna  change when we have the search, search its going get the ingredients from the api and call setIngredientList
 
-    const [ingredientList, setIngredientList] = useState(allFood);
-    //the ones are gonna be displayed after the list
-    const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const [ingredientList, setIngredientList] = useState(allFood);
+  //the ones are gonna be displayed after the list
+  const [selectedIngredients, setSelectedIngredients] = useState([]);
 
-    function selectIngredient(name) {
-        setSelectedIngredients(prevState =>
-            prevState.indexOf(name) === -1 ? prevState.concat([name]) : prevState
-        );
-    }
+  function selectIngredient(name) {
+    setSelectedIngredients((prevState) =>
+      prevState.indexOf(name) === -1 ? prevState.concat([name]) : prevState
+    );
+  }
 
-    function removeIngredient(name) {
-        setSelectedIngredients(prevState => 
-           prevState.filter(el => el !== name))
-    };
-
+  function removeIngredient(name) {
+    setSelectedIngredients((prevState) =>
+      prevState.filter((el) => el !== name)
+    );
+  }
 
   function searchIngredients(foodItem) {
     axios

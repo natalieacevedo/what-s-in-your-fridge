@@ -5,9 +5,13 @@ function IngredientSearch({ searchIngredients }) {
   const [userInput, changeUserInput] = useState("");
 
   return (
-    <div>
+    <div className="searchDiv">
       <h1>so?....whats in your fridge?</h1>
-      <input type="text" onChange={(e) => changeUserInput(e.target.value)} />
+      <input
+        className="searchInput"
+        type="text"
+        onChange={(e) => changeUserInput(e.target.value)}
+      />
 
       <div class="middle">
         <a class="btn" href="#">
