@@ -1,0 +1,36 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const Home = () => {
+  return (
+    <div class="div1">
+      <div class="div2">
+        <img
+          src="https://trello.com/1/cards/61718dc0f612505e8ac74380/attachments/61718dd8fec2405241a934c8/download/first_idea_logo.png"
+          alt="What's in your fridge?"
+          width="140%"
+          height="100%"
+        />
+      </div>
+
+      <div class="div3">
+        <div class="middle">
+          <a class="btn" href="#">
+            <span class="wave"></span>
+            <span class="text">
+              <NavLink
+                className="button1"
+                activeClassName="active"
+                to="/ingredients/ingredientRoot"
+              >
+                Check Ingredients
+              </NavLink>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
