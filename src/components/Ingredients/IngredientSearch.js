@@ -26,5 +26,5 @@ function IngredientSearch({ searchIngredients }) {
     </div>
   );
 }
-
+    
 export default IngredientSearch;
