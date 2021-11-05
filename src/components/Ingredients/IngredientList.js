@@ -5,17 +5,16 @@ function IngredientsList({
   ingredients,
   selectedIngredients,
   selectIngredient,
-  removeIngredient
+  removeIngredient,
 }) {
   const items = ingredients.map((el) => {
-    
     let selected = selectedIngredients.indexOf(el.name) !== -1;
     const onClick = () => {
       if (selected) {
-        return removeIngredient(el.name)
+        return removeIngredient(el.name);
       } else {
-        return selectIngredient(el.name)
-      }      
+        return selectIngredient(el.name);
+      }
     };
     return (
       <IngredientListItem
@@ -25,7 +24,7 @@ function IngredientsList({
       />
     );
   });
- 
+
   return (
     <div>
       <h1>Choose Ingredients Please</h1>
@@ -39,13 +38,16 @@ function IngredientListItem({ name, selected, onClick }) {
     <div id="container">
       <ul>
         <li key={name} onClick={onClick}>
-          <label for="circle-input" id="label-name">
-            {name}
-          </label>
-          <input id="circle-input" type="checkbox" checked={selected} />
-          <label for="circle-input" id="circle-cont">
-            <div id="circle"></div>
-          </label>
+          <label>{name}</label>
+          <input
+            className="checkbox-input"
+            type="checkbox"
+            checked={selected}
+          />
+
+          <span class="checkbox-checkmark-box">
+            <span class="checkbox-checkmark"> </span>
+          </span>
         </li>
       </ul>
     </div>

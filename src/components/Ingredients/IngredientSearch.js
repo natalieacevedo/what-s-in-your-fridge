@@ -1,21 +1,26 @@
-import React from 'react';
-import { useState} from 'react';
+import React from "react";
+import { useState } from "react";
 
-function IngredientSearch({searchIngredients}) {
-    
-    const [userInput, changeUserInput] = useState('');
-   
-    return (
-        <div>
-            <h1>so?....whats in your fridge?</h1>
-            <input
-                type="text"
-                onChange={(e) => changeUserInput(e.target.value)}
-            />
-            <button onClick={() => searchIngredients(userInput)}>Search Ingredients</button>
-            
-        </div>
-    )
+function IngredientSearch({ searchIngredients }) {
+  const [userInput, changeUserInput] = useState("");
+
+  return (
+    <div>
+      <h1>so?....whats in your fridge?</h1>
+      <input type="text" onChange={(e) => changeUserInput(e.target.value)} />
+
+      <div class="middle">
+        <a class="btn" href="#">
+          <span class="wave"></span>
+          <span class="text">
+            <button class="btn" onClick={() => searchIngredients(userInput)}>
+              Search Ingredients
+            </button>
+          </span>
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export default IngredientSearch;
