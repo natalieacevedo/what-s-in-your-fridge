@@ -54,6 +54,14 @@ h1 {
   margin-top: 1rem;
 }
 
+.checkbox-checkmark-box {
+  display: flex;
+}
+
+.check {
+  display: flex;
+}
+
 /*  BUTTON from here */
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
