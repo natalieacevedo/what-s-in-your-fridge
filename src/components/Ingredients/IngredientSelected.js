@@ -9,7 +9,6 @@ function IngredientSelected({ ingredients,removeIngredient}) {
 
     return (
         <div>
-            {/* {ingredients.map(el => <span>{`${el} `}</span>)} */}
             <h3>Selected ingredients:</h3>
             <ul>
             {

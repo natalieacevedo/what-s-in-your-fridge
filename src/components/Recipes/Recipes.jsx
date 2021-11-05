@@ -4,6 +4,7 @@ import Navbar1 from '../Navbar/Navbar';
 import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Footer from "../footer/Footer";
 
 
 
@@ -44,7 +45,7 @@ const Recipes = (props) => {
         </ul>
         
       )}
-      
+      <Footer />
   </>
   );
 };
