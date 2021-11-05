@@ -1,11 +1,10 @@
-import React from "react";
+import { React ,useState } from "react";
 import axios from "axios";
 import IngredientList from "./IngredientList";
 import IngredientSearch from "./IngredientSearch";
 import IngredientSelected from "./IngredientSelected";
-import { useState } from "react";
-import Navbar1 from "../Navbar/Navbar";
-import Footer from "../footer/Footer";
+import Navbar1 from "../Navbar";
+import Footer from "../Footer";
 
 const allFood = [
   { name: "tomato" },
