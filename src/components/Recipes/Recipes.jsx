@@ -17,7 +17,7 @@ const Recipes = (props) => {
   
   function ListOfRecipes() {
     axios
-      .get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${allIngredientsforTheRecipe}&number=15&apiKey=361ef8a3714d4e02a1d85d38a8bcca93`)
+      .get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${allIngredientsforTheRecipe}&number=5&apiKey=361ef8a3714d4e02a1d85d38a8bcca93`)
         .then((response) => {
             return response.data;
         })
@@ -40,7 +40,7 @@ const Recipes = (props) => {
       {recipes.map(el => 
         <ul>
           <li>{el.title}</li>
-          <li>{el.image}</li>
+           <li>< img src ={el.image} alt='foodPicture'/></li>
         </ul>
         
       )}
