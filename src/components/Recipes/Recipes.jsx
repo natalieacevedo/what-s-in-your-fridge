@@ -1,10 +1,11 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import { useParams } from 'react-router';
 import Navbar1 from '../Navbar/Navbar';
 import { useState } from 'react';
 import axios from 'axios';
-import { useEffect } from 'react';
-import  Card1  from './Card';
+
+import  { Card }  from 'react-bootstrap';
+import RecipePop from './RecipePop';
 import Footer from "../footer/Footer";
 
 
@@ -39,14 +40,23 @@ const Recipes = (props) => {
 <>
 <Navbar1 />
       <h2>Recipes</h2>
-      {recipes.map(el => 
-        <ul>
-          <li>{el.title}</li>
-           <li>< img src ={el.image} alt='foodPicture'/></li>
-        </ul>
-        
-      )}
-  <Card1 />
+
+      <Card style={{ width: '18rem' }}>
+           {recipes.map(el => 
+        <>
+            <Card.Img variant="top" src={el.image} />
+            <Card.Body>
+            <Card.Title>{el.title}</Card.Title>
+            <Card.Text>
+            Some quick example text to build on the card title and make up the bulk of
+            the card's content.
+            </Card.Text>
+            <RecipePop />
+            </Card.Body>
+            </>
+            )};
+        </Card>
+  
       <Footer />
   </>
   );
