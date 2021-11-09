@@ -22,7 +22,7 @@ const Home = () => {
               <NavLink
                 className="button1"
                 activeClassName="active"
-                to="/ingredients/ingredientRoot"
+                to="/ingredients"
               >
                 Check Ingredients
               </NavLink>
