@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React from "react";
+import { Accordion } from "react-bootstrap";
 
 function IngredientsList({
   ingredients,
@@ -28,7 +29,39 @@ function IngredientsList({
   return (
     <div>
       <h1>Choose Ingredients Please</h1>
-      <ul>{items}</ul>
+
+      <Accordion flush>
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Vegetables</Accordion.Header>
+          <Accordion.Body>
+            <ul>{items}</ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Meat</Accordion.Header>
+          <Accordion.Body>
+            <ul>{items}</ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="2">
+          <Accordion.Header>Fruits</Accordion.Header>
+          <Accordion.Body>
+            <ul>{items}</ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>Grains</Accordion.Header>
+          <Accordion.Body>
+            <ul>{items}</ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>SeaFood</Accordion.Header>
+          <Accordion.Body>
+            <ul>{items}</ul>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 }

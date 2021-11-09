@@ -1,10 +1,6 @@
 /*  BUTTON from here */
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
-html {
-  position: relative;
-  height: 100%;
-}
 
 .button1 {
   color: white;

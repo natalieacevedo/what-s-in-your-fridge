@@ -1,12 +1,9 @@
-import {React, useEffect} from 'react'
-import { useParams } from 'react-router';
-import Navbar1 from '../Navbar/Navbar';
-import { useState } from 'react';
+import {React, useEffect, useState} from 'react'
 import axios from 'axios';
-
 import  { Card }  from 'react-bootstrap';
 import RecipePop from './RecipePop';
-import Footer from "../footer/Footer";
+import Footer from "../Footer";
+import Navbar1 from '../Navbar';
 
 const Recipes = (props) => {
 
