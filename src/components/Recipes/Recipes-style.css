@@ -1,0 +1,20 @@
+.card{
+    width: 30 rem;
+}
+
+@media (max-width: 768px) {
+    .col {
+        width: 100%;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .col {
+        width: 50%;
+    }
+  }
+  @media (min-width: 1025px) {
+    .col {
+        width: 25%;
+    }
+
+  }

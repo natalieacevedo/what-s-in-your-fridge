@@ -1,9 +1,10 @@
 import {React, useEffect, useState} from 'react'
 import axios from 'axios';
-import  { Card }  from 'react-bootstrap';
+import  { Card, Container, Row, Col }  from 'react-bootstrap';
 import RecipePop from './RecipePop';
 import Footer from "../Footer";
 import Navbar1 from '../Navbar';
+import "./Recipes-style.css"
 
 
 
@@ -37,11 +38,14 @@ const Recipes = (props) => {
 <>
 <Navbar1 />
       <h2>Recipes</h2>
-
-      <Card style={{ width: '18rem' }}>
-           {recipes.map(el => 
-        <>
-            <Card.Img variant="top" src={el.image} />
+      <Container>
+            <Row md={3}>
+              {recipes.map(el => 
+                <Col>
+      <Card>
+           
+      
+            <Card.Img src={el.image} />
             <Card.Body>
             <Card.Title>{el.title}</Card.Title>
             <Card.Text>
@@ -50,10 +54,12 @@ const Recipes = (props) => {
             </Card.Text>
             <RecipePop />
             </Card.Body>
-            </>
-            )};
+            
         </Card>
-  
+        </Col>
+            )};
+            </Row>
+        </Container>
       <Footer />
   </>
   );
