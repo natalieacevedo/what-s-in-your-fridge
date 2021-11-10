@@ -2,6 +2,11 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
 
+
+const vegetables = ['onions', 'spinash', 'cucumbers','alfalfa,celery','carrots','split beans','soy beans','cabbage'];
+const meats = ['chicken', 'goat', 'meat','fish','shrimp', 'turkey'];
+
+
 function IngredientsList({
   ingredients,
   selectedIngredients,
@@ -25,40 +30,58 @@ function IngredientsList({
       />
     );
   });
+  //onClick={onClick}
+
+  function acordion(arr) {
+  
+    return arr.map((el) => {
+      const onClick = (e) => {
+        e.preventDefault();
+        selectIngredient(e.target.textContent)
+      };
+      return (
+        <ul>
+          <li onClick={onClick}>{el}</li>
+        </ul>
+      )
+    })
+    
+  };
 
   return (
     <div>
       <h1>Choose Ingredients Please</h1>
+     <ul>{items}</ul>
 
       <Accordion flush>
         <Accordion.Item eventKey="0">
           <Accordion.Header>Vegetables</Accordion.Header>
           <Accordion.Body>
-            <ul>{items}</ul>
+           {acordion(vegetables)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
           <Accordion.Header>Meat</Accordion.Header>
           <Accordion.Body>
-            <ul>{items}</ul>
+           {acordion(meats)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
           <Accordion.Header>Fruits</Accordion.Header>
           <Accordion.Body>
-            <ul>{items}</ul>
+          {acordion(vegetables)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
           <Accordion.Header>Grains</Accordion.Header>
           <Accordion.Body>
-            <ul>{items}</ul>
+          {acordion(meats)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4">
           <Accordion.Header>SeaFood</Accordion.Header>
           <Accordion.Body>
-            <ul>{items}</ul>
+           {acordion(vegetables)}
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
