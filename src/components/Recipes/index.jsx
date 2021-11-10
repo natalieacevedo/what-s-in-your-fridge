@@ -6,10 +6,6 @@ import Footer from "../Footer";
 import Navbar1 from '../Navbar';
 import "./Recipes-style.css"
 
-
-
-
-
 const Recipes = (props) => {
 
   const [recipes, updateRecipes] = useState([]);

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
               <NavLink
                 className="button1"
                 activeClassName="active"
-                to="/ingredients/ingredientRoot"
+                to="/ingredients"
               >
                 Check Ingredients
               </NavLink>
