@@ -3,9 +3,17 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 
 
-const vegetables = ['onions', 'spinash', 'cucumbers','alfalfa,celery','carrots','split beans','soy beans','cabbage'];
-const meats = ['chicken', 'goat', 'meat','fish','shrimp', 'turkey'];
+const vegetables = ['onions', 'spinash', 'cucumbers', 'alfalfa','celery','carrots', 'split beans', 'soy beans', 'cabbage', 'eggplant'];
 
+const meats = ['chicken', 'goat', 'meat','fish','shrimp', 'turkey','bacon','ham','hot dogs','Prosciutto','salami','sausages'
+];
+
+const fruits = ['apples', 'pears', 'citrus', 'oranges', 'grapefruits', 'mandarin', 'limes', 'lemon', 'stone fruit', 'nectarines', 'apricots', 'peaches', 'plums', 'bananas', 'mangoes', 'strawberries', 'raspberries', 'blueberries', 'kiwifruit', 'passionfruit', 'watermelons', 'honeydew'];
+
+const grains = ['teff', 'wheat', 'oats', 'rice', 'corn', 'barley', 'sorghum', 'rye', 'millet', 'triticale', 'amaranth', 'buckwheat', 'quinoa'];
+
+const seafood = ['halibut','mahi mahi','monkfish','mullet','parrotfish','chilean sea bass',' perch','salmon','sardine','sturgeon','shark','tilapia']
+ 
 
 function IngredientsList({
   ingredients,
@@ -69,19 +77,19 @@ function IngredientsList({
         <Accordion.Item eventKey="2">
           <Accordion.Header>Fruits</Accordion.Header>
           <Accordion.Body>
-          {acordion(vegetables)}
+          {acordion(fruits)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
           <Accordion.Header>Grains</Accordion.Header>
           <Accordion.Body>
-          {acordion(meats)}
+          {acordion(grains)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4">
           <Accordion.Header>SeaFood</Accordion.Header>
           <Accordion.Body>
-           {acordion(vegetables)}
+           {acordion(seafood)}
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
