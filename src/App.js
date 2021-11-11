@@ -20,7 +20,7 @@ function App() {
     <Switch>
       <Route exact path='/' component={Home}/>    
       <Route path='/ingredients' component={IngredientRoot}/>
-      <Route path='/recipes/:ingredients' component={Recipes} />
+      <Route path='/recipes' component={Recipes} />
     </Switch>
     </>
       

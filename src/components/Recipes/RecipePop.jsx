@@ -1,5 +1,6 @@
 import {React , useState}  from 'react'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
+import image from '../../images/first-idea-logo.png'
 
 function RecipePop() {
     const [show, setShow] = useState(false);
@@ -22,6 +23,7 @@ function RecipePop() {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
+            <Image src="https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-ramen-korea-justicon-flat-justicon.png" />
             <p>
               Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
               commodi aspernatur enim, consectetur. Cumque deleniti temporibus
@@ -32,6 +34,13 @@ function RecipePop() {
               deleniti rem!
             </p>
           </Modal.Body>
+          <Container >
+          <Stack direction="horizontal" gap={5} className="justify-content-center">
+          <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
+          <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>
+          <Button  variant="success" onClick={()=> window.open("https://www.pingodoce.pt/", "_blank")}>Pingo Doce</Button>
+          </Stack>
+          </Container>
         </Modal>
       </>
     );
