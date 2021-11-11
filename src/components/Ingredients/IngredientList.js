@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-expressions */
 import React from "react";
 import { Accordion } from "react-bootstrap";
+import styles from './ingredient.module.css';
 
 
-const vegetables = ['onions', 'spinash', 'cucumbers', 'alfalfa','celery','carrots', 'split beans', 'soy beans', 'cabbage', 'eggplant'];
+const vegetables = ['onions', 'spinash', 'cucumbers', 'alfalfa','celery','carrots', 'split beans', 'soy beans', 'cabbage', 'eggplant', 'kale', 'baby carrots', 'soy sprout', 'boychok', 'green onion','onions', 'spinash', 'cucumbers', 'alfalfa','celery'];
 
-const meats = ['chicken', 'goat', 'meat','fish','shrimp', 'turkey','bacon','ham','hot dogs','Prosciutto','salami','sausages'
-];
+const meats = ['chicken', 'goat', 'meat','fish','shrimp', 'turkey','bacon','ham','hot dogs','Prosciutto','salami','sausages','chorizo','duck','chicken', 'goat', 'meat','fish','shrimp', 'turkey'];
 
-const fruits = ['apples', 'pears', 'citrus', 'oranges', 'grapefruits', 'mandarin', 'limes', 'lemon', 'stone fruit', 'nectarines', 'apricots', 'peaches', 'plums', 'bananas', 'mangoes', 'strawberries', 'raspberries', 'blueberries', 'kiwifruit', 'passionfruit', 'watermelons', 'honeydew'];
+const fruits = ['apples', 'pears', 'citrus', 'oranges', 'grapefruits', 'mandarin', 'limes', 'lemon', 'stone fruit', 'nectarines', 'apricots', 'peaches', 'plums', 'bananas', 'mangoes', 'strawberries', 'raspberries', 'blueberries', 'kiwifruit', 'passionfruit'];
 
-const grains = ['teff', 'wheat', 'oats', 'rice', 'corn', 'barley', 'sorghum', 'rye', 'millet', 'triticale', 'amaranth', 'buckwheat', 'quinoa'];
+const grains = ['teff', 'wheat', 'oats', 'rice', 'corn', 'barley', 'sorghum', 'rye', 'millet', 'triticale', 'amaranth', 'buckwheat', 'quinoa','arroz','corn'];
 
-const seafood = ['halibut','mahi mahi','monkfish','mullet','parrotfish','chilean sea bass',' perch','salmon','sardine','sturgeon','shark','tilapia']
+const seafood = ['halibut','mahi','monkfish','mullet','parrotfish','seabass',' perch','salmon','sardine','sturgeon','shark','tilapia','halibut','mahi','monkfish']
  
 
 function IngredientsList({
@@ -38,7 +38,6 @@ function IngredientsList({
       />
     );
   });
-  //onClick={onClick}
 
   function acordion(arr) {
   
@@ -48,10 +47,12 @@ function IngredientsList({
         selectIngredient(e.target.textContent)
       };
       return (
-        <ul>
-          <li onClick={onClick}>{el}</li>
+        <ul className={styles.wrapper}>
+          <li className={styles.ingredientItem} onClick={onClick}>{el}</li>
         </ul>
       )
+
+     
     })
     
   };
