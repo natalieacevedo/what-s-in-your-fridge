@@ -9,25 +9,44 @@ const Recipes = (props) => {
 
   const [recipes, updateRecipes] = useState([]);
 
+  const [details, setDetails] = useState([]);
+
+
   let allIngredientsforTheRecipe = props.match.params.ingredients;
   
   function ListOfRecipes() {
     axios
-      .get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${allIngredientsforTheRecipe}&number=5&apiKey=361ef8a3714d4e02a1d85d38a8bcca93`)
-        .then((response) => {
-            return response.data;
-        })
+      .get(`http://localhost:5000/api/listofrecipes/${allIngredientsforTheRecipe}`)
+
+      .then((response) => {
+        return response.data;
+      })
       .then((data) => {
-          console.log(data)
-            updateRecipes(data);
-        });
+        updateRecipes(data);
+      });
 
   };
   
   useEffect(ListOfRecipes, [allIngredientsforTheRecipe]);
   
+//////////////////////////////////////////////////////////////////////////////////////////
+  function recipeDetails(id) {
+    
+    axios
+      .get(`http://localhost:5000/api/recipe/${id}`)
+      .then((response) => response.data)
+      .then((data) => {
+        let a = (({ summary, title, image, servings, sourceUrl }) => ({ summary, title, image, servings, sourceUrl }))(data);
+        setDetails(a)
+      });
+    
+  };
 
-  console.log(recipes);
+  // recipeDetails(648742);
+
+  // console.log(details);
+ 
+ 
   
   return (
 <>

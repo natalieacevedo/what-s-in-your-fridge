@@ -4,9 +4,7 @@ import { useHistory } from "react-router-dom";
 
 function IngredientSelected({ ingredients,removeIngredient}) {
     const history = useHistory();
-    console.log(ingredients)
-
-
+    
     return (
         <div>
             <h3>Selected ingredients:</h3>
