@@ -7,7 +7,7 @@ function RecipePop() {
   
     return (
       <>
-        <Button variant="primary" onClick={() => setShow(true)}>
+        <Button variant="danger" onClick={() => setShow(true)}>
           Recipe
         </Button>
   
