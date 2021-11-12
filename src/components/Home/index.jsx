@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavLink } from "react-router-dom";
 import "./homePage.css";
 
@@ -21,7 +22,7 @@ const Home = () => {
               <NavLink
                 className="HomeButtonTextColor"
                 activeClassName="active"
-                to="/ingredients/ingredientRoot"
+                to="/ingredients"
               >
                 <h2>Check Ingredients</h2>
               </NavLink>

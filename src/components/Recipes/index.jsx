@@ -5,10 +5,6 @@ import RecipePop from './RecipePop';
 import Footer from "../Footer";
 import Navbar1 from '../Navbar';
 
-
-
-
-
 const Recipes = (props) => {
 
   const [recipes, updateRecipes] = useState([]);
