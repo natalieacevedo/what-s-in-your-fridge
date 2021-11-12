@@ -6,10 +6,10 @@ import "./Navbar.css";
 const Navbar1 = () => {
   return (
     <>
-      <div class="centerButtonsMiddle">
-        <a class="btnNav" href="#">
-          <span class="wave2"></span>
-          <span class="text">
+      <div className="centerButtonsMiddle">
+        <a className="btnNav" href="#">
+          <span className="wave2"></span>
+          <span className="text">
             <Navbar variant="dark">
               <Container className="NavContainer">
                 <Navbar.Brand as={Link} to="/" className="Logo">

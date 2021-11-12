@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import React from "react";
+import  {React, useState }from "react";
 import { Accordion } from "react-bootstrap";
 
 import "../../checkbox.scss";
@@ -118,6 +118,9 @@ function IngredientsList({
   selectIngredient,
   removeIngredient,
 }) {
+
+  const [isSelected, setIsSelected] = useState(false);
+
   const items = ingredients.map((el) => {
     let selected = selectedIngredients.indexOf(el.name) !== -1;
     const onClick = () => {
@@ -136,21 +139,35 @@ function IngredientsList({
     );
   });
 
+
+
+function ChangeBackgrounSelected() {
+  
+  setIsSelected(!isSelected);
+  
+}
+
+  
   function acordion(arr) {
+
     return arr.map((el) => {
+      
       const onClick = (e) => {
+        ChangeBackgrounSelected();
         e.preventDefault();
         selectIngredient(e.target.textContent);
       };
+
       return (
         <ul className={styles.wrapper}>
-          <li className={styles.ingredientItem} onClick={onClick}>
-            {el}
-          </li>
+          <li className={`${styles.ingredientItem} ${isSelected ? styles.backgroundSelection : ''}`}
+          onClick={onClick}>{el}</li>
         </ul>
-      );
-    });
-  }
+      )
+     
+    })
+    
+  };
 
   return (
     <div>
@@ -199,8 +216,8 @@ function IngredientListItem({ name, selected, onClick }) {
             checked={selected}
           />
 
-          <span class="checkbox-checkmark-box">
-            <span class="checkbox-checkmark"> </span>
+          <span className="checkbox-checkmark-box">
+            <span className="checkbox-checkmark"> </span>
           </span>
         </li>
       </ul>
