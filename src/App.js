@@ -8,11 +8,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/ingredients" component={IngredientRoot} />
-        <Route path="/recipes/:ingredients" component={Recipes} />
-      </Switch>
+      
+    <Switch>
+      <Route exact path='/' >
+        <Home />
+      </Route>    
+      <Route path='/ingredients/' >
+        <IngredientRoot />
+      </Route>
+      <Route path='/recipes/:ingredients'  component={Recipes}/>
+    </Switch>
     </>
   );
 }

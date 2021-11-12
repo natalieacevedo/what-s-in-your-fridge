@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import "./Navbar.css";
 
 const Navbar1 = () => {
@@ -25,7 +25,7 @@ const Navbar1 = () => {
                   <Nav.Link as={Link} to="/ingredients/ingredientRoot">
                     Ingredients
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/recipes/">
+                  <Nav.Link as={Link} to="/recipes/:ingredients" >
                     Recipes
                   </Nav.Link>
                 </Nav>
