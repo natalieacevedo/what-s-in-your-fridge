@@ -8,7 +8,7 @@ import "./Recipes-style.css"
 
 const Recipes = (props) => {
 
-  /*const [recipes, updateRecipes] = useState([]);
+  const [recipes, updateRecipes] = useState([]);
 
   let allIngredientsforTheRecipe = props.match.params.ingredients;
   
@@ -28,7 +28,7 @@ const Recipes = (props) => {
   useEffect(ListOfRecipes, [allIngredientsforTheRecipe]);
   
 
-  console.log(recipes);*/
+  console.log(recipes);
   
   return (
 <>
@@ -36,12 +36,14 @@ const Recipes = (props) => {
       <h2>Recipes</h2>
       <Container>
         <Row >
+             {recipes.map(el => 
+             <>
            <Card >
              <div className="new-overflow">
-            <Card.Img className="custom-overflow " src="https://img.icons8.com/external-justicon-flat-justicon/128/external-ramen-korea-justicon-flat-justicon.png"/>
+            <Card.Img className="custom-overflow " src={el.image}/>
               </div>            
             <Card.Body className="text-center">
-            <Card.Title>Ramen</Card.Title>
+            <Card.Title>{el.title}</Card.Title>
             <Card.Text>
             Some quick example text to build on the card title and make up the bulk of
             the card's content.
@@ -49,62 +51,9 @@ const Recipes = (props) => {
             <RecipePop />
             </Card.Body>
         </Card>
-           <Card >
-            <Card.Img  />
-            <Card.Body className="text-center">
-            <Card.Title></Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <RecipePop />
-            </Card.Body>
-        </Card>
-           <Card >
-            <Card.Img  />
-            <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <RecipePop />
-            </Card.Body>
-        </Card>
-           <Card >
-            <Card.Img  />
-            <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <RecipePop />
-            </Card.Body>
-        </Card>
-           <Card >
-            <Card.Img  />
-            <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <RecipePop />
-            </Card.Body>
-        </Card>
-           <Card >
-            <Card.Img  />
-            <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <RecipePop />
-            </Card.Body>
-        </Card>
-      </Row>
+            </>
+            )};
+         </Row>
       </Container>
       <Footer />
   </>

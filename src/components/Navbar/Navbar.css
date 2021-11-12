@@ -107,3 +107,7 @@ a.btn2:hover {
     transform: translatex(0);
   }
 }
+.navbar-container{
+  display: flex;
+  width: fit-content;
+}

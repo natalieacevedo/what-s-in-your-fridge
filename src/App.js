@@ -18,9 +18,13 @@ function App() {
     <>
       
     <Switch>
-      <Route exact path='/' component={Home}/>    
-      <Route path='/ingredients' component={IngredientRoot}/>
-      <Route path='/recipes' component={Recipes} />
+      <Route exact path='/' >
+        <Home />
+      </Route>    
+      <Route path='/ingredients/' >
+        <IngredientRoot />
+      </Route>
+      <Route path='/recipes/:ingredients'  component={Recipes}/>
     </Switch>
     </>
       
