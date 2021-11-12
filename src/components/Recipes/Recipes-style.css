@@ -16,6 +16,7 @@
  
 .custom-overflow{
      transform: scale(1) !important;
+     transition: transform 0.7s ease;
  }
 .custom-overflow:hover{
      transform: scale(1.7) !important;

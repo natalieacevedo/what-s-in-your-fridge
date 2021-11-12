@@ -18,7 +18,7 @@ const Navbar1 = () => {
                   <Nav.Link as={Link} to="/ingredients/ingredientRoot">
                     Ingredients
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/recipes">
+                  <Nav.Link as={Link} to="/recipes/:ingredients" >
                     Recipes
                   </Nav.Link>
                 </Nav>

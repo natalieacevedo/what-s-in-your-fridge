@@ -1,6 +1,6 @@
 import {React , useState}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
-import image from '../../images/first-idea-logo.png'
+
 
 function RecipePop() {
     const [show, setShow] = useState(false);
