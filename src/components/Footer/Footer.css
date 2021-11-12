@@ -1,3 +1,9 @@
+.footerContainer {
+  margin-top: 1rem;
+  background-color: rgba(255, 80, 80, 0.329);
+  padding-top: 1rem;
+}
+
 #lab_social_icon_footer a {
   color: #333;
 }

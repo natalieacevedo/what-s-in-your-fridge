@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-expressions */
 import React from "react";
 import { Accordion } from "react-bootstrap";
+import "../../checkbox.scss";
+import "../Home/homePage.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function IngredientsList({
   ingredients,
@@ -32,8 +35,10 @@ function IngredientsList({
 
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Vegetables</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header className="accordionText">
+            Vegetables
+          </Accordion.Header>
+          <Accordion.Body className="Accordion-body">
             <ul>{items}</ul>
           </Accordion.Body>
         </Accordion.Item>

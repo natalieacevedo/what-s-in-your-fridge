@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -8,7 +9,8 @@ const Footer = () => {
           href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
           rel="stylesheet"
         />
-        <div class="container">
+        <div class="footerContainer">
+          <p>Connect with us: </p>
           <div class="text-center center-block">
             <a href="https://www.facebook.com/bootsnipp">
               <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
