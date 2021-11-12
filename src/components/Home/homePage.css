@@ -1,4 +1,4 @@
-.div1 {
+.totalContainer {
   display: flex;
 
   flex-direction: column;
@@ -6,20 +6,25 @@
   justify-content: space-around;
   background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/617ab7cc7cdd5f40fa493659/download/teste_opacity.png")
     no-repeat center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
-  width: 100%;
+  overflow: hidden;
 }
 
-.div2 {
+.imgContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-left: 5%;
   padding-top: 0%;
+  /* width: 100%;
+  height: 100%; */
 }
-
+#fridgeImg {
+  width: 150%;
+  height: 100%;
+}
 ul {
   list-style: none;
   display: flex;
@@ -45,6 +50,7 @@ button.btn {
 h1 {
   display: flex;
   justify-content: center;
+  padding-top: 1rem;
 }
 .searchInput {
   display: flex;
@@ -58,20 +64,29 @@ h1 {
   display: flex;
 }
 
-.check {
+h3 {
   display: flex;
+  justify-content: center;
 }
 
-/*  BUTTON from here */
+.HomeButtonTextColor {
+  text-decoration: none;
+  color: white;
+}
+
+.HomeButtonTextColor:hover {
+  color: rgb(241, 146, 146);
+}
+
+.homeButtonContainer {
+  margin-bottom: 3rem;
+}
+
+/*  BUTTON styles from here */
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
 
-.button1 {
-  color: white;
-  text-decoration: none;
-}
-
-.middle {
+.centerButtonsMiddle {
   position: relative;
   display: flex;
   height: 80%;
@@ -85,7 +100,7 @@ a.btn {
   position: relative;
   background: rgb(226, 3, 3);
   border-radius: 15px;
-  padding: 8px 20px;
+  padding: 30px 50px;
   margin: 0;
   letter-spacing: 1px;
   overflow: hidden;
@@ -94,16 +109,21 @@ a.btn {
     0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
+#buttonTextColor {
+  color: white;
+  text-decoration: none;
+}
+
 a.btn .wave {
   opacity: 1;
   position: absolute;
   top: 0;
   left: 50%;
   background: rgb(236, 45, 45);
-  width: 500px;
-  height: 500px;
+  width: 520px;
+  height: 532px;
   margin-left: -250px;
-  margin-top: -480px;
+  margin-top: -475px;
   transform-origin: 50% 49%;
   border-radius: 43%;
   box-shadow: 0 16px 24px 2px rgba(58, 53, 53, 0.14),
@@ -168,5 +188,110 @@ a.btn:hover {
   }
   100% {
     transform: translatex(0);
+  }
+}
+
+/* ------ FROM HERE IS SEARCH INGREDIENTS BUTTON ----- */
+
+a.btn-Search {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  background: rgb(226, 3, 3);
+  border-radius: 15px;
+  padding: 8px 25px;
+  margin: 0;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+a.btn-Search .wave {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: rgb(236, 45, 45);
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -475px;
+  transform-origin: 50% 49%;
+  border-radius: 43%;
+  box-shadow: 0 16px 24px 2px rgba(58, 53, 53, 0.14),
+    0 6px 30px 5px rgba(58, 53, 53, 0.14),
+    0 8px 10px -5px rgba(58, 53, 53, 0.14);
+  animation: drift 8000ms infinite linear;
+}
+
+a.btn-Search.rumble {
+  animation: rumbleinthejungle 300ms linear;
+}
+
+a.btn-Search .text {
+  position: relative;
+  z-index: 2;
+}
+
+a.btn-Search:hover {
+  box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.1),
+    0 6px 10px 5px rgba(0, 0, 0, 0.12), 0 8px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------- FROM HERE IS MEDIA QUERIES ----------- */
+
+@media screen and (min-width: 768px) {
+  .totalContainer {
+    background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png")
+      no-repeat;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+  }
+
+  .imgContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 5%;
+    padding-top: 0%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .homeButtonContainer {
+    margin-bottom: 10rem;
+  }
+
+  a.btn {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    background: rgb(226, 3, 3);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 0;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .totalContainer {
+    background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  #fridgeImg {
+    width: 80%;
+    height: 100%;
+    margin-top: 5%;
   }
 }

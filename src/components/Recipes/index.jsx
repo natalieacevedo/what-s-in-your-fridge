@@ -1,9 +1,10 @@
 import {React, useEffect, useState} from 'react'
 import axios from 'axios';
-import  { Card }  from 'react-bootstrap';
+import  { Card, Container, Row }  from 'react-bootstrap';
 import RecipePop from './RecipePop';
 import Footer from "../Footer";
 import Navbar1 from '../Navbar';
+import "./Recipes-style.css"
 
 const Recipes = (props) => {
 
@@ -51,12 +52,15 @@ const Recipes = (props) => {
 <>
 <Navbar1 />
       <h2>Recipes</h2>
-
-      <Card style={{ width: '18rem' }}>
-           {recipes.map(el => 
-        <>
-            <Card.Img variant="top" src={el.image} />
-            <Card.Body>
+      <Container>
+        <Row >
+             {recipes.map(el => 
+             <>
+           <Card >
+             <div className="new-overflow">
+            <Card.Img className="custom-overflow " src={el.image}/>
+              </div>            
+            <Card.Body className="text-center">
             <Card.Title>{el.title}</Card.Title>
             <Card.Text>
             Some quick example text to build on the card title and make up the bulk of
@@ -64,10 +68,11 @@ const Recipes = (props) => {
             </Card.Text>
             <RecipePop />
             </Card.Body>
+        </Card>
             </>
             )};
-        </Card>
-  
+         </Row>
+      </Container>
       <Footer />
   </>
   );

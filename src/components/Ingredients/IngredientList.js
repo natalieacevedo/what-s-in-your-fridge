@@ -1,19 +1,116 @@
 /* eslint-disable no-unused-expressions */
-import React from "react";
+import  {React, useState }from "react";
 import { Accordion } from "react-bootstrap";
-import styles from './ingredient.module.css';
-import { useState } from "react";
 
-const vegetables = ['onions', 'spinash', 'cucumbers', 'alfalfa','celery','carrots', 'split beans', 'soy beans', 'cabbage', 'eggplant', 'kale', 'baby carrots', 'soy sprout', 'boychok', 'green onion','onions', 'spinash', 'cucumbers', 'alfalfa','celery'];
+import "../../checkbox.scss";
+import "../Home/homePage.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./ingredient.module.css";
 
-const meats = ['chicken', 'goat', 'meat','fish','shrimp', 'turkey','bacon','ham','hot dogs','Prosciutto','salami','sausages','chorizo','duck','chicken', 'goat', 'meat','fish','shrimp', 'turkey'];
+const vegetables = [
+  "onions",
+  "spinash",
+  "cucumbers",
+  "alfalfa",
+  "celery",
+  "carrots",
+  "split beans",
+  "soy beans",
+  "cabbage",
+  "eggplant",
+  "kale",
+  "baby carrots",
+  "soy sprout",
+  "boychok",
+  "green onion",
+  "onions",
+  "spinash",
+  "cucumbers",
+  "alfalfa",
+  "celery",
+];
 
-const fruits = ['apples', 'pears', 'citrus', 'oranges', 'grapefruits', 'mandarin', 'limes', 'lemon', 'stone fruit', 'nectarines', 'apricots', 'peaches', 'plums', 'bananas', 'mangoes', 'strawberries', 'raspberries', 'blueberries', 'kiwifruit', 'passionfruit'];
+const meats = [
+  "chicken",
+  "goat",
+  "meat",
+  "fish",
+  "shrimp",
+  "turkey",
+  "bacon",
+  "ham",
+  "hot dogs",
+  "Prosciutto",
+  "salami",
+  "sausages",
+  "chorizo",
+  "duck",
+  "chicken",
+  "goat",
+  "meat",
+  "fish",
+  "shrimp",
+  "turkey",
+];
 
-const grains = ['teff', 'wheat', 'oats', 'rice', 'corn', 'barley', 'sorghum', 'rye', 'millet', 'triticale', 'amaranth', 'buckwheat', 'quinoa','arroz','corn'];
+const fruits = [
+  "apples",
+  "pears",
+  "citrus",
+  "oranges",
+  "grapefruits",
+  "mandarin",
+  "limes",
+  "lemon",
+  "stone fruit",
+  "nectarines",
+  "apricots",
+  "peaches",
+  "plums",
+  "bananas",
+  "mangoes",
+  "strawberries",
+  "raspberries",
+  "blueberries",
+  "kiwifruit",
+  "passionfruit",
+];
 
-const seafood = ['halibut','mahi','monkfish','mullet','parrotfish','seabass',' perch','salmon','sardine','sturgeon','shark','tilapia','halibut','mahi','monkfish']
- 
+const grains = [
+  "teff",
+  "wheat",
+  "oats",
+  "rice",
+  "corn",
+  "barley",
+  "sorghum",
+  "rye",
+  "millet",
+  "triticale",
+  "amaranth",
+  "buckwheat",
+  "quinoa",
+  "arroz",
+  "corn",
+];
+
+const seafood = [
+  "halibut",
+  "mahi",
+  "monkfish",
+  "mullet",
+  "parrotfish",
+  "seabass",
+  " perch",
+  "salmon",
+  "sardine",
+  "sturgeon",
+  "shark",
+  "tilapia",
+  "halibut",
+  "mahi",
+  "monkfish",
+];
 
 function IngredientsList({
   ingredients,
@@ -75,38 +172,32 @@ function ChangeBackgrounSelected() {
   return (
     <div>
       <h1>Choose Ingredients Please</h1>
-     <ul>{items}</ul>
+      <ul>{items}</ul>
 
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Vegetables</Accordion.Header>
-          <Accordion.Body>
-           {acordion(vegetables)}
+          <Accordion.Header className="accordionText">
+            Vegetables
+          </Accordion.Header>
+          <Accordion.Body className="Accordion-body">
+            {acordion(vegetables)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
           <Accordion.Header>Meat</Accordion.Header>
-          <Accordion.Body>
-           {acordion(meats)}
-          </Accordion.Body>
+          <Accordion.Body>{acordion(meats)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
           <Accordion.Header>Fruits</Accordion.Header>
-          <Accordion.Body>
-          {acordion(fruits)}
-          </Accordion.Body>
+          <Accordion.Body>{acordion(fruits)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
           <Accordion.Header>Grains</Accordion.Header>
-          <Accordion.Body>
-          {acordion(grains)}
-          </Accordion.Body>
+          <Accordion.Body>{acordion(grains)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4">
           <Accordion.Header>SeaFood</Accordion.Header>
-          <Accordion.Body>
-           {acordion(seafood)}
-          </Accordion.Body>
+          <Accordion.Body>{acordion(seafood)}</Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </div>
@@ -125,8 +216,8 @@ function IngredientListItem({ name, selected, onClick }) {
             checked={selected}
           />
 
-          <span class="checkbox-checkmark-box">
-            <span class="checkbox-checkmark"> </span>
+          <span className="checkbox-checkmark-box">
+            <span className="checkbox-checkmark"> </span>
           </span>
         </li>
       </ul>
