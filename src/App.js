@@ -13,7 +13,7 @@ function App() {
       <Route exact path='/' >
         <Home />
       </Route>    
-      <Route path='/ingredients/' >
+      <Route path='/ingredients' >
         <IngredientRoot />
       </Route>
       <Route path='/recipes/:ingredients'  component={Recipes}/>
