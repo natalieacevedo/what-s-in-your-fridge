@@ -29,6 +29,7 @@ function IngredientRoot() {
     axios
       .get(`http://localhost:5000/api/ingredients/${foodItem}`)
       .then((response) => {
+        console.log(response.data);
         return response.data;
       })
       .then((data) => {

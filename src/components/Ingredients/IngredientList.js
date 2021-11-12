@@ -2,7 +2,7 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
 import styles from './ingredient.module.css';
-
+import { useState } from "react";
 
 const vegetables = ['onions', 'spinash', 'cucumbers', 'alfalfa','celery','carrots', 'split beans', 'soy beans', 'cabbage', 'eggplant', 'kale', 'baby carrots', 'soy sprout', 'boychok', 'green onion','onions', 'spinash', 'cucumbers', 'alfalfa','celery'];
 
@@ -21,6 +21,9 @@ function IngredientsList({
   selectIngredient,
   removeIngredient,
 }) {
+
+  const [isSelected, setIsSelected] = useState(false);
+
   const items = ingredients.map((el) => {
     let selected = selectedIngredients.indexOf(el.name) !== -1;
     const onClick = () => {
@@ -39,19 +42,31 @@ function IngredientsList({
     );
   });
 
-  function acordion(arr) {
+
+
+function ChangeBackgrounSelected() {
   
+  setIsSelected(!isSelected);
+  
+}
+
+  
+  function acordion(arr) {
+
     return arr.map((el) => {
+      
       const onClick = (e) => {
+        ChangeBackgrounSelected();
         e.preventDefault();
-        selectIngredient(e.target.textContent)
+        selectIngredient(e.target.textContent);
       };
+
       return (
         <ul className={styles.wrapper}>
-          <li className={styles.ingredientItem} onClick={onClick}>{el}</li>
+          <li className={`${styles.ingredientItem} ${isSelected ? styles.backgroundSelection : ''}`}
+          onClick={onClick}>{el}</li>
         </ul>
       )
-
      
     })
     

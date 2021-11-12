@@ -30,23 +30,22 @@ const Recipes = (props) => {
   useEffect(ListOfRecipes, [allIngredientsforTheRecipe]);
   
 //////////////////////////////////////////////////////////////////////////////////////////
-  function recipeDetails(id) {
-    
-    axios
-      .get(`http://localhost:5000/api/recipe/${id}`)
-      .then((response) => response.data)
-      .then((data) => {
-        let a = (({ summary, title, image, servings, sourceUrl }) => ({ summary, title, image, servings, sourceUrl }))(data);
-        setDetails(a)
-      });
-    
-  };
+  // function recipeDetails(id) {
+  //   axios
+  //     .get(`http://localhost:5000/api/recipe/${id}`)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setDetails(response.data)
+
+  //     })
+  // };
+
+  
 
   // recipeDetails(648742);
-
-  // console.log(details);
  
  
+  
   
   return (
 <>

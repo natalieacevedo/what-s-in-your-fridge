@@ -14,7 +14,7 @@ function IngredientSearch({ searchIngredients }) {
       />
 
       <div class="middle">
-        <a class="btn" href="#">
+        <a className="btn" href="#">
           <span class="wave"></span>
           <span class="text">
             <button class="btn" onClick={() => searchIngredients(userInput)}>
