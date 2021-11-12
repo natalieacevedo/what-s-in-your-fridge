@@ -9,22 +9,31 @@ const Footer = () => {
           href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
           rel="stylesheet"
         />
-        <div class="footerContainer">
-          <div class="text-center center-block">
+        <div className="footerContainer">
+          <div className="text-center center-block">
             <a href="https://www.facebook.com/bootsnipp">
-              <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
+              <i
+                id="social-fb"
+                className="fa fa-facebook-square fa-3x social"
+              ></i>
             </a>
             <a href="https://twitter.com/bootsnipp">
-              <i id="social-tw" class="fa fa-twitter-square fa-3x social"></i>
+              <i
+                id="social-tw"
+                className="fa fa-twitter-square fa-3x social"
+              ></i>
             </a>
             <a href="https://plus.google.com/+Bootsnipp-page">
               <i
                 id="social-gp"
-                class="fa fa-google-plus-square fa-3x social"
+                className="fa fa-google-plus-square fa-3x social"
               ></i>
             </a>
             <a href="mailto:#">
-              <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+              <i
+                id="social-em"
+                className="fa fa-envelope-square fa-3x social"
+              ></i>
             </a>
           </div>
         </div>

@@ -199,8 +199,8 @@ function IngredientListItem({ name, selected, onClick }) {
             checked={selected}
           />
 
-          <span class="checkbox-checkmark-box">
-            <span class="checkbox-checkmark"> </span>
+          <span className="checkbox-checkmark-box">
+            <span className="checkbox-checkmark"> </span>
           </span>
         </li>
       </ul>

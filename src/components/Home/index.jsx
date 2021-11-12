@@ -1,12 +1,11 @@
 import React from "react";
-
 import { NavLink } from "react-router-dom";
 import "./homePage.css";
 
 const Home = () => {
   return (
-    <div class="totalContainer">
-      <div class="imgContainer">
+    <div className="totalContainer">
+      <div className="imgContainer">
         <img
           src="https://trello.com/1/cards/61718dc0f612505e8ac74380/attachments/61718dd8fec2405241a934c8/download/first_idea_logo.png"
           alt="What's in your fridge?"
@@ -14,11 +13,11 @@ const Home = () => {
         />
       </div>
 
-      <div class="homeButtonContainer">
-        <div class="centerButtonsMiddle">
-          <a class="btn" href="#">
-            <span class="wave"></span>
-            <span class="text">
+      <div className="homeButtonContainer">
+        <div className="centerButtonsMiddle">
+          <a className="btn" href="#">
+            <span className="wave"></span>
+            <span className="text">
               <NavLink
                 className="HomeButtonTextColor"
                 activeClassName="active"

@@ -21,8 +21,8 @@ function IngredientSelected({ ingredients, removeIngredient }) {
           </li>
         ))}
       </ul>
-      <div class="centerButtonsMiddle">
-        <a class="btn-Search">
+      <div className="centerButtonsMiddle">
+        <a className="btn-Search">
           <span className="wave"></span>
           <span
             className="text btn-Search"

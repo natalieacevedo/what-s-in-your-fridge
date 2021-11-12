@@ -15,8 +15,8 @@ function IngredientSearch({ searchIngredients }) {
         onChange={(e) => changeUserInput(e.target.value)}
       />
 
-      <div class="centerButtonsMiddle">
-        <a class="btn-Search" href="#">
+      <div className="centerButtonsMiddle">
+        <a className="btn-Search" href="#">
           <span className="wave"></span>
           <span
             className="text btn-Search"
