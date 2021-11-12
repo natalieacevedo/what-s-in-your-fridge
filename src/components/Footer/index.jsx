@@ -10,7 +10,6 @@ const Footer = () => {
           rel="stylesheet"
         />
         <div class="footerContainer">
-          <p>Connect with us: </p>
           <div class="text-center center-block">
             <a href="https://www.facebook.com/bootsnipp">
               <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>

@@ -11,6 +11,7 @@ function IngredientSelected({ ingredients, removeIngredient }) {
       <ul>
         {ingredients.map((el) => (
           <li
+            className="selected-ingredients"
             onClick={(e) => {
               console.log(e.target.textContent);
               removeIngredient(e.target.textContent);
