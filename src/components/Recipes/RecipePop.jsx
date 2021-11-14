@@ -21,7 +21,7 @@ function RecipePop({recipeId}) {
   useEffect(() => recipeDetails(recipeId), [recipeId]);
 
   //recipeDetails(recipeId);
-// console.log(details);
+ console.log(details);
 
   
     return (
@@ -45,6 +45,8 @@ function RecipePop({recipeId}) {
             <Image src={details.image}/>
             <p>
               {details.summary}
+              {details.serving}
+              {details.sourceUrl}
             </p>
           </Modal.Body>
           <Container >
