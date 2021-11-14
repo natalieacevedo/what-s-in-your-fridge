@@ -10,7 +10,7 @@ const Recipes = (props) => {
 
   const [recipes, updateRecipes] = useState([]);
 
-  const [details, setDetails] = useState([]);
+  //const [details, setDetails] = useState([]);
 
 
   let allIngredientsforTheRecipe = props.match.params.ingredients;
@@ -29,25 +29,8 @@ const Recipes = (props) => {
   };
   
   useEffect(ListOfRecipes, [allIngredientsforTheRecipe]);
-  
-//////////////////////////////////////////////////////////////////////////////////////////
-  // function recipeDetails(id) {
-  //   axios
-  //     .get(`http://localhost:5000/api/recipe/${id}`)
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setDetails(response.data)
-
-  //     })
-  // };
-
-  
-
-  // recipeDetails(648742);
  
  
-  
-  
   return (
 <>
 <Navbar1 />
@@ -63,10 +46,9 @@ const Recipes = (props) => {
             <Card.Body className="text-center">
             <Card.Title>{el.title}</Card.Title>
             <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
+            {`Discover how to cook ${el.title}, a meal all the family will love`}
             </Card.Text>
-            <RecipePop />
+                     <RecipePop recipeId={el.id}/>
             </Card.Body>
         </Card>
             </>

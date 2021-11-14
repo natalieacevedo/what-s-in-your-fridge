@@ -91,6 +91,8 @@ const vegetables = [
     "quinoa",
     "arroz",
     "corn",
+    "flour",
+    "sugar"
   ];
   
   const seafood = [
@@ -137,7 +139,6 @@ function AccordionFunctionality({selectIngredient, removeIngredient}) {
           removeIngredient(e.target.textContent);
         }
         
-
       };
 
       return (
