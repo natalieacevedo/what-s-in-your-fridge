@@ -8,7 +8,7 @@ import AccordionBody from "react-bootstrap/esm/AccordionBody";
 
 const vegetables = [
     "onions",
-    "spinash",
+    "spinach",
     "cucumbers",
     "alfalfa",
     "celery",
@@ -111,30 +111,38 @@ const vegetables = [
     "monkfish",
   ];
 
-function AccordionFunctionality({selectIngredient}) {
+function AccordionFunctionality({selectIngredient, removeIngredient}) {
 
   const [isSelected, setIsSelected] = useState(false);
     
   function ChangeBackgrounSelected() {
-  
     setIsSelected(!isSelected);
     
-  }
+  };
 
   function acordionItems(arr) {
-    
-
+   
     return arr.map((el) => {
       
       const onClick = (e) => {
+       
         ChangeBackgrounSelected();
         e.preventDefault();
-        selectIngredient(e.target.textContent);
+
+        if (isSelected) {
+          e.target.style.backgroundColor = "red";
+          selectIngredient(e.target.textContent);
+        } else {
+          e.target.style.backgroundColor = '';
+          removeIngredient(e.target.textContent);
+        }
+        
+
       };
 
       return (
         <ul className={styles.wrapper}>
-          <li className={`${styles.ingredientItem} ${isSelected ? styles.backgroundSelection : ''}`}
+          <li className={styles.ingredientItem}
           onClick={onClick}>{el}</li>
         </ul>
       )

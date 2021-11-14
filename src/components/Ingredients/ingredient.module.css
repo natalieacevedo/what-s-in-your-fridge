@@ -22,3 +22,7 @@
 .ingredientItem:hover {
   background-color: rgba(252, 42, 42, 0.555);
 }
+
+.backgroundSelected {
+    background-color: aquamarine;
+}
