@@ -42,12 +42,14 @@ function IngredientRoot() {
     <div>
       <Navbar1 />
       <IngredientSearch searchIngredients={searchIngredients} />
+
       <IngredientList
         ingredients={ingredientList}
         selectedIngredients={selectedIngredients}
         selectIngredient={selectIngredient}
         removeIngredient={removeIngredient}
       />
+
       <IngredientSelected
         ingredients={selectedIngredients}
         removeIngredient={removeIngredient}

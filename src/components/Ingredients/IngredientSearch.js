@@ -12,6 +12,7 @@ function IngredientSearch({ searchIngredients }) {
         width="50%"
         height="50%"
         alt="so...what's in your fridge ?"
+        id="desktop-img"
       />
       <input
         placeholder="Please type your ingredients"

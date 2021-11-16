@@ -52,7 +52,7 @@ const Recipes = (props) => {
             </Card.Body>
         </Card>
             </>
-            )};
+            )}
          </Row>
       </Container>
       <Footer />
