@@ -21,30 +21,31 @@ function RecipePop({recipeId}) {
   useEffect(() => recipeDetails(recipeId), [recipeId]);
 
   //recipeDetails(recipeId);
-// console.log(details);
+ console.log(details);
 
   
     return (
       <>
-        <Button variant="primary" onClick={() => setShow(true)}>
+        <Button variant="danger" onClick={() => setShow(true)}>
           Recipe
         </Button>
   
         <Modal
           show={show}
           onHide={() => setShow(false)}
-          dialogClassName="modal-90w"
-          aria-labelledby="example-custom-modal-styling-title"
+          size="lg"
         >
           <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title">
+            <Modal.Title >
               {details.title}
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <Image src={details.image}/>
+          <Modal.Body >
+            <Image src={details.image} fluid />
             <p>
               {details.summary}
+              {details.serving}
+              {details.sourceUrl}
             </p>
           </Modal.Body>
           <Container >

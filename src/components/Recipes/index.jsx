@@ -44,7 +44,7 @@ const Recipes = (props) => {
             <Card.Img className="custom-overflow " src={el.image}/>
               </div>            
             <Card.Body className="text-center">
-            <Card.Title>{el.title}</Card.Title>
+            <Card.Title>{el.title}</Card.Title> 
             <Card.Text>
             {`Discover how to cook ${el.title}, a meal all the family will love`}
             </Card.Text>

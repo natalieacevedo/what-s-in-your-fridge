@@ -32,6 +32,7 @@ function IngredientsList({
       <AccordionFunctionality
         selectIngredient={selectIngredient}
         removeIngredient={removeIngredient}
+        selectedIngredients={selectedIngredients}
       />
     </div>
   );
