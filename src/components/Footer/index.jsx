@@ -11,19 +11,19 @@ const Footer = () => {
         />
         <div className="footerContainer">
           <div className="text-center center-block">
-            <a href="https://www.facebook.com/bootsnipp">
+            <a href="https://www.facebook.com/">
               <i
                 id="social-fb"
                 className="fa fa-facebook-square fa-3x social"
               ></i>
             </a>
-            <a href="https://twitter.com/bootsnipp">
+            <a href="https://twitter.com/">
               <i
                 id="social-tw"
                 className="fa fa-twitter-square fa-3x social"
               ></i>
             </a>
-            <a href="https://plus.google.com/+Bootsnipp-page">
+            <a href="https://plus.google.com/">
               <i
                 id="social-gp"
                 className="fa fa-google-plus-square fa-3x social"

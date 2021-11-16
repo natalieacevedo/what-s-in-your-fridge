@@ -6,6 +6,7 @@ import IngredientSelected from "./IngredientSelected";
 import Navbar1 from "../Navbar";
 import Footer from "../Footer";
 import "../Home/homePage.css";
+import "../../checkbox.scss";
 
 function IngredientRoot() {
   //its gonna  change when we have the search, search its going get the ingredients from the api and call setIngredientList

@@ -6,22 +6,28 @@ function IngredientSearch({ searchIngredients }) {
   const [userInput, changeUserInput] = useState("");
 
   return (
-    <div className="searchDiv">
-      <h1>so?....whats in your fridge?</h1>
+    <div className="search-div">
+      <img
+        src="https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d3ad4f50ad68463d3b5b7/download/newtestlogo.png"
+        width="50%"
+        height="50%"
+        alt="so...what's in your fridge ?"
+      />
       <input
-        placeholder="please type your ingredients"
-        className="searchInput"
+        placeholder="Please type your ingredients"
+        className="search-input"
         type="text"
         onChange={(e) => changeUserInput(e.target.value)}
       />
 
-      <div className="centerButtonsMiddle">
-        <a className="btn-Search" href="#">
+      <div className="center-buttons-middle">
+        <a className="btn-search" href="#">
           <span className="wave"></span>
           <span
-            className="text btn-Search"
-            id="buttonTextColor"
-            onClick={() => searchIngredients(userInput)}>
+            className="text btn-search"
+            id="button-text-color"
+            onClick={() => searchIngredients(userInput)}
+          >
             Search Ingredients
           </span>
         </a>
