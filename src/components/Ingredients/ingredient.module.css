@@ -31,6 +31,7 @@
 
 .selected {
   background-color: red;
+  color: white;
 }
 
 .notSelected {

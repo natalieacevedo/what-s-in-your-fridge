@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AccordionBody from "react-bootstrap/esm/AccordionBody";
 
 const vegetables = [
-<<<<<<< HEAD
   "onions",
   "spinach",
   "cucumbers",
@@ -23,11 +22,6 @@ const vegetables = [
   "soy sprout",
   "boychok",
   "green onion",
-  "onions",
-  "spinash",
-  "cucumbers",
-  "alfalfa",
-  "celery",
 ];
 
 const meats = [
@@ -45,12 +39,6 @@ const meats = [
   "sausages",
   "chorizo",
   "duck",
-  "chicken",
-  "goat",
-  "meat",
-  "fish",
-  "shrimp",
-  "turkey",
 ];
 
 const fruits = [
@@ -114,156 +102,37 @@ const seafood = [
   "monkfish",
 ];
 
-function AccordionFunctionality({ selectIngredient, removeIngredient }) {
-  const [isSelected, setIsSelected] = useState(false);
-
-  function ChangeBackgrounSelected() {
-    setIsSelected(!isSelected);
-  }
-=======
-    "onions",
-    "spinach",
-    "cucumbers",
-    "alfalfa",
-    "celery",
-    "carrots",
-    "split beans",
-    "soy beans",
-    "cabbage",
-    "eggplant",
-    "kale",
-    "baby carrots",
-    "soy sprout",
-    "boychok",
-    "green onion"
-    
-  ];
-  
-  const meats = [
-    "chicken",
-    "goat",
-    "meat",
-    "fish",
-    "shrimp",
-    "turkey",
-    "bacon",
-    "ham",
-    "hot dogs",
-    "Prosciutto",
-    "salami",
-    "sausages",
-    "chorizo",
-    "duck"
-   
-  ];
-  
-  const fruits = [
-    "apples",
-    "pears",
-    "citrus",
-    "oranges",
-    "grapefruits",
-    "mandarin",
-    "limes",
-    "lemon",
-    "stone fruit",
-    "nectarines",
-    "apricots",
-    "peaches",
-    "plums",
-    "bananas",
-    "mangoes",
-    "strawberries",
-    "raspberries",
-    "blueberries",
-    "kiwifruit",
-    "passionfruit",
-  ];
-  
-  const grains = [
-    "teff",
-    "wheat",
-    "oats",
-    "rice",
-    "corn",
-    "barley",
-    "sorghum",
-    "rye",
-    "millet",
-    "triticale",
-    "amaranth",
-    "buckwheat",
-    "quinoa",
-    "arroz",
-    "corn",
-    "flour",
-    "sugar"
-  ];
-  
-  const seafood = [
-    "halibut",
-    "mahi",
-    "monkfish",
-    "mullet",
-    "parrotfish",
-    "seabass",
-    " perch",
-    "salmon",
-    "sardine",
-    "sturgeon",
-    "shark",
-    "tilapia",
-    "halibut",
-    "mahi",
-    "monkfish",
-  ];
-
-function AccordionFunctionality({selectIngredient, removeIngredient,selectedIngredients}) {
->>>>>>> f39a582bc2efead63327c7e1b8a673a962724154
-
+function AccordionFunctionality({
+  selectIngredient,
+  removeIngredient,
+  selectedIngredients,
+}) {
   console.log(selectedIngredients);
-  
+
   function acordionItems(arr) {
     return arr.map((el) => {
-<<<<<<< HEAD
-      const onClick = (e) => {
-        ChangeBackgrounSelected();
-
-        e.preventDefault();
-
-        if (isSelected) {
-          e.target.style.backgroundColor = "red";
-          e.target.style.color = "white";
-          selectIngredient(e.target.textContent);
-        } else {
-          e.target.style.backgroundColor = "";
-          e.target.style.color = "black";
-=======
-
       let isSelected = selectedIngredients.indexOf(el) !== -1;
-      
+
       const onClick = (e) => {
-       
         e.preventDefault();
 
         if (isSelected) {
-         
->>>>>>> f39a582bc2efead63327c7e1b8a673a962724154
           removeIngredient(e.target.textContent);
         } else {
-          
-          
           selectIngredient(e.target.textContent);
         }
       };
 
       //if (selectedIngredients.indexOf(el) === -1) { el.style.backgroundColor = '' };
 
-     
       return (
         <ul className={styles.wrapper}>
-<<<<<<< HEAD
-          <li className={styles.ingredientItem} onClick={onClick}>
+          <li
+            className={`${styles.ingredientItem} ${
+              isSelected ? styles.selected : styles.notSelected
+            }`}
+            onClick={onClick}
+          >
             {el}
           </li>
         </ul>
@@ -272,21 +141,7 @@ function AccordionFunctionality({selectIngredient, removeIngredient,selectedIngr
   }
 
   return (
-=======
-          <li className={`${styles.ingredientItem} ${isSelected ? styles.selected : styles.notSelected}`}
-            onClick={onClick}>
-            {el}
-          </li>
-        </ul>
-      )
-     
-    })
-    
-};
- 
-return (
-  //< className={`post-wrapper ${this.state.loading ? 'post-wrapper--loading' : ''}`}>
->>>>>>> f39a582bc2efead63327c7e1b8a673a962724154
+    //< className={`post-wrapper ${this.state.loading ? 'post-wrapper--loading' : ''}`}>
     <div>
       <Accordion flush>
         <Accordion.Item eventKey="0">
@@ -313,13 +168,7 @@ return (
         </Accordion.Item>
       </Accordion>
     </div>
-<<<<<<< HEAD
   );
-=======
-  
-);
-
->>>>>>> f39a582bc2efead63327c7e1b8a673a962724154
 }
 
 export default AccordionFunctionality;
