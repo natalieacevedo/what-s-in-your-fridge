@@ -5,6 +5,7 @@ import axios from 'axios';
 function RecipePop({recipeId}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
+  const [allInfo, setAllInfo] = useState([]);
 
   console.log(recipeId);
   
@@ -13,17 +14,17 @@ function RecipePop({recipeId}) {
         .get(`http://localhost:5000/api/recipe/${id}`)
         .then((response) => {
          // console.log(response.data);
-          setDetails(response.data)
-  
+          let detailsWithNoTags = response.data.summary.replace(/<\/?[^>]+(>|$)/g, "");
+          let indexOfInformationWeDontWant = detailsWithNoTags.indexOf( 'It is brought to you');
+          let finalDetailsString = detailsWithNoTags.slice(0, indexOfInformationWeDontWant);
+          
+          setDetails(finalDetailsString);
+          setAllInfo(response.data);
         })
   };
   
   useEffect(() => recipeDetails(recipeId), [recipeId]);
-
-  //recipeDetails(recipeId);
- console.log(details);
-
-  
+ 
     return (
       <>
         <Button variant="danger" onClick={() => setShow(true)}>
@@ -37,16 +38,15 @@ function RecipePop({recipeId}) {
         >
           <Modal.Header closeButton>
             <Modal.Title >
-              {details.title}
+              {allInfo.title}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body >
-            <Image src={details.image} fluid />
-            <p>
-              {details.summary}
-              {details.serving}
-              {details.sourceUrl}
-            </p>
+            <Image src={allInfo.image} fluid />
+            <p>{details} </p>
+            <p> {allInfo.serving}</p>
+            <p>{allInfo.sourceUrl}</p>
+           
           </Modal.Body>
           <Container >
           <Stack direction="horizontal" gap={5} className="justify-content-center">
