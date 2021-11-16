@@ -45,7 +45,7 @@ function RecipePop({recipeId}) {
             <Image src={allInfo.image} fluid />
             <p>{details} </p>
             <p> {allInfo.serving}</p>
-            <p>{allInfo.sourceUrl}</p>
+            <p><a href={allInfo.sourceUrl}>Let's make it!</a></p>
            
           </Modal.Body>
           <Container >

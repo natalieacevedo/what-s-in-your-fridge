@@ -79,7 +79,6 @@ const grains = [
   "buckwheat",
   "quinoa",
   "arroz",
-  "corn",
   "flour",
   "sugar",
 ];
