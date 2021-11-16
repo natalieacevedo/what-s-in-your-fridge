@@ -1,4 +1,4 @@
-.totalContainer {
+.total-container {
   display: flex;
 
   flex-direction: column;
@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.imgContainer {
+.img-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,7 +21,7 @@
   /* width: 100%;
   height: 100%; */
 }
-#fridgeImg {
+#fridge-img {
   width: 150%;
   height: 100%;
 }
@@ -41,7 +41,7 @@ button.btn {
   color: white;
 }
 
-.searchDiv {
+.search-div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@ h1 {
   justify-content: center;
   padding-top: 1rem;
 }
-.searchInput {
+.search-input {
   display: flex;
   justify-content: center;
   width: 80%;
@@ -69,16 +69,16 @@ h3 {
   justify-content: center;
 }
 
-.HomeButtonTextColor {
+.home-button-text-color {
   text-decoration: none;
   color: white;
 }
 
-.HomeButtonTextColor:hover {
+.home-button-text-color:hover {
   color: rgb(241, 146, 146);
 }
 
-.homeButtonContainer {
+.home-button-container {
   margin-bottom: 3rem;
 }
 
@@ -86,7 +86,7 @@ h3 {
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
 
-.centerButtonsMiddle {
+.center-buttons-middle {
   position: relative;
   display: flex;
   height: 80%;
@@ -109,7 +109,7 @@ a.btn {
     0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
-#buttonTextColor {
+#button-text-color {
   color: white;
   text-decoration: none;
 }
@@ -193,7 +193,7 @@ a.btn:hover {
 
 /* ------ FROM HERE IS SEARCH INGREDIENTS BUTTON ----- */
 
-a.btn-Search {
+a.btn-search {
   text-decoration: none;
   color: #fff;
   position: relative;
@@ -208,7 +208,7 @@ a.btn-Search {
     0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
-a.btn-Search .wave {
+a.btn-search .wave {
   opacity: 1;
   position: absolute;
   top: 0;
@@ -226,16 +226,16 @@ a.btn-Search .wave {
   animation: drift 8000ms infinite linear;
 }
 
-a.btn-Search.rumble {
+a.btn-search.rumble {
   animation: rumbleinthejungle 300ms linear;
 }
 
-a.btn-Search .text {
+a.btn-search .text {
   position: relative;
   z-index: 2;
 }
 
-a.btn-Search:hover {
+a.btn-search:hover {
   box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.1),
     0 6px 10px 5px rgba(0, 0, 0, 0.12), 0 8px 5px -5px rgba(0, 0, 0, 0.3);
 }
@@ -243,7 +243,7 @@ a.btn-Search:hover {
 /* ----------- FROM HERE IS MEDIA QUERIES ----------- */
 
 @media screen and (min-width: 768px) {
-  .totalContainer {
+  .total-container {
     background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png")
       no-repeat;
     background-size: cover;
@@ -251,7 +251,7 @@ a.btn-Search:hover {
     background-repeat: no-repeat;
   }
 
-  .imgContainer {
+  .img-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -261,7 +261,7 @@ a.btn-Search:hover {
     height: 100%;
   }
 
-  .homeButtonContainer {
+  .home-button-container {
     margin-bottom: 10rem;
   }
 
@@ -282,14 +282,14 @@ a.btn-Search:hover {
 }
 
 @media screen and (min-width: 1024px) {
-  .totalContainer {
+  .total-container {
     background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png")
       no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 
-  #fridgeImg {
+  #fridge-img {
     width: 80%;
     height: 100%;
     margin-top: 5%;

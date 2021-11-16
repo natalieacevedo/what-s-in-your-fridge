@@ -4,6 +4,9 @@ import { useHistory } from "react-router-dom";
 function IngredientSelected({ ingredients, removeIngredient }) {
   const history = useHistory();
   console.log(ingredients);
+  function handleClick() {
+   alert("Select Ingrdients")
+  }
 
   return (
     <div>
@@ -21,13 +24,13 @@ function IngredientSelected({ ingredients, removeIngredient }) {
           </li>
         ))}
       </ul>
-      <div className="centerButtonsMiddle">
-        <a className="btn-Search">
+      <div className="center-buttons-middle">
+        <a className="btn-search">
           <span className="wave"></span>
           <span
-            className="text btn-Search"
-            id="buttonTextColor"
-            onClick={() => history.push(`/recipes/${ingredients.join(",")}`)}
+            className="text btn-search"
+            id="button-text-color"
+            onClick={() =>(ingredients.length<=0) ? handleClick() :history.push(`/recipes/${ingredients.join(",")}`)}
           >
             Get your delicious Recipes
           </span>

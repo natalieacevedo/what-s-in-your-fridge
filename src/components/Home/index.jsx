@@ -4,24 +4,24 @@ import "./homePage.css";
 
 const Home = () => {
   return (
-    <div className="totalContainer">
-      <div className="imgContainer">
+    <div className="total-container">
+      <div className="img-container">
         <img
           src="https://trello.com/1/cards/61718dc0f612505e8ac74380/attachments/61718dd8fec2405241a934c8/download/first_idea_logo.png"
           alt="What's in your fridge?"
-          id="fridgeImg"
+          id="fridge-img"
         />
       </div>
 
-      <div className="homeButtonContainer">
-        <div className="centerButtonsMiddle">
+      <div className="home-button-container">
+        <div className="center-buttons-middle">
           <a className="btn" href="#">
             <span className="wave"></span>
             <span className="text">
               <NavLink
-                className="HomeButtonTextColor"
+                className="home-button-text-color"
                 activeClassName="active"
-                to="/ingredients"
+                to="/ingredients/"
               >
                 <h2>Check Ingredients</h2>
               </NavLink>
