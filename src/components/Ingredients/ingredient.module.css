@@ -17,12 +17,14 @@
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   height: 1vh;
   margin-bottom: 1em;
+  border-radius: 12px;
 }
 
 .ingredientItem:hover {
-  background-color: rgba(252, 42, 42, 0.555);
+  background-color: rgba(255, 0, 0, 0.63);
+  color: white !important;
 }
 
 .backgroundSelected {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }

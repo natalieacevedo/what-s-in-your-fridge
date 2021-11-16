@@ -1,4 +1,4 @@
-import  {React, useState }from "react";
+import { React, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import styles from "./ingredient.module.css";
 import "../../checkbox.scss";
@@ -7,158 +7,152 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AccordionBody from "react-bootstrap/esm/AccordionBody";
 
 const vegetables = [
-    "onions",
-    "spinach",
-    "cucumbers",
-    "alfalfa",
-    "celery",
-    "carrots",
-    "split beans",
-    "soy beans",
-    "cabbage",
-    "eggplant",
-    "kale",
-    "baby carrots",
-    "soy sprout",
-    "boychok",
-    "green onion",
-    "onions",
-    "spinash",
-    "cucumbers",
-    "alfalfa",
-    "celery",
-  ];
-  
-  const meats = [
-    "chicken",
-    "goat",
-    "meat",
-    "fish",
-    "shrimp",
-    "turkey",
-    "bacon",
-    "ham",
-    "hot dogs",
-    "Prosciutto",
-    "salami",
-    "sausages",
-    "chorizo",
-    "duck",
-    "chicken",
-    "goat",
-    "meat",
-    "fish",
-    "shrimp",
-    "turkey",
-  ];
-  
-  const fruits = [
-    "apples",
-    "pears",
-    "citrus",
-    "oranges",
-    "grapefruits",
-    "mandarin",
-    "limes",
-    "lemon",
-    "stone fruit",
-    "nectarines",
-    "apricots",
-    "peaches",
-    "plums",
-    "bananas",
-    "mangoes",
-    "strawberries",
-    "raspberries",
-    "blueberries",
-    "kiwifruit",
-    "passionfruit",
-  ];
-  
-  const grains = [
-    "teff",
-    "wheat",
-    "oats",
-    "rice",
-    "corn",
-    "barley",
-    "sorghum",
-    "rye",
-    "millet",
-    "triticale",
-    "amaranth",
-    "buckwheat",
-    "quinoa",
-    "arroz",
-    "corn",
-    "flour",
-    "sugar"
-  ];
-  
-  const seafood = [
-    "halibut",
-    "mahi",
-    "monkfish",
-    "mullet",
-    "parrotfish",
-    "seabass",
-    " perch",
-    "salmon",
-    "sardine",
-    "sturgeon",
-    "shark",
-    "tilapia",
-    "halibut",
-    "mahi",
-    "monkfish",
-  ];
+  "onions",
+  "spinach",
+  "cucumbers",
+  "alfalfa",
+  "celery",
+  "carrots",
+  "split beans",
+  "soy beans",
+  "cabbage",
+  "eggplant",
+  "kale",
+  "baby carrots",
+  "soy sprout",
+  "boychok",
+  "green onion",
+  "onions",
+  "spinash",
+  "cucumbers",
+  "alfalfa",
+  "celery",
+];
 
-function AccordionFunctionality({selectIngredient, removeIngredient}) {
+const meats = [
+  "chicken",
+  "goat",
+  "meat",
+  "fish",
+  "shrimp",
+  "turkey",
+  "bacon",
+  "ham",
+  "hot dogs",
+  "Prosciutto",
+  "salami",
+  "sausages",
+  "chorizo",
+  "duck",
+  "chicken",
+  "goat",
+  "meat",
+  "fish",
+  "shrimp",
+  "turkey",
+];
 
+const fruits = [
+  "apples",
+  "pears",
+  "citrus",
+  "oranges",
+  "grapefruits",
+  "mandarin",
+  "limes",
+  "lemon",
+  "stone fruit",
+  "nectarines",
+  "apricots",
+  "peaches",
+  "plums",
+  "bananas",
+  "mangoes",
+  "strawberries",
+  "raspberries",
+  "blueberries",
+  "kiwifruit",
+  "passionfruit",
+];
+
+const grains = [
+  "teff",
+  "wheat",
+  "oats",
+  "rice",
+  "corn",
+  "barley",
+  "sorghum",
+  "rye",
+  "millet",
+  "triticale",
+  "amaranth",
+  "buckwheat",
+  "quinoa",
+  "arroz",
+  "corn",
+  "flour",
+  "sugar",
+];
+
+const seafood = [
+  "halibut",
+  "mahi",
+  "monkfish",
+  "mullet",
+  "parrotfish",
+  "seabass",
+  " perch",
+  "salmon",
+  "sardine",
+  "sturgeon",
+  "shark",
+  "tilapia",
+  "halibut",
+  "mahi",
+  "monkfish",
+];
+
+function AccordionFunctionality({ selectIngredient, removeIngredient }) {
   const [isSelected, setIsSelected] = useState(false);
-    
+
   function ChangeBackgrounSelected() {
     setIsSelected(!isSelected);
-    
-  };
+  }
 
   function acordionItems(arr) {
-   
     return arr.map((el) => {
-      
       const onClick = (e) => {
-       
         ChangeBackgrounSelected();
+
         e.preventDefault();
 
         if (isSelected) {
           e.target.style.backgroundColor = "red";
+          e.target.style.color = "white";
           selectIngredient(e.target.textContent);
         } else {
-          e.target.style.backgroundColor = '';
+          e.target.style.backgroundColor = "";
+          e.target.style.color = "black";
           removeIngredient(e.target.textContent);
         }
-        
       };
 
       return (
         <ul className={styles.wrapper}>
-          <li className={styles.ingredientItem}
-          onClick={onClick}>{el}</li>
+          <li className={styles.ingredientItem} onClick={onClick}>
+            {el}
+          </li>
         </ul>
-      )
-     
-    })
-    
-  };
+      );
+    });
+  }
 
   return (
     <div>
-       <Accordion flush>
+      <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header className="accordionText">
-            Vegetables
-          </Accordion.Header>
+          <Accordion.Header>Vegetables</Accordion.Header>
           <Accordion.Body className="Accordion-body">
             {acordionItems(vegetables)}
           </Accordion.Body>
@@ -180,9 +174,8 @@ function AccordionFunctionality({selectIngredient, removeIngredient}) {
           <Accordion.Body>{acordionItems(seafood)}</Accordion.Body>
         </Accordion.Item>
       </Accordion>
-      </div>
-)
-
-};
+    </div>
+  );
+}
 
 export default AccordionFunctionality;

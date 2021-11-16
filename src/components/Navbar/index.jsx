@@ -18,6 +18,7 @@ const Navbar1 = () => {
                       className="my-navbar"
                       as={Link}
                       to="/ingredients/"
+                      href="/ingredients"
                     >
                       <h3>Ingredients</h3>
                     </Nav.Link>

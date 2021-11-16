@@ -1,6 +1,5 @@
-import React from 'react';
-import AccordionFunctionality from './Accordion'
-
+import React from "react";
+import AccordionFunctionality from "./Accordion";
 
 function IngredientsList({
   ingredients,
@@ -8,8 +7,6 @@ function IngredientsList({
   selectIngredient,
   removeIngredient,
 }) {
-
-  
   const items = ingredients.map((el) => {
     let selected = selectedIngredients.indexOf(el.name) !== -1;
     const onClick = () => {
@@ -32,8 +29,10 @@ function IngredientsList({
     <div>
       <h1>Choose Ingredients Please</h1>
       <ul>{items}</ul>
-      <AccordionFunctionality selectIngredient={selectIngredient}
-        removeIngredient={removeIngredient}/>
+      <AccordionFunctionality
+        selectIngredient={selectIngredient}
+        removeIngredient={removeIngredient}
+      />
     </div>
   );
 }
@@ -58,6 +57,5 @@ function IngredientListItem({ name, selected, onClick }) {
     </div>
   );
 }
-
 
 export default IngredientsList;

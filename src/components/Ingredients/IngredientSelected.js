@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import styles from "./ingredient.module.css";
 
 function IngredientSelected({ ingredients, removeIngredient }) {
   const history = useHistory();
@@ -8,7 +9,7 @@ function IngredientSelected({ ingredients, removeIngredient }) {
   return (
     <div>
       <h3>Selected ingredients:</h3>
-      <ul>
+      <ul className="selected-container">
         {ingredients.map((el) => (
           <li
             className="selected-ingredients"
