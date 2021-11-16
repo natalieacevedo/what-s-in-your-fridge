@@ -21,12 +21,8 @@ const vegetables = [
     "baby carrots",
     "soy sprout",
     "boychok",
-    "green onion",
-    "onions",
-    "spinash",
-    "cucumbers",
-    "alfalfa",
-    "celery",
+    "green onion"
+    
   ];
   
   const meats = [
@@ -43,13 +39,8 @@ const vegetables = [
     "salami",
     "sausages",
     "chorizo",
-    "duck",
-    "chicken",
-    "goat",
-    "meat",
-    "fish",
-    "shrimp",
-    "turkey",
+    "duck"
+   
   ];
   
   const fruits = [
@@ -113,46 +104,48 @@ const vegetables = [
     "monkfish",
   ];
 
-function AccordionFunctionality({selectIngredient, removeIngredient}) {
+function AccordionFunctionality({selectIngredient, removeIngredient,selectedIngredients}) {
 
-  const [isSelected, setIsSelected] = useState(false);
-    
-  function ChangeBackgrounSelected() {
-    setIsSelected(!isSelected);
-    
-  };
-
+  console.log(selectedIngredients);
+  
   function acordionItems(arr) {
    
     return arr.map((el) => {
+
+      let isSelected = selectedIngredients.indexOf(el) !== -1;
       
       const onClick = (e) => {
        
-        ChangeBackgrounSelected();
         e.preventDefault();
 
         if (isSelected) {
-          e.target.style.backgroundColor = "red";
-          selectIngredient(e.target.textContent);
-        } else {
-          e.target.style.backgroundColor = '';
+         
           removeIngredient(e.target.textContent);
+        } else {
+          
+          
+          selectIngredient(e.target.textContent);
         }
-        
       };
 
+      //if (selectedIngredients.indexOf(el) === -1) { el.style.backgroundColor = '' };
+
+     
       return (
         <ul className={styles.wrapper}>
-          <li className={styles.ingredientItem}
-          onClick={onClick}>{el}</li>
+          <li className={`${styles.ingredientItem} ${isSelected ? styles.selected : styles.notSelected}`}
+            onClick={onClick}>
+            {el}
+          </li>
         </ul>
       )
      
     })
     
-  };
-
-  return (
+};
+ 
+return (
+  //< className={`post-wrapper ${this.state.loading ? 'post-wrapper--loading' : ''}`}>
     <div>
        <Accordion flush>
         <Accordion.Item eventKey="0">
@@ -180,9 +173,10 @@ function AccordionFunctionality({selectIngredient, removeIngredient}) {
           <Accordion.Body>{acordionItems(seafood)}</Accordion.Body>
         </Accordion.Item>
       </Accordion>
-      </div>
-)
+    </div>
+  
+);
 
-};
+}
 
 export default AccordionFunctionality;

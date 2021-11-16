@@ -33,7 +33,7 @@ function IngredientsList({
       <h1>Choose Ingredients Please</h1>
       <ul>{items}</ul>
       <AccordionFunctionality selectIngredient={selectIngredient}
-        removeIngredient={removeIngredient}/>
+        removeIngredient={removeIngredient} selectedIngredients={selectedIngredients}/>
     </div>
   );
 }

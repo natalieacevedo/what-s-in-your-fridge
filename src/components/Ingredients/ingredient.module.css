@@ -26,3 +26,11 @@
 .backgroundSelected {
     background-color: aquamarine;
 }
+
+.selected {
+  background-color: red;
+}
+
+.notSelected {
+  background-color: white;
+}
