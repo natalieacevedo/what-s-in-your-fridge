@@ -35,7 +35,7 @@ function IngredientRoot() {
         return response.data;
       })
       .then((data) => {
-        setIngredientList(data);
+        setIngredientList(data); 
       });
   }
   return (
