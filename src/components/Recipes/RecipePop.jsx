@@ -33,16 +33,15 @@ function RecipePop({recipeId}) {
         <Modal
           show={show}
           onHide={() => setShow(false)}
-          dialogClassName="modal-90w"
-          aria-labelledby="example-custom-modal-styling-title"
+          size="lg"
         >
           <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title">
+            <Modal.Title >
               {details.title}
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <Image src={details.image}/>
+          <Modal.Body >
+            <Image src={details.image} fluid />
             <p>
               {details.summary}
             </p>
