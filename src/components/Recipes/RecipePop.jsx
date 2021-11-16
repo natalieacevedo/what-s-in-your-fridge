@@ -1,9 +1,28 @@
-import {React , useState}  from 'react'
+import {React ,useEffect, useState}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
+import axios from 'axios';
 
+function RecipePop({recipeId}) {
+  const [show, setShow] = useState(false);
+  const [details, setDetails] = useState([]);
 
-function RecipePop() {
-    const [show, setShow] = useState(false);
+  console.log(recipeId);
+  
+ function recipeDetails(id) {
+      axios
+        .get(`http://localhost:5000/api/recipe/${id}`)
+        .then((response) => {
+         // console.log(response.data);
+          setDetails(response.data)
+  
+        })
+  };
+  
+  useEffect(() => recipeDetails(recipeId), [recipeId]);
+
+  //recipeDetails(recipeId);
+// console.log(details);
+
   
     return (
       <>
@@ -19,19 +38,13 @@ function RecipePop() {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title">
-              Recipe
+              {details.title}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Image src="https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-ramen-korea-justicon-flat-justicon.png" />
+            <Image src={details.image}/>
             <p>
-              Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-              commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-              ipsam atque a dolores quisquam quisquam adipisci possimus
-              laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-              accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-              reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-              deleniti rem!
+              {details.summary}
             </p>
           </Modal.Body>
           <Container >
