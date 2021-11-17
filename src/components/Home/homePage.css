@@ -25,7 +25,14 @@
   width: 150%;
   height: 100%;
 }
-ul {
+
+li {
+  display: flex;
+  padding-right: 3%;
+  align-items: center;
+}
+
+#first-swiper {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -33,11 +40,6 @@ ul {
   padding-left: 2px;
 }
 
-li {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 button.btn {
   color: white;
 }
@@ -287,6 +289,13 @@ a.btn-search:hover {
     width: 60%;
     padding: 0.8rem;
   }
+  .accordion-item {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .accordion-button {
+    border-radius: 12px !important;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -317,4 +326,19 @@ a.btn-search:hover {
     border-radius: 15px;
     padding: 0.8rem;
   }
+
+  .accordion-item {
+    margin-left: 26%;
+    margin-right: 26%;
+  }
+  .accordion-body {
+    margin-left: 50px !important;
+  }
 }
+
+/* @media screen and (max-width: 480px) {
+  .accordion-body {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)) !important;
+  }
+} */

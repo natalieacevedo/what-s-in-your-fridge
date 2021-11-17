@@ -11,9 +11,9 @@ const Navbar1 = () => {
           <a className="btn-nav" href="#">
             <span className="wave2"></span>
             <span className="text">
-              <Navbar variant="dark" >
-                <Container >
-                  <Nav className="me-auto " variant="pills" > 
+              <Navbar variant="dark">
+                <Container>
+                  <Nav className="me-auto ">
                     <Nav.Link
                       className="my-navbar"
                       as={NavLink}
@@ -22,7 +22,12 @@ const Navbar1 = () => {
                     >
                       <h3>Ingredients</h3>
                     </Nav.Link>
-                    <Nav.Link as={NavLink}  activeClassName="active" to="/recipes/" disabled>
+                    <Nav.Link
+                      as={NavLink}
+                      activeClassName="active"
+                      to="/recipes/"
+                      disabled
+                    >
                       <h3>Recipes</h3>
                     </Nav.Link>
                   </Nav>

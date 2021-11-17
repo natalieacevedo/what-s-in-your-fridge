@@ -4,7 +4,6 @@ import styles from "./ingredient.module.css";
 import "../../checkbox.scss";
 import "../Home/homePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AccordionBody from "react-bootstrap/esm/AccordionBody";
 
 const vegetables = [
   "onions",
@@ -144,7 +143,7 @@ function AccordionFunctionality({
     //< className={`post-wrapper ${this.state.loading ? 'post-wrapper--loading' : ''}`}>
     <div>
       <Accordion flush>
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="0" className="accordion-item">
           <Accordion.Header>Vegetables</Accordion.Header>
           <Accordion.Body className="Accordion-body">
             {acordionItems(vegetables)}

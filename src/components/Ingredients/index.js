@@ -7,6 +7,9 @@ import Navbar1 from "../Navbar";
 import Footer from "../Footer";
 import "../Home/homePage.css";
 import "../../checkbox.scss";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
+import "swiper/swiper.scss";
+import "./ingredient.module.css";
 
 function IngredientRoot() {
   //its gonna  change when we have the search, search its going get the ingredients from the api and call setIngredientList
@@ -54,6 +57,7 @@ function IngredientRoot() {
         ingredients={selectedIngredients}
         removeIngredient={removeIngredient}
       />
+
       <Footer />
     </div>
   );

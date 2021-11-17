@@ -1,5 +1,13 @@
 import React from "react";
 import AccordionFunctionality from "./Accordion";
+import {
+  Swiper,
+  SwiperSlide,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/react/swiper-react.js";
+import "swiper/swiper.scss";
 
 function IngredientsList({
   ingredients,
@@ -17,18 +25,24 @@ function IngredientsList({
       }
     };
     return (
-      <IngredientListItem
-        name={el.name}
-        selected={selected}
-        onClick={onClick}
-      />
+      <SwiperSlide>
+        <IngredientListItem
+          name={el.name}
+          selected={selected}
+          onClick={onClick}
+        />
+      </SwiperSlide>
     );
   });
 
   return (
     <div>
       <h1>Choose Ingredients Please</h1>
-      <ul>{items}</ul>
+
+      <ul>
+        <Swiper slidesPerView={5}>{items}</Swiper>
+      </ul>
+
       <AccordionFunctionality
         selectIngredient={selectIngredient}
         removeIngredient={removeIngredient}
@@ -41,7 +55,7 @@ function IngredientsList({
 function IngredientListItem({ name, selected, onClick }) {
   return (
     <div id="container">
-      <ul>
+      <ul id="first-swiper">
         <li key={name} onClick={onClick}>
           <label>{name}</label>
           <input

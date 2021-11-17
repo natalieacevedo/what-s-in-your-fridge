@@ -37,3 +37,48 @@
 .notSelected {
   background-color: white;
 }
+
+.ingredients_h3 {
+  margin-top: 8% !important;
+}
+
+.selected_container {
+  padding: 1rem;
+  padding-left: 3rem;
+}
+
+.ingredient_selected {
+  display: inline-table;
+  width: 10vw;
+  white-space: nowrap;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 1vw;
+  -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+  height: 1vh;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  background-color: rgb(255, 143, 143);
+  color: black;
+}
+
+@media screen and (min-width: 1024px) {
+  .ingredients_h3 {
+    margin-top: 5% !important;
+  }
+
+  .ingredient_selected {
+    display: inline-table;
+    width: 10vw;
+    white-space: nowrap;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1vw;
+    -webkit-box-shadow: 3px 3px 4px 5px #ccc;
+    height: 1rem;
+    margin-bottom: 1em;
+    border-radius: 50px;
+    background-color: rgb(235, 25, 25);
+    color: white;
+  }
+}
