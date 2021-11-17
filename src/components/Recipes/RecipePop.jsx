@@ -2,6 +2,7 @@ import {React ,useEffect, useState}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
 import smiley from '../../images/facefood.png';
 import axios from 'axios';
+import "./Recipes-style.css"
 
 function RecipePop({recipeId}) {
   const [show, setShow] = useState(false);
@@ -40,6 +41,7 @@ function RecipePop({recipeId}) {
           show={show}
           onHide={() => setShow(false)}
           size="lg"
+          centered
         >
           <Modal.Header closeButton>
             <Modal.Title >
@@ -47,7 +49,9 @@ function RecipePop({recipeId}) {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body >
-            <Image src={allInfo.image} fluid />
+            <div className="center-image">
+            <Image src={allInfo.image}  fluid />
+            </div>
             <p>{details} </p>
             <p> {allInfo.serving}</p>
             <p><a href={allInfo.sourceUrl}>Let's make it!</a></p>

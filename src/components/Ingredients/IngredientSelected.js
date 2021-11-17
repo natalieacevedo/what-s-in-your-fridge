@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import styles from "./ingredient.module.css";
+import {toast} from 'react-toastify'
 
+
+toast.configure()
 function IngredientSelected({ ingredients, removeIngredient }) {
   const history = useHistory();
   console.log(ingredients);
-  function handleClick() {
-   alert("Select Ingrdients")
+  const notify = () => {
+   toast.error('Please choose some ingredients',{position: toast.POSITION.TOP_CENTER})
   }
-
+  
   return (
     <div>
       <h3>Selected ingredients:</h3>
@@ -29,9 +31,9 @@ function IngredientSelected({ ingredients, removeIngredient }) {
         <a className="btn-search">
           <span className="wave"></span>
           <span
-            className="text btn-search"
+            className="text btn-search btn"
             id="button-text-color"
-            onClick={() =>(ingredients.length<=0) ? handleClick() :history.push(`/recipes/${ingredients.join(",")}`)}
+            onClick={() =>(ingredients.length<=0) ? notify() :history.push(`/recipes/${ingredients.join(",")}`)}
           >
             Get your delicious Recipes
           </span>
