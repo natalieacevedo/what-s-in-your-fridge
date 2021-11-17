@@ -1,12 +1,10 @@
 import {React ,useEffect, useState, useContext}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
 import smiley from '../../images/facefood.png';
+import smileyColor from '../../images/facefoodcolor.png';
 import axios from 'axios';
 import "./Recipes-style.css"
 import FavoriteContext from "../Context/FavoriteContext";
-
-
-
 
 function RecipePop({recipeId}) {
   const [show, setShow] = useState(false);
@@ -14,11 +12,6 @@ function RecipePop({recipeId}) {
   const [allInfo, setAllInfo] = useState([]);
 
   const { isFavorite, changeIsFavorite, favoriteContent, setFavoriteContent } = useContext(FavoriteContext);
-
-  //favorite content es lo que necesito en el favorite component///
-
-  // changeIsFavorite(true);
-  console.log(isFavorite);
 
     console.log(recipeId);
   
@@ -37,17 +30,20 @@ function RecipePop({recipeId}) {
   };
 
   function SmileyClick(e) {
-    e.target.style.backgroundColor = 'yellow'
-    changeIsFavorite(!isFavorite);
-    if (isFavorite) {
-      setFavoriteContent(allInfo)
-   
-    } else {
-      setFavoriteContent('');
-    }
+    // console.log(isFavorite);
+    // changeIsFavorite(!isFavorite);
+
+    // if (isFavorite) {
+    //   setFavoriteContent(allInfo);
+    // } else {
+    //   setFavoriteContent('');
+    // }
+    setFavoriteContent([allInfo.title, allInfo.sourceUrl, allInfo.image]);
+
   }
 
   console.log(favoriteContent);
+  console.log(allInfo);
 
   useEffect(() => recipeDetails(recipeId), [recipeId]);
  
@@ -79,8 +75,10 @@ function RecipePop({recipeId}) {
           </Modal.Body>
           <Container >
 
-          <img src={smiley} alt="carita" onClick={SmileyClick}></img>
+            <img height='60px' width='60px'
+            src={isFavorite ? smileyColor: smiley} alt="carita" onClick={SmileyClick}></img>
          
+            
            <Stack direction="horizontal" gap={5} className="justify-content-center">
           <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
           <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>

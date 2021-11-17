@@ -10,7 +10,7 @@ function Favorite() {
 
     const arrayWithAllFavorite = []
     
-    const { favoriteContent } = useContext(FavoriteContext);
+    const { favoriteContent} = useContext(FavoriteContext);
 
     if (favoriteContent['title']) {
         
