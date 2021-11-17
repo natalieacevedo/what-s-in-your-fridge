@@ -1,15 +1,24 @@
-import {React ,useEffect, useState}  from 'react'
+import {React ,useEffect, useState, useContext}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
 import smiley from '../../images/facefood.png';
 import axios from 'axios';
+import FavoriteContext from "../Context/FavoriteContext";
+
+
+
 
 function RecipePop({recipeId}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
-  
- 
+  const { isFavorite, changeIsFavorite, favoriteContent, setFavoriteContent } = useContext(FavoriteContext);
+
+  //favorite content es lo que necesito en el favorite component///
+
+  // changeIsFavorite(true);
+  console.log(isFavorite);
+
     console.log(recipeId);
   
  function recipeDetails(id) {
@@ -26,8 +35,19 @@ function RecipePop({recipeId}) {
         })
   };
 
-  console.log(allInfo);//only need all info
- 
+  function SmileyClick(e) {
+    e.target.style.backgroundColor = 'yellow'
+    changeIsFavorite(!isFavorite);
+    if (isFavorite) {
+      setFavoriteContent(allInfo)
+   
+    } else {
+      setFavoriteContent('');
+    }
+  }
+
+  console.log(favoriteContent);
+
   useEffect(() => recipeDetails(recipeId), [recipeId]);
  
     return (
@@ -55,7 +75,7 @@ function RecipePop({recipeId}) {
           </Modal.Body>
           <Container >
 
-          <img src={smiley} alt="carita" onClick={(e) => e.target.style.backgroundColor='yellow'}></img>
+          <img src={smiley} alt="carita" onClick={SmileyClick}></img>
          
            <Stack direction="horizontal" gap={5} className="justify-content-center">
           <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>

@@ -14,6 +14,11 @@ export const FavoriteContextProvider = ({ children }) => {
 
     return (
 
-        
-    )
+        <FavoriteContext.Provider
+            value={{ isFavorite, changeIsFavorite, favoriteContent, setFavoriteContent }}>
+      
+            {children}
+        </FavoriteContext.Provider>
+   
+    );
 }
