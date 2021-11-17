@@ -1,5 +1,6 @@
 import {React ,useEffect, useState}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
+import smiley from '../../images/facefood.png';
 import axios from 'axios';
 
 function RecipePop({recipeId}) {
@@ -7,7 +8,9 @@ function RecipePop({recipeId}) {
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
-  console.log(recipeId);
+  
+ 
+    console.log(recipeId);
   
  function recipeDetails(id) {
       axios
@@ -22,7 +25,9 @@ function RecipePop({recipeId}) {
           setAllInfo(response.data);
         })
   };
-  
+
+  console.log(allInfo);//only need all info
+ 
   useEffect(() => recipeDetails(recipeId), [recipeId]);
  
     return (
@@ -49,11 +54,15 @@ function RecipePop({recipeId}) {
            
           </Modal.Body>
           <Container >
-          <Stack direction="horizontal" gap={5} className="justify-content-center">
+
+          <img src={smiley} alt="carita" onClick={(e) => e.target.style.backgroundColor='yellow'}></img>
+         
+           <Stack direction="horizontal" gap={5} className="justify-content-center">
           <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
           <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>
           <Button  variant="success" onClick={()=> window.open("https://www.pingodoce.pt/", "_blank")}>Pingo Doce</Button>
-          </Stack>
+            </Stack>
+           
           </Container>
         </Modal>
       </>
