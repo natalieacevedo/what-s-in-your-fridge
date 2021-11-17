@@ -25,6 +25,12 @@ const Navbar1 = () => {
                     <Nav.Link as={NavLink}  activeClassName="active" to="/recipes/" disabled>
                       <h3>Recipes</h3>
                     </Nav.Link>
+
+                    
+                    <Nav.Link as={NavLink}  activeClassName="active" to="/favorites/">
+                      <h3>Favorite</h3>
+                    </Nav.Link>
+
                   </Nav>
                 </Container>
               </Navbar>
