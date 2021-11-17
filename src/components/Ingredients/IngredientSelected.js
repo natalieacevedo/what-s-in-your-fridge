@@ -4,13 +4,17 @@ import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import "swiper/swiper.scss";
 import "../Home/homePage.css";
 import styles from "./ingredient.module.css";
+import { toast } from "react-toastify";
 
+toast.configure();
 function IngredientSelected({ ingredients, removeIngredient }) {
   const history = useHistory();
   console.log(ingredients);
-  function handleClick() {
-    alert("Select Ingredients");
-  }
+  const notify = () => {
+    toast.error("Please choose some ingredients", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
 
   return (
     <div>
@@ -45,11 +49,11 @@ function IngredientSelected({ ingredients, removeIngredient }) {
         <a className="btn-search">
           <span className="wave"></span>
           <span
-            className="text btn-search"
+            className="text btn-search btn"
             id="button-text-color"
             onClick={() =>
               ingredients.length <= 0
-                ? handleClick()
+                ? notify()
                 : history.push(`/recipes/${ingredients.join(",")}`)
             }
           >

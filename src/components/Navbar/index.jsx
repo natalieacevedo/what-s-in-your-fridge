@@ -11,26 +11,36 @@ const Navbar1 = () => {
           <a className="btn-nav" href="#">
             <span className="wave2"></span>
             <span className="text">
-              <Navbar variant="dark">
-                <Container>
-                  <Nav className="me-auto ">
-                    <Nav.Link
-                      className="my-navbar"
-                      as={NavLink}
-                      activeClassName="active"
-                      to="/ingredients/"
-                    >
-                      <h3>Ingredients</h3>
-                    </Nav.Link>
-                    <Nav.Link
-                      as={NavLink}
-                      activeClassName="active"
-                      to="/recipes/"
-                      disabled
-                    >
-                      <h3>Recipes</h3>
-                    </Nav.Link>
-                  </Nav>
+              <Navbar variant="dark" expand="sm">
+                <Container fluid>
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto " variant="pills">
+                      <Nav.Link
+                        className="my-navbar"
+                        as={NavLink}
+                        activeClassName="active"
+                        to="/ingredients/"
+                      >
+                        <h3>Ingredients</h3>
+                      </Nav.Link>
+                      <Nav.Link
+                        as={NavLink}
+                        activeClassName="active"
+                        to="/recipes/"
+                        disabled
+                      >
+                        <h3>Recipes</h3>
+                      </Nav.Link>
+                      <Nav.Link
+                        as={NavLink}
+                        activeClassName="active"
+                        to="/favorites/"
+                      >
+                        <h3>Favorite</h3>
+                      </Nav.Link>
+                    </Nav>
+                  </Navbar.Collapse>
                 </Container>
               </Navbar>
             </span>

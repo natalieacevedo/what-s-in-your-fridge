@@ -3,6 +3,8 @@ import IngredientRoot from "./components/Ingredients";
 import Home from "./components/Home";
 import Recipes from "./components/Recipes";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Favorite from "./components/Favorites/index";
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
           <IngredientRoot />
         </Route>
         <Route path="/recipes/:ingredients" component={Recipes} />
+        <Route path="/favorites">
+          <Favorite/>
+        </Route>
       </Switch>
     </>
   );

@@ -1,13 +1,17 @@
 import {React ,useEffect, useState}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
+import smiley from '../../images/facefood.png';
 import axios from 'axios';
+import "./Recipes-style.css"
 
 function RecipePop({recipeId}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
-  console.log(recipeId);
+  
+ 
+    console.log(recipeId);
   
  function recipeDetails(id) {
       axios
@@ -22,7 +26,9 @@ function RecipePop({recipeId}) {
           setAllInfo(response.data);
         })
   };
-  
+
+  console.log(allInfo);//only need all info
+ 
   useEffect(() => recipeDetails(recipeId), [recipeId]);
  
     return (
@@ -35,6 +41,7 @@ function RecipePop({recipeId}) {
           show={show}
           onHide={() => setShow(false)}
           size="lg"
+          centered
         >
           <Modal.Header closeButton>
             <Modal.Title >
@@ -42,18 +49,24 @@ function RecipePop({recipeId}) {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body >
-            <Image src={allInfo.image} fluid />
+            <div className="center-image">
+            <Image src={allInfo.image}  fluid />
+            </div>
             <p>{details} </p>
             <p> {allInfo.serving}</p>
-            <p>{allInfo.sourceUrl}</p>
+            <p><a href={allInfo.sourceUrl}>Let's make it!</a></p>
            
           </Modal.Body>
           <Container >
-          <Stack direction="horizontal" gap={5} className="justify-content-center">
+
+          <img src={smiley} alt="carita" onClick={(e) => e.target.style.backgroundColor='yellow'}></img>
+         
+           <Stack direction="horizontal" gap={5} className="justify-content-center">
           <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
           <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>
           <Button  variant="success" onClick={()=> window.open("https://www.pingodoce.pt/", "_blank")}>Pingo Doce</Button>
-          </Stack>
+            </Stack>
+           
           </Container>
         </Modal>
       </>
