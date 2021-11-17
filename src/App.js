@@ -5,10 +5,12 @@ import Recipes from "./components/Recipes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Favorite from "./components/Favorites/index";
 import 'react-toastify/dist/ReactToastify.css'
+import {FavoriteContextProvider } from "./components/Context/FavoriteContext";
+
 
 function App() {
   return (
-    <>
+    <FavoriteContextProvider>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -21,8 +23,8 @@ function App() {
           <Favorite/>
         </Route>
       </Switch>
-    </>
+      </FavoriteContextProvider>
   );
-}
+};
 
 export default App;
