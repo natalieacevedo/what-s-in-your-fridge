@@ -23,6 +23,7 @@ const Recipes = (props) => {
         return response.data;
       })
       .then((data) => {
+        console.log(data);
         updateRecipes(data);
       });
 
@@ -61,7 +62,7 @@ const Recipes = (props) => {
             
             </Card.Text>
                      <RecipePop missedIngredients={arrayWithMissedIngredients} recipe={el} recipeId={el.id}/>
-            </Card.Body>
+              </Card.Body>
         </Card>
             </>
             )}

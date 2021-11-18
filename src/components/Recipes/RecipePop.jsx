@@ -71,9 +71,9 @@ function RecipePop({recipe, missedIngredients}) {
               For two servings you are missing these ingredients:<br></br>
             </p>
             <ul className='listStyling'>
-            {missedIngredients.map(ingredient =><li>{ingredient}</li>)}
+            {missedIngredients && missedIngredients.map(ingredient =><li>{ingredient}</li>)}
             </ul>
-            <p><a className='centerLink' href={allInfo.sourceUrl}>Let's make it!</a></p>
+            <p><a target="_blank"className='centerLink' href={allInfo.sourceUrl}>Let's make it!</a></p>
            
           </Modal.Body>
           <Container >
