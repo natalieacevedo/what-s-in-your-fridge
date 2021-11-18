@@ -20,7 +20,6 @@ export const FavoriteContextProvider = ({ children }) => {
     }
 
     function removeFavorite(recipeId) {
-        // FIXME: remove from prev immutably
         setFavorites((prev) => {
             let newstate = { ...prev };
             delete newstate[recipeId];

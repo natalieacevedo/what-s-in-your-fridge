@@ -38,6 +38,7 @@ const meats = [
   "sausages",
   "chorizo",
   "duck",
+  "saitan"
 ];
 
 const fruits = [
@@ -61,6 +62,7 @@ const fruits = [
   "blueberries",
   "kiwifruit",
   "passionfruit",
+  "mamon"
 ];
 
 const grains = [
@@ -78,8 +80,8 @@ const grains = [
   "buckwheat",
   "quinoa",
   "arroz",
-  "flour",
-  "sugar",
+  "flour"
+ 
 ];
 
 const seafood = [
