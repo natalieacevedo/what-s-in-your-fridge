@@ -42,7 +42,7 @@ const Recipes = (props) => {
 <>
 <Navbar1 />
      
-      <Container>
+      <Container className="favourite-container">
         <Row >
              {recipes.map(el => 
              <>
@@ -54,12 +54,7 @@ const Recipes = (props) => {
             <Card.Title>{el.title}</Card.Title> 
             <Card.Text>
                        {`Discover how to cook ${el.title}, a meal all the family will love`}
-                       {/* <p>For two servings of this recipe you are missing the following ingredients:<br></br></p>
-                         <ul>
-                         {missedIngredients.map(el =>
-                           <li><strong> {el}, </strong></li>)}
-                         </ul> */}
-            
+                       
             </Card.Text>
                      <RecipePop missedIngredients={arrayWithMissedIngredients} recipe={el} recipeId={el.id}/>
               </Card.Body>

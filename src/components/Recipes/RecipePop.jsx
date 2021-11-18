@@ -86,20 +86,41 @@ function RecipePop({recipe, missedIngredients}) {
             <p><a target="_blank"className='centerLink' href={allInfo.sourceUrl}>Let's make it!</a></p>
            
           </Modal.Body>
-          <Container >
-          {/* <p className='whereToBuy'>Get your missing ingredients at: </p> */}
-            <Stack direction="horizontal" gap={5} className="justify-content-center">
-             
-          <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
-          <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>
-          <Button  variant="success" onClick={()=> window.open("https://www.pingodoce.pt/", "_blank")}>Pingo Doce</Button>
-            </Stack>
-           
-          </Container>
-        </Modal>
-      </>
-    );
-    }
+
   
   
+        <Container>
+
+          <Stack
+            direction="horizontal"
+            gap={5}
+            className="justify-content-center"
+          >
+            <Button
+              variant="white"
+              onClick={() => window.open("https://www.auchan.pt/", "_blank")}
+            >
+              <img src={auchan} alt="Auchan" width="40%" />
+            </Button>
+            <Button
+              variant="white"
+              onClick={() =>
+                window.open("https://www.continente.pt/", "_blank")
+              }
+            >
+              <img src={continente} alt="Continente" width="40%" />
+            </Button>
+            <Button
+              variant="white"
+              onClick={() => window.open("https://www.pingodoce.pt/", "_blank")}
+            >
+              <img src={pingodoce} alt="Pingo Doce" width="80%" />
+            </Button>
+          </Stack>
+        </Container>
+      </Modal>
+    </>
+  );
+}
+
 export default RecipePop;

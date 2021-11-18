@@ -12,16 +12,10 @@ function App() {
   return (
     <FavoriteContextProvider>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/ingredients/">
-          <IngredientRoot />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route path="/ingredients/" component={IngredientRoot} />
         <Route path="/recipes/:ingredients" component={Recipes} />
-        <Route path="/favorites">
-          <Favorite/>
-        </Route>
+        <Route path="/favorites" component={Favorite} />
       </Switch>
       </FavoriteContextProvider>
   );
