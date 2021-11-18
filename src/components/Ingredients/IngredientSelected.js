@@ -5,6 +5,10 @@ import "swiper/swiper.scss";
 import "../Home/homePage.css";
 import styles from "./ingredient.module.css";
 import { toast } from "react-toastify";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/modules/navigation/navigation.scss";
+
+SwiperCore.use([Navigation]);
 
 toast.configure();
 function IngredientSelected({ ingredients, removeIngredient }) {
@@ -22,11 +26,15 @@ function IngredientSelected({ ingredients, removeIngredient }) {
 
       <ul className={styles.selected_container}>
         <Swiper
+          className="swiper-test"
+          navigation={true}
+          spaceBetween={1}
           breakpoints={{
             320: { slidesPerView: 2 },
             375: { slidesPerView: 3 },
             480: { slidesPerView: 4 },
-            768: { slidesPerView: 5 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
           }}
         >
           {ingredients.map((el) => (
