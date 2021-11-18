@@ -29,8 +29,12 @@ const Recipes = (props) => {
   };
   
   useEffect(ListOfRecipes, [allIngredientsforTheRecipe]);
+
+
+  let arrayWithMissedIngredients = recipes.map(el => el.missedIngredients
+  .map(el => el.original)).flat();
  
- 
+  
   return (
 <>
 <Navbar1 />
@@ -46,9 +50,15 @@ const Recipes = (props) => {
             <Card.Body className="text-center">
             <Card.Title>{el.title}</Card.Title> 
             <Card.Text>
-            {`Discover how to cook ${el.title}, a meal all the family will love`}
+                       {`Discover how to cook ${el.title}, a meal all the family will love`}
+                       <p>For two servings of this recipe you are missing the following ingredients:<br></br></p>
+                         <ul>
+                         {arrayWithMissedIngredients.map(el =>
+                           <li><strong> {el}, </strong></li>)}
+                         </ul>
+            
             </Card.Text>
-                     <RecipePop recipeId={el.id}/>
+                     <RecipePop recipe={el} recipeId={el.id}/>
             </Card.Body>
         </Card>
             </>

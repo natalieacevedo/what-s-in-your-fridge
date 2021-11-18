@@ -1,23 +1,23 @@
-import {React ,useEffect, useState}  from 'react'
+import {React ,useEffect, useState, useContext}  from 'react'
 import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
 import smiley from '../../images/facefood.png';
+import smileyColor from '../../images/facefoodcolor.png';
 import axios from 'axios';
 import "./Recipes-style.css"
+import FavoriteContext from "../Context/FavoriteContext";
 
-function RecipePop({recipeId}) {
+function RecipePop({recipe}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
-  
- 
-    console.log(recipeId);
+  const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
+  const currentlyFavorite = isFavorite(recipe.id);
   
  function recipeDetails(id) {
       axios
         .get(`http://localhost:5000/api/recipe/${id}`)
         .then((response) => {
-         // console.log(response.data);
           let detailsWithNoTags = response.data.summary.replace(/<\/?[^>]+(>|$)/g, "");
           let indexOfInformationWeDontWant = detailsWithNoTags.indexOf( 'It is brought to you');
           let finalDetailsString = detailsWithNoTags.slice(0, indexOfInformationWeDontWant);
@@ -26,11 +26,18 @@ function RecipePop({recipeId}) {
           setAllInfo(response.data);
         })
   };
+      
+  useEffect(() => recipeDetails(recipe.id), [recipe.id]);
 
-  console.log(allInfo);//only need all info
- 
-  useEffect(() => recipeDetails(recipeId), [recipeId]);
- 
+  const SmileyClick = () => {
+    console.log(currentlyFavorite);
+    if (currentlyFavorite) {
+      removeFavorite(recipe.id);
+    } else {
+      addFavorite(recipe.id, recipe);
+    }
+  };
+
     return (
       <>
         <Button variant="danger" onClick={() => setShow(true)}>
@@ -59,8 +66,10 @@ function RecipePop({recipeId}) {
           </Modal.Body>
           <Container >
 
-          <img src={smiley} alt="carita" onClick={(e) => e.target.style.backgroundColor='yellow'}></img>
+            <img height='60px' width='60px'
+            src={currentlyFavorite ? smileyColor: smiley} alt="carita" onClick={SmileyClick}></img>
          
+            
            <Stack direction="horizontal" gap={5} className="justify-content-center">
           <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
           <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>
@@ -71,6 +80,7 @@ function RecipePop({recipeId}) {
         </Modal>
       </>
     );
-  }
+    }
   
-  export default RecipePop
+  
+export default RecipePop;
