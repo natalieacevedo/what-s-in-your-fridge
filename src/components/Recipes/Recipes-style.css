@@ -29,3 +29,39 @@
 	display: flex;
 	justify-content: center;
 }
+
+
+.modal-title{
+	margin: 0 auto;
+}
+
+.detailsParagraph {
+	margin: 2.5vw;
+	margin-bottom: 5vh;
+	font-size: 1.3rem;
+}
+
+.centerLink{
+	/* position: relative; */
+	
+	font-size: 2rem;
+	display: block; 
+	text-align: center;
+}
+
+.listStyling{
+	list-style-type: square !important;
+	padding-left: 5rem;
+	margin-top: -1.2rem;
+	background-color: '#ffffff';
+	margin-left: 3vw;
+	font-size: 1.2rem;
+}
+
+.whereToBuy{
+	text-align: center;
+	margin-top: -5vh;
+}
+a:visited {
+	color: purple;
+  }

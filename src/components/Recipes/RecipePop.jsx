@@ -6,11 +6,12 @@ import axios from 'axios';
 import "./Recipes-style.css"
 import FavoriteContext from "../Context/FavoriteContext";
 
-function RecipePop({recipe}) {
+function RecipePop({recipe, missedIngredients}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
+  console.log(missedIngredients);
   const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
   const currentlyFavorite = isFavorite(recipe.id);
   
@@ -54,23 +55,31 @@ function RecipePop({recipe}) {
             <Modal.Title >
               {allInfo.title}
             </Modal.Title>
+
+              {<img className='positioningFace'height='60px' width='60px'
+              src={currentlyFavorite ? smileyColor : smiley} alt="carita" onClick={SmileyClick}></img>}
+            
           </Modal.Header>
           <Modal.Body >
             <div className="center-image">
             <Image src={allInfo.image}  fluid />
             </div>
-            <p>{details} </p>
-            <p> {allInfo.serving}</p>
-            <p><a href={allInfo.sourceUrl}>Let's make it!</a></p>
+        
+            <p className='detailsParagraph'>
+              {details}<br></br>
+              {allInfo.serving}
+              For two servings you are missing these ingredients:<br></br>
+            </p>
+            <ul className='listStyling'>
+            {missedIngredients.map(ingredient =><li>{ingredient}</li>)}
+            </ul>
+            <p><a className='centerLink' href={allInfo.sourceUrl}>Let's make it!</a></p>
            
           </Modal.Body>
           <Container >
-
-            <img height='60px' width='60px'
-            src={currentlyFavorite ? smileyColor: smiley} alt="carita" onClick={SmileyClick}></img>
-         
-            
-           <Stack direction="horizontal" gap={5} className="justify-content-center">
+          {/* <p className='whereToBuy'>Get your missing ingredients at: </p> */}
+            <Stack direction="horizontal" gap={5} className="justify-content-center">
+             
           <Button onClick={()=> window.open("https://www.auchan.pt/", "_blank")}>Auchan</Button>
           <Button  variant="danger" onClick={()=> window.open("https://www.continente.pt/", "_blank")}>Continente</Button>
           <Button  variant="success" onClick={()=> window.open("https://www.pingodoce.pt/", "_blank")}>Pingo Doce</Button>

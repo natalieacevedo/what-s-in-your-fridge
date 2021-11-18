@@ -34,6 +34,8 @@ const Recipes = (props) => {
   let arrayWithMissedIngredients = recipes.map(el => el.missedIngredients
   .map(el => el.original)).flat();
  
+  console.log(arrayWithMissedIngredients);
+  
   
   return (
 <>
@@ -51,14 +53,14 @@ const Recipes = (props) => {
             <Card.Title>{el.title}</Card.Title> 
             <Card.Text>
                        {`Discover how to cook ${el.title}, a meal all the family will love`}
-                       <p>For two servings of this recipe you are missing the following ingredients:<br></br></p>
+                       {/* <p>For two servings of this recipe you are missing the following ingredients:<br></br></p>
                          <ul>
-                         {arrayWithMissedIngredients.map(el =>
+                         {missedIngredients.map(el =>
                            <li><strong> {el}, </strong></li>)}
-                         </ul>
+                         </ul> */}
             
             </Card.Text>
-                     <RecipePop recipe={el} recipeId={el.id}/>
+                     <RecipePop missedIngredients={arrayWithMissedIngredients} recipe={el} recipeId={el.id}/>
             </Card.Body>
         </Card>
             </>
