@@ -9,13 +9,13 @@ import continente from "../../images/continente.logo.png";
 import auchan from "../../images/auchangelogo.png";
 import pingodoce from "../../images/pingodocelogo.png";
 
-function RecipePop({ recipe }) {
+function RecipePop({recipe, missedIngredients}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
-  const { isFavorite, addFavorite, removeFavorite } =
-    useContext(FavoriteContext);
+  console.log(missedIngredients);
+  const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
   const currentlyFavorite = isFavorite(recipe.id);
 
   function recipeDetails(id) {
@@ -48,34 +48,47 @@ function RecipePop({ recipe }) {
     }
   };
 
-  return (
-    <>
-      <Button variant="danger" onClick={() => setShow(true)}>
-        Recipe
-      </Button>
+    return (
+      <>
+        <Button variant="danger" onClick={() => setShow(true)}>
+          Recipe
+        </Button>
+  
+        <Modal
+          show={show}
+          onHide={() => setShow(false)}
+          size="lg"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title >
+              {allInfo.title}
+            </Modal.Title>
 
-      <Modal show={show} onHide={() => setShow(false)} size="lg" centered>
-        <Modal.Header closeButton>
-          <Modal.Title>{allInfo.title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="center-image">
-            <Image src={allInfo.image} fluid />
-          </div>
-          <p>{details} </p>
-          <p> {allInfo.serving}</p>
-          <p>
-            <a href={allInfo.sourceUrl} target="_blank">Let's make it!</a>
-          </p>
-        </Modal.Body>
+              {<img className='positioningFace'height='60px' width='60px'
+              src={currentlyFavorite ? smileyColor : smiley} alt="carita" onClick={SmileyClick}></img>}
+            
+          </Modal.Header>
+          <Modal.Body >
+            <div className="center-image">
+            <Image src={allInfo.image}  fluid />
+            </div>
+        
+            <p className='detailsParagraph'>
+              {details}<br></br>
+              {allInfo.serving}
+              For two servings you are missing these ingredients:<br></br>
+            </p>
+            <ul className='listStyling'>
+            {missedIngredients && missedIngredients.map(ingredient =><li>{ingredient}</li>)}
+            </ul>
+            <p><a target="_blank"className='centerLink' href={allInfo.sourceUrl}>Let's make it!</a></p>
+           
+          </Modal.Body>
+
+  
+  
         <Container>
-          <img
-            height="60px"
-            width="60px"
-            src={currentlyFavorite ? smileyColor : smiley}
-            alt="carita"
-            onClick={SmileyClick}
-          ></img>
 
           <Stack
             direction="horizontal"
