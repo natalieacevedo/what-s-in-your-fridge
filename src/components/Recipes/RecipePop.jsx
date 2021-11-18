@@ -65,7 +65,7 @@ function RecipePop({ recipe }) {
           <p>{details} </p>
           <p> {allInfo.serving}</p>
           <p>
-            <a href={allInfo.sourceUrl}>Let's make it!</a>
+            <a href={allInfo.sourceUrl} target="_blank">Let's make it!</a>
           </p>
         </Modal.Body>
         <Container>
