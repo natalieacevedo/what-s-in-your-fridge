@@ -39,7 +39,7 @@ const Recipes = (props) => {
 <>
 <Navbar1 />
       <h2>Recipes</h2>
-      <Container>
+      <Container className="favourite-container">
         <Row >
              {recipes.map(el => 
              <>
