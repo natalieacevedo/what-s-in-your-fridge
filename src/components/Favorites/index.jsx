@@ -14,7 +14,7 @@ function Favorite() {
 
         <>
         <Navbar1 />
-              <h2>Favourites</h2>
+             
               <Container className="favourite-container">
                 {favorites ? (
                     <Row >

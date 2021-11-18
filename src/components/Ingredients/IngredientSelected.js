@@ -19,10 +19,10 @@ function IngredientSelected({ ingredients, removeIngredient }) {
       position: toast.POSITION.TOP_CENTER,
     });
   };
-
+ 
   return (
-    <div>
-      <h3 className={styles.ingredients_h3}>Selected ingredients:</h3>
+    <div style={{backgroundColor:"aliceblue"}}>
+      <h3 className={styles.ingredients_h3}>Selected Ingredients</h3>
 
       <ul className={styles.selected_container}>
         <Swiper

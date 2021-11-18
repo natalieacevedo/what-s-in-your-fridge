@@ -8,6 +8,7 @@ import FavoriteContext from "../Context/FavoriteContext";
 import continente from "../../images/continente.logo.png";
 import auchan from "../../images/auchangelogo.png";
 import pingodoce from "../../images/pingodocelogo.png";
+import styles from "./Recipes-style.css"
 
 function RecipePop({recipe, missedIngredients}) {
   const [show, setShow] = useState(false);
@@ -69,7 +70,7 @@ function RecipePop({recipe, missedIngredients}) {
               src={currentlyFavorite ? smileyColor : smiley} alt="carita" onClick={SmileyClick}></img>}
             
           </Modal.Header>
-          <Modal.Body >
+          <Modal.Body className={styles.modalBody} >
             <div className="center-image">
             <Image src={allInfo.image}  fluid />
             </div>

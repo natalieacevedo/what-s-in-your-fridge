@@ -37,7 +37,7 @@ const Navbar1 = () => {
                         activeClassName="active"
                         to="/favorites/"
                       >
-                        <h3>Favorite</h3>
+                        <h3>Favorites</h3>
                       </Nav.Link>
                     </Nav>
                   </Navbar.Collapse>

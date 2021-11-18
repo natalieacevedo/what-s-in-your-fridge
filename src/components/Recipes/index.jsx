@@ -41,7 +41,7 @@ const Recipes = (props) => {
   return (
 <>
 <Navbar1 />
-      <h2>Recipes</h2>
+     
       <Container>
         <Row >
              {recipes.map(el => 

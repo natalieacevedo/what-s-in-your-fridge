@@ -68,3 +68,15 @@
 a:visited {
 	color: purple;
   }
+
+  .card{
+	  background-color:rgb(184, 242, 253, 0.3);
+	  border: 2.5px solid rgba(0,0,0,.125);
+  }
+
+ 
+ .justify-content-center, .modal-body{background-color:rgb(215, 252, 253)}
+
+  .modal-header{background-color:rgb(251, 137, 128)}
+
+  .img-fluid{ border: 1px solid black;}
