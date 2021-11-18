@@ -438,7 +438,7 @@ a.btn-search:hover {
 
   .swiper-test {
     width: 80%;
-    height: 250px;
+    height: auto;
   }
 
   .swiper-slide {
