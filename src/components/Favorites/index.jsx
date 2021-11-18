@@ -7,44 +7,38 @@ import "../Recipes/Recipes-style.css"
 import FavoriteContext from "../Context/FavoriteContext";
 
 function Favorite() {
-
-    const arrayWithAllFavorite = []
-    
-    const { favoriteContent} = useContext(FavoriteContext);
-
-    if (favoriteContent['title']) {
-        
-    arrayWithAllFavorite.push([favoriteContent['title'], favoriteContent['image'], favoriteContent['sourceUrl']]);
-    
-    };
-
-    console.log(arrayWithAllFavorite);
-
-    
+    const { favorites } = useContext(FavoriteContext);
+    console.log(favorites);
+       
     return (
 
         <>
         <Navbar1 />
               <h2>Favourites</h2>
               <Container className="favourite-container">
-                <Row >
-                   
-                     <>
-                   <Card >
-                     <div className="new-overflow">
-                    <Card.Img className="custom-overflow "  />
-                      </div>            
-                    <Card.Body className="text-center">
-                    <Card.Title>title favourite Recipe</Card.Title> 
-                    <Card.Text>
-                    text of the favourite Recipe
-                    </Card.Text>
-                    <RecipePop />
-                    </Card.Body>
-                </Card>
-                    </>
-                    
-                 </Row>
+                {favorites ? (
+                    <Row >
+                        {Object.values(favorites).map(el =>
+                            <>
+                                <Card >
+                                    <div className="new-overflow">
+                                        <Card.Img className="custom-overflow" src={el.image} />
+                                    </div>
+                                    <Card.Body className="text-center">
+                                        <Card.Title>{el.title}</Card.Title>
+                                        <Card.Text>
+                                            {el.description}
+                                        </Card.Text>
+                                        <RecipePop recipe={el} />
+                                    </Card.Body>
+                                </Card>
+                            </>
+                        )}
+                    </Row>
+                ) : (
+                    <p>You don't have any favorites yet</p>       
+                )
+                }
               </Container>
               <Footer />
           </>

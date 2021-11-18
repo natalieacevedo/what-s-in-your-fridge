@@ -7,16 +7,31 @@ export default FavoriteContext;
 
 export const FavoriteContextProvider = ({ children }) => {
 
-    const [isFavorite, changeIsFavorite] = useState(false);
-    const [favoriteContent, setFavoriteContent] = useState([]);
-    
+    const [favorites, setFavorites] = useState({});
 
+    const isFavorite = (recipeId) => favorites.hasOwnProperty(recipeId);
+
+    function addFavorite(recipeId, recipe) {
+        setFavorites((prev) => {
+            let newstate = { ...prev };
+            newstate[recipeId] = recipe;
+            return newstate;
+        });
+    }
+
+    function removeFavorite(recipeId) {
+        // FIXME: remove from prev immutably
+        setFavorites((prev) => {
+            let newstate = { ...prev };
+            delete newstate[recipeId];
+            return newstate;
+        })
+    }
 
     return (
 
         <FavoriteContext.Provider
-            value={{ isFavorite, changeIsFavorite, favoriteContent, setFavoriteContent }}>
-      
+            value={{ favorites, isFavorite, addFavorite, removeFavorite }}>
             {children}
         </FavoriteContext.Provider>
    

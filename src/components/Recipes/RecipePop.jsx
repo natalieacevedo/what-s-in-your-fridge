@@ -6,20 +6,18 @@ import axios from 'axios';
 import "./Recipes-style.css"
 import FavoriteContext from "../Context/FavoriteContext";
 
-function RecipePop({recipeId}) {
+function RecipePop({recipe}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
 
-  const { isFavorite, changeIsFavorite, favoriteContent, setFavoriteContent } = useContext(FavoriteContext);
-
-    console.log(recipeId);
+  const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
+  const currentlyFavorite = isFavorite(recipe.id);
   
  function recipeDetails(id) {
       axios
         .get(`http://localhost:5000/api/recipe/${id}`)
         .then((response) => {
-         // console.log(response.data);
           let detailsWithNoTags = response.data.summary.replace(/<\/?[^>]+(>|$)/g, "");
           let indexOfInformationWeDontWant = detailsWithNoTags.indexOf( 'It is brought to you');
           let finalDetailsString = detailsWithNoTags.slice(0, indexOfInformationWeDontWant);
@@ -28,25 +26,18 @@ function RecipePop({recipeId}) {
           setAllInfo(response.data);
         })
   };
+      
+  useEffect(() => recipeDetails(recipe.id), [recipe.id]);
 
-  function SmileyClick(e) {
-    // console.log(isFavorite);
-    // changeIsFavorite(!isFavorite);
+  const SmileyClick = () => {
+    console.log(currentlyFavorite);
+    if (currentlyFavorite) {
+      removeFavorite(recipe.id);
+    } else {
+      addFavorite(recipe.id, recipe);
+    }
+  };
 
-    // if (isFavorite) {
-    //   setFavoriteContent(allInfo);
-    // } else {
-    //   setFavoriteContent('');
-    // }
-    setFavoriteContent([allInfo.title, allInfo.sourceUrl, allInfo.image]);
-
-  }
-
-  console.log(favoriteContent);
-  console.log(allInfo);
-
-  useEffect(() => recipeDetails(recipeId), [recipeId]);
- 
     return (
       <>
         <Button variant="danger" onClick={() => setShow(true)}>
@@ -76,7 +67,7 @@ function RecipePop({recipeId}) {
           <Container >
 
             <img height='60px' width='60px'
-            src={isFavorite ? smileyColor: smiley} alt="carita" onClick={SmileyClick}></img>
+            src={currentlyFavorite ? smileyColor: smiley} alt="carita" onClick={SmileyClick}></img>
          
             
            <Stack direction="horizontal" gap={5} className="justify-content-center">
@@ -89,6 +80,7 @@ function RecipePop({recipeId}) {
         </Modal>
       </>
     );
-  }
+    }
   
-  export default RecipePop
+  
+export default RecipePop;

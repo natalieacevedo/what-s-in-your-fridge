@@ -30,12 +30,11 @@ const Recipes = (props) => {
   
   useEffect(ListOfRecipes, [allIngredientsforTheRecipe]);
 
+
   let arrayWithMissedIngredients = recipes.map(el => el.missedIngredients
-    .map(el => el.original)).flat();
+  .map(el => el.original)).flat();
  
-  console.log(recipes);
-  console.log(arrayWithMissedIngredients);
- 
+  
   return (
 <>
 <Navbar1 />
@@ -59,7 +58,7 @@ const Recipes = (props) => {
                          </ul>
             
             </Card.Text>
-                     <RecipePop recipeId={el.id}/>
+                     <RecipePop recipe={el} recipeId={el.id}/>
             </Card.Body>
         </Card>
             </>
