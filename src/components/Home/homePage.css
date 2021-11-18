@@ -37,7 +37,6 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 2px;
 }
 
 button.btn {
@@ -87,6 +86,78 @@ h3 {
   margin-bottom: 3rem;
 }
 
+/* ----------- FROM HERE IS SWIPER CSS ------------- */
+.swiper-button-prev {
+  color: red !important;
+}
+
+.swiper-button-next {
+  color: red !important;
+}
+.swiper-items {
+  width: 70% !important;
+}
+
+.navigation {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 30%;
+  z-index: 10;
+}
+/* .arrow1Cointainer {
+  flex: 1;
+}
+.arrow2Cointainer {
+  flex: 1;
+} 
+.arrows {
+  color: red;
+  font-size: 36px;
+}
+.swiper-button-disabled {
+  opacity: 0.3;
+} */
+.swiper {
+  width: 80%;
+}
+
+.swiper-test {
+  width: 90%;
+  height: 150px;
+}
+
+.swiper-search {
+  width: 90%;
+  height: 120px;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 60% !important;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: 0px !important;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 60% !important;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: 0px !important;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /*  BUTTON styles from here */
 
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
@@ -245,8 +316,9 @@ a.btn-search:hover {
     0 6px 10px 5px rgba(0, 0, 0, 0.12), 0 8px 5px -5px rgba(0, 0, 0, 0.3);
 }
 
-/* ----------- FROM HERE IS MEDIA QUERIES ----------- */
+/*////// ----------- FROM HERE IS MEDIA QUERIES -----------///// */
 
+/* ----------- TABLET VERSION FROM HERE -------------- */
 @media screen and (min-width: 768px) {
   .total-container {
     background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png")
@@ -296,8 +368,16 @@ a.btn-search:hover {
   .accordion-button {
     border-radius: 12px !important;
   }
-}
+  .swiper {
+    width: 90%;
+  }
 
+  .swiper-test {
+    width: 80%;
+    height: 100px;
+  }
+}
+/*------------ DESKTOP VERSION FROM HERE ---------*/
 @media screen and (min-width: 1024px) {
   .total-container {
     background: url("https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png")
@@ -334,11 +414,69 @@ a.btn-search:hover {
   .accordion-body {
     margin-left: 50px !important;
   }
-}
 
-/* @media screen and (max-width: 480px) {
-  .accordion-body {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)) !important;
+  .search-ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-} */
+
+  .swiper-button-next {
+    left: auto;
+  }
+  .swiper-button-prev {
+    left: 0 !important;
+    right: auto;
+  }
+  .swiper {
+    width: 80%;
+  }
+
+  .swiper-test {
+    width: 80%;
+    height: 250px;
+  }
+
+  .swiper-slide {
+    width: 20px;
+    margin-left: 50px;
+    margin-right: 1px;
+  }
+
+  .swiper-search {
+    width: 90%;
+    height: auto;
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    top: 30% !important;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    top: 30% !important;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  }
+}

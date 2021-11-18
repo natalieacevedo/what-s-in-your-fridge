@@ -62,11 +62,45 @@
   color: black;
 }
 
+.ingredient_selected {
+  display: inline-table;
+  width: 10vw;
+  white-space: nowrap;
+  font-size: 1em;
+  text-align: center;
+  padding: 1vw;
+  -webkit-box-shadow: 3px 3px 4px 5px #ccc;
+  height: 1rem;
+  margin-bottom: 1em;
+  border-radius: 50px;
+  background-color: rgb(235, 25, 25);
+  color: white;
+}
+
+/* ------------ DESKTOP MEDIA QUERIES SWIPER BOXES ----------- */
 @media screen and (min-width: 1024px) {
   .ingredients_h3 {
     margin-top: 5% !important;
   }
 
+  .ingredient_selected {
+    display: inline-table;
+    width: 10vw;
+    white-space: nowrap;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1vw;
+    -webkit-box-shadow: 3px 3px 4px 5px #ccc;
+    height: 1rem;
+    margin-bottom: 1em;
+    border-radius: 50px;
+    background-color: rgb(235, 25, 25);
+    color: white;
+  }
+}
+
+/* ------------ TABLET MEDIA QUERIES SWIPER BOXES ----------- */
+@media screen and (min-width: 768px) {
   .ingredient_selected {
     display: inline-table;
     width: 10vw;

@@ -1,13 +1,11 @@
 import React from "react";
 import AccordionFunctionality from "./Accordion";
-import {
-  Swiper,
-  SwiperSlide,
-  Navigation,
-  Pagination,
-  Scrollbar,
-} from "swiper/react/swiper-react.js";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
+import SwiperCore, { Navigation } from "swiper";
 import "swiper/swiper.scss";
+import "swiper/modules/navigation/navigation.scss";
+
+SwiperCore.use([Navigation]);
 
 function IngredientsList({
   ingredients,
@@ -15,6 +13,7 @@ function IngredientsList({
   selectIngredient,
   removeIngredient,
 }) {
+  const navigation = { prevEl: ".arrow1", nextEl: ".arrow2" };
   const items = ingredients.map((el) => {
     let selected = selectedIngredients.indexOf(el.name) !== -1;
     const onClick = () => {
@@ -39,8 +38,34 @@ function IngredientsList({
     <div>
       <h1>Choose Ingredients Please</h1>
 
-      <ul>
-        <Swiper slidesPerView={5}>{items}</Swiper>
+      <ul className="search-ul">
+        <Swiper
+          spaceBetween={1}
+          className="swiper-search"
+          navigation={true}
+          breakpoints={{
+            320: { slidesPerView: 2 },
+            375: { slidesPerView: 2 },
+            480: { slidesPerView: 3 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
+          }}
+        >
+          <div className="swiper-items">{items}</div>
+          {/* <div className="navigation">
+            <div className="arrow1Cointainer">
+              <div className="arrow1">
+                <span class="material-icons arrows">arrow_back_ios</span>
+              </div>
+            </div>
+            <div className="arrow2Cointainer">
+              <div className="arrow2">
+                {" "}
+                <span class="material-icons arrows">arrow_forward_ios</span>
+              </div>
+            </div>
+          </div> */}
+        </Swiper>
       </ul>
 
       <AccordionFunctionality
