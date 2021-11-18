@@ -1,10 +1,13 @@
-import {React ,useEffect, useState, useContext}  from 'react'
-import { Modal, Button, Image, Container, Stack } from 'react-bootstrap'
-import smiley from '../../images/facefood.png';
-import smileyColor from '../../images/facefoodcolor.png';
-import axios from 'axios';
-import "./Recipes-style.css"
+import { React, useEffect, useState, useContext } from "react";
+import { Modal, Button, Image, Container, Stack } from "react-bootstrap";
+import smiley from "../../images/facefood.png";
+import smileyColor from "../../images/facefoodcolor.png";
+import axios from "axios";
+import "./Recipes-style.css";
 import FavoriteContext from "../Context/FavoriteContext";
+import continente from "../../images/continente.logo.png";
+import auchan from "../../images/auchangelogo.png";
+import pingodoce from "../../images/pingodocelogo.png";
 
 function RecipePop({recipe, missedIngredients}) {
   const [show, setShow] = useState(false);
@@ -14,20 +17,26 @@ function RecipePop({recipe, missedIngredients}) {
   console.log(missedIngredients);
   const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
   const currentlyFavorite = isFavorite(recipe.id);
-  
- function recipeDetails(id) {
-      axios
-        .get(`http://localhost:5000/api/recipe/${id}`)
-        .then((response) => {
-          let detailsWithNoTags = response.data.summary.replace(/<\/?[^>]+(>|$)/g, "");
-          let indexOfInformationWeDontWant = detailsWithNoTags.indexOf( 'It is brought to you');
-          let finalDetailsString = detailsWithNoTags.slice(0, indexOfInformationWeDontWant);
-          
-          setDetails(finalDetailsString);
-          setAllInfo(response.data);
-        })
-  };
-      
+
+  function recipeDetails(id) {
+    axios.get(`http://localhost:5000/api/recipe/${id}`).then((response) => {
+      let detailsWithNoTags = response.data.summary.replace(
+        /<\/?[^>]+(>|$)/g,
+        ""
+      );
+      let indexOfInformationWeDontWant = detailsWithNoTags.indexOf(
+        "It is brought to you"
+      );
+      let finalDetailsString = detailsWithNoTags.slice(
+        0,
+        indexOfInformationWeDontWant
+      );
+
+      setDetails(finalDetailsString);
+      setAllInfo(response.data);
+    });
+  }
+
   useEffect(() => recipeDetails(recipe.id), [recipe.id]);
 
   const SmileyClick = () => {
