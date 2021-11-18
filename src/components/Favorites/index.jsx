@@ -26,7 +26,7 @@ function Favorite() {
         <>
         <Navbar1 />
               <h2>Favourites</h2>
-              <Container>
+              <Container className="favourite-container">
                 <Row >
                    
                      <>

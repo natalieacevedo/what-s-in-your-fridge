@@ -11,11 +11,11 @@ const Navbar1 = () => {
           <a className="btn-nav" href="#">
             <span className="wave2"></span>
             <span className="text">
-              <Navbar variant="dark" expand="sm">
+              <Navbar variant="dark" expand="sm" >
                 <Container fluid>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                  <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto " variant="pills">
+                  <Navbar.Collapse id="basic-navbar-nav" >
+                    <Nav  justify variant="pills" className="m-auto">
                       <Nav.Link
                         className="my-navbar"
                         as={NavLink}
