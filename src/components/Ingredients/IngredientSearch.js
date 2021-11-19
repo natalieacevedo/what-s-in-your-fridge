@@ -8,7 +8,7 @@ function IngredientSearch({ searchIngredients }) {
   return (
     <div className="search-div">
       <img
-        src="https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d3ad4f50ad68463d3b5b7/download/newtestlogo.png"
+        src="https://trello.com/1/cards/61969b6238caf307d4f81dad/attachments/61977224e8b35b6a6b128caa/download/finallogobig1newsize.pngg"
         width="50%"
         height="50%"
         alt="so...what's in your fridge ?"

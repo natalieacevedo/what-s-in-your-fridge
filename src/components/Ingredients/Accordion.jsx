@@ -38,7 +38,7 @@ const meats = [
   "sausages",
   "chorizo",
   "duck",
-  "saitan"
+  "saitan",
 ];
 
 const fruits = [
@@ -62,7 +62,7 @@ const fruits = [
   "blueberries",
   "kiwifruit",
   "passionfruit",
-  "mamon"
+  "mamon",
 ];
 
 const grains = [
@@ -80,8 +80,7 @@ const grains = [
   "buckwheat",
   "quinoa",
   "arroz",
-  "flour"
- 
+  "flour",
 ];
 
 const seafood = [
@@ -115,15 +114,13 @@ function AccordionFunctionality({
 
       const onClick = (e) => {
         e.preventDefault();
-        
+
         if (isSelected) {
           removeIngredient(e.target.textContent);
         } else {
           selectIngredient(e.target.textContent);
         }
       };
-
-     
 
       return (
         <ul className={styles.wrapper}>
@@ -139,30 +136,36 @@ function AccordionFunctionality({
       );
     });
   }
-  
+
   return (
-  
     <div>
-      <Accordion flush >
-        <Accordion.Item eventKey="0" className="accordion-item">
+      <Accordion flush>
+        <Accordion.Item
+          eventKey="0"
+          className="accordion-item"
+          style={{ backgroundColor: "aliceblue" }}
+        >
           <Accordion.Header>Vegetables</Accordion.Header>
-          <Accordion.Body className="Accordion-body">
+          <Accordion.Body
+            className="Accordion-body"
+            style={{ backgroundColor: "aliceblue" }}
+          >
             {acordionItems(vegetables)}
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="1">
+        <Accordion.Item eventKey="1" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>Meat</Accordion.Header>
           <Accordion.Body>{acordionItems(meats)}</Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="2">
+        <Accordion.Item eventKey="2" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>Fruits</Accordion.Header>
-          <Accordion.Body  >{acordionItems(fruits)}</Accordion.Body>
+          <Accordion.Body>{acordionItems(fruits)}</Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="3">
+        <Accordion.Item eventKey="3" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>Grains</Accordion.Header>
           <Accordion.Body>{acordionItems(grains)}</Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="4">
+        <Accordion.Item eventKey="4" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>SeaFood</Accordion.Header>
           <Accordion.Body>{acordionItems(seafood)}</Accordion.Body>
         </Accordion.Item>

@@ -18,11 +18,11 @@
   justify-content: center;
   margin-left: 5%;
   padding-top: 0%;
-  /* width: 100%;
+  /* width: 100%; 
   height: 100%; */
 }
 #fridge-img {
-  width: 150%;
+  width: 100%;
   height: 100%;
 }
 
@@ -62,7 +62,7 @@ h1 {
   margin-top: 1rem;
   border-radius: 10px;
   padding: 0.4rem;
-  background-color: rgb( 254, 238, 237 );
+  background-color: rgb(254, 238, 237);
 }
 
 .checkbox-checkmark-box {
@@ -76,15 +76,24 @@ h3 {
 
 .home-button-text-color {
   text-decoration: none;
-  color: white;
+  color: white !important;
 }
 
 .home-button-text-color:hover {
-  color: rgb(241, 146, 146);
+  color: rgb(241, 146, 146) !important;
 }
 
 .home-button-container {
   margin-bottom: 3rem;
+}
+
+#desktop-img {
+  padding-top: 5%;
+  width: 60%;
+}
+
+.accordion-button {
+  background-color: #d6e6f4 !important;
 }
 
 /* ----------- FROM HERE IS SWIPER CSS ------------- */
@@ -187,7 +196,7 @@ a.btn {
 }
 
 #button-text-color {
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 
@@ -333,7 +342,7 @@ a.btn-search:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-left: 5%;
+
     padding-top: 0%;
     width: 100%;
     height: 100%;
@@ -377,6 +386,15 @@ a.btn-search:hover {
     width: 80%;
     height: 100px;
   }
+  #desktop-img {
+    width: 50%;
+    padding-top: 4%;
+  }
+  #fridge-img {
+    width: 60%;
+    height: 50%;
+    margin-top: 5%;
+  }
 }
 /*------------ DESKTOP VERSION FROM HERE ---------*/
 @media screen and (min-width: 1024px) {
@@ -388,14 +406,16 @@ a.btn-search:hover {
   }
 
   #fridge-img {
-    width: 80%;
-    height: 100%;
-    margin-top: 5%;
+    width: 100vh;
+
+    /* margin-top: 5%;
+    margin-right: 20px; */
   }
 
   #desktop-img {
-    width: 26%;
-    height: 26%;
+    padding-top: 3%;
+    width: 28%;
+    height: 28%;
   }
 
   .search-input {
@@ -413,7 +433,7 @@ a.btn-search:hover {
     margin-right: 26%;
   }
   .accordion-body {
-    margin-left: 50px !important;
+    padding-left: 50px !important;
   }
 
   .search-ul {

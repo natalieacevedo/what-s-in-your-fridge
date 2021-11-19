@@ -7,7 +7,7 @@ const Home = () => {
     <div className="total-container">
       <div className="img-container">
         <img
-          src="https://trello.com/1/cards/61718dc0f612505e8ac74380/attachments/61718dd8fec2405241a934c8/download/first_idea_logo.png"
+          src="https://trello.com/1/cards/61969b6238caf307d4f81dad/attachments/61977224e8b35b6a6b128caa/download/finallogobig1newsize.png"
           alt="What's in your fridge?"
           id="fridge-img"
         />
