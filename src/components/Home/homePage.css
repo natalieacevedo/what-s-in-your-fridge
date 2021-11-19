@@ -62,6 +62,7 @@ h1 {
   margin-top: 1rem;
   border-radius: 10px;
   padding: 0.4rem;
+  background-color: rgb( 254, 238, 237 );
 }
 
 .checkbox-checkmark-box {

@@ -115,7 +115,7 @@ function AccordionFunctionality({
 
       const onClick = (e) => {
         e.preventDefault();
-
+        
         if (isSelected) {
           removeIngredient(e.target.textContent);
         } else {
