@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import  React from "react";
 import { Accordion } from "react-bootstrap";
 import styles from "./ingredient.module.css";
 import "../../checkbox.scss";
@@ -38,7 +38,6 @@ const meats = [
   "sausages",
   "chorizo",
   "duck",
-  "saitan"
 ];
 
 const fruits = [
@@ -62,7 +61,6 @@ const fruits = [
   "blueberries",
   "kiwifruit",
   "passionfruit",
-  "mamon"
 ];
 
 const grains = [
@@ -80,8 +78,8 @@ const grains = [
   "buckwheat",
   "quinoa",
   "arroz",
-  "flour"
- 
+  "flour",
+  "sugar",
 ];
 
 const seafood = [
@@ -107,7 +105,6 @@ function AccordionFunctionality({
   removeIngredient,
   selectedIngredients,
 }) {
-  console.log(selectedIngredients);
 
   function acordionItems(arr) {
     return arr.map((el) => {
@@ -115,7 +112,7 @@ function AccordionFunctionality({
 
       const onClick = (e) => {
         e.preventDefault();
-        
+
         if (isSelected) {
           removeIngredient(e.target.textContent);
         } else {
@@ -123,7 +120,7 @@ function AccordionFunctionality({
         }
       };
 
-     
+      //if (selectedIngredients.indexOf(el) === -1) { el.style.backgroundColor = '' };
 
       return (
         <ul className={styles.wrapper}>
@@ -139,11 +136,11 @@ function AccordionFunctionality({
       );
     });
   }
-  
+
   return (
-  
+    //< className={`post-wrapper ${this.state.loading ? 'post-wrapper--loading' : ''}`}>
     <div>
-      <Accordion flush >
+      <Accordion flush>
         <Accordion.Item eventKey="0" className="accordion-item">
           <Accordion.Header>Vegetables</Accordion.Header>
           <Accordion.Body className="Accordion-body">
@@ -156,7 +153,7 @@ function AccordionFunctionality({
         </Accordion.Item>
         <Accordion.Item eventKey="2">
           <Accordion.Header>Fruits</Accordion.Header>
-          <Accordion.Body  >{acordionItems(fruits)}</Accordion.Body>
+          <Accordion.Body>{acordionItems(fruits)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
           <Accordion.Header>Grains</Accordion.Header>

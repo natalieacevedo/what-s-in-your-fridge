@@ -66,7 +66,7 @@ function RecipePop({recipe, missedIngredients}) {
               {allInfo.title}
             </Modal.Title>
 
-              {<img className='positioningFace'height='60px' width='60px'
+              {<img className='positioningFace smile'height='60px' width='60px'
               src={currentlyFavorite ? smileyColor : smiley} alt="carita" onClick={SmileyClick}></img>}
             
           </Modal.Header>
@@ -78,10 +78,10 @@ function RecipePop({recipe, missedIngredients}) {
             <p className='detailsParagraph'>
               {details}<br></br>
               {allInfo.serving}
-              For two servings you are missing these ingredients:<br></br>
-            </p>
-            <ul className='listStyling'>
-            {missedIngredients && missedIngredients.map(ingredient =><li>{ingredient}</li>)}
+              <p className="missingIngredients">For two servings you are missing these ingredients:</p>
+            </p> 
+            <ul className='listStyling '>
+            {missedIngredients && missedIngredients.map(ingredient =><li className="bulletPoints">{ingredient}</li>)}
             </ul>
             <p><a target="_blank"className='centerLink' href={allInfo.sourceUrl}>Let's make it!</a></p>
            
@@ -89,7 +89,7 @@ function RecipePop({recipe, missedIngredients}) {
 
   
   
-        <Container>
+        <Container className="modal-body">
 
           <Stack
             direction="horizontal"

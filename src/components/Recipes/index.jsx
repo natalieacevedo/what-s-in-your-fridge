@@ -23,7 +23,6 @@ const Recipes = (props) => {
         return response.data;
       })
       .then((data) => {
-        console.log(data);
         updateRecipes(data);
       });
 
@@ -35,13 +34,11 @@ const Recipes = (props) => {
   let arrayWithMissedIngredients = recipes.map(el => el.missedIngredients
   .map(el => el.original)).flat();
  
-  console.log(arrayWithMissedIngredients);
-  
   
   return (
 <>
 <Navbar1 />
-     
+      <h2>Recipes</h2>
       <Container className="favourite-container">
         <Row >
              {recipes.map(el => 
@@ -54,10 +51,10 @@ const Recipes = (props) => {
             <Card.Title>{el.title}</Card.Title> 
             <Card.Text>
                        {`Discover how to cook ${el.title}, a meal all the family will love`}
-                       
+                    
             </Card.Text>
                      <RecipePop missedIngredients={arrayWithMissedIngredients} recipe={el} recipeId={el.id}/>
-              </Card.Body>
+            </Card.Body>
         </Card>
             </>
             )}

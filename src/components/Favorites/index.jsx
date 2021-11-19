@@ -8,13 +8,12 @@ import FavoriteContext from "../Context/FavoriteContext";
 
 function Favorite() {
     const { favorites } = useContext(FavoriteContext);
-    console.log(favorites);
        
     return (
 
         <>
         <Navbar1 />
-             
+              <h2>Favourites</h2>
               <Container className="favourite-container">
                 {favorites ? (
                     <Row >
@@ -35,9 +34,9 @@ function Favorite() {
                             </>
                         )}
                     </Row>
-                ) : (
-                    <p>You don't have any favorites yet</p>       
-                )
+                ) : 
+                    (<p>You don't have any favorites yet</p>)       
+                
                 }
               </Container>
               <Footer />
