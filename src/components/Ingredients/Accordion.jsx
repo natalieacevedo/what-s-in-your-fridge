@@ -147,26 +147,26 @@ function AccordionFunctionality({
           <Accordion.Header>Vegetables</Accordion.Header>
           <Accordion.Body
             className="Accordion-body"
-            style={{ backgroundColor: "aliceblue" }}
+            style={{ backgroundColor: "#ddefff" }}
           >
             {acordionItems(vegetables)}
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>Meat</Accordion.Header>
-          <Accordion.Body>{acordionItems(meats)}</Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: "#ddefff" }}>{acordionItems(meats)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>Fruits</Accordion.Header>
-          <Accordion.Body>{acordionItems(fruits)}</Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: "#ddefff" }} >{acordionItems(fruits)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>Grains</Accordion.Header>
-          <Accordion.Body>{acordionItems(grains)}</Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: "#ddefff" }} >{acordionItems(grains)}</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4" style={{ backgroundColor: "aliceblue" }}>
           <Accordion.Header>SeaFood</Accordion.Header>
-          <Accordion.Body>{acordionItems(seafood)}</Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: "#ddefff" }} >{acordionItems(seafood)}</Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </div>

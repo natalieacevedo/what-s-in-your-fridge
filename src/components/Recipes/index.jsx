@@ -38,7 +38,8 @@ const Recipes = (props) => {
   return (
 <>
 <Navbar1 />
-      <h2>Recipes</h2>
+      <br></br>
+      <br></br>
       <Container className="favourite-container">
         <Row >
              {recipes.map(el => 

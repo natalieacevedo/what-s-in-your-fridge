@@ -78,7 +78,7 @@ function RecipePop({recipe, missedIngredients}) {
             <p className='detailsParagraph'>
               {details}<br></br>
               {allInfo.serving}
-              <p className="missingIngredients">For two servings you are missing these ingredients:</p>
+              <p>For two servings you are missing these ingredients:</p>
             </p> 
             <ul className='listStyling '>
             {missedIngredients && missedIngredients.map(ingredient =><li className="bulletPoints">{ingredient}</li>)}

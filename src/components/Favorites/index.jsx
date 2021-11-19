@@ -13,9 +13,10 @@ function Favorite() {
 
         <>
         <Navbar1 />
-              <h2>Favourites</h2>
+          <br></br>    
+          <br></br>    
               <Container className="favourite-container">
-                {favorites ? (
+                {Object.values(favorites).length > 0 ? (
                     <Row >
                         {Object.values(favorites).map(el =>
                             <>
@@ -35,7 +36,7 @@ function Favorite() {
                         )}
                     </Row>
                 ) : 
-                    (<p>You don't have any favorites yet</p>)       
+                <h1>You don't have any favourites yet</h1> 
                 
                 }
               </Container>
