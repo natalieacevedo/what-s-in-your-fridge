@@ -6,6 +6,7 @@ import RecipePop from "../Recipes/RecipePop";
 import "../Recipes/Recipes-style.css"
 import FavoriteContext from "../Context/FavoriteContext";
 
+
 function Favorite() {
     const { favorites } = useContext(FavoriteContext);
        

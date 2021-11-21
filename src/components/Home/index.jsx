@@ -1,13 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./homePage.css";
+import HomeImage from "../../images/finallogobig1newsize.png"
 
 const Home = () => {
   return (
     <div className="total-container">
       <div className="img-container">
         <img
-          src="https://trello.com/1/cards/61969b6238caf307d4f81dad/attachments/61977224e8b35b6a6b128caa/download/finallogobig1newsize.png"
+          // src="https://trello.com/1/cards/61969b6238caf307d4f81dad/attachments/61977224e8b35b6a6b128caa/download/finallogobig1newsize.png"
+          src={HomeImage}
           alt="What's in your fridge?"
           id="fridge-img"
         />
