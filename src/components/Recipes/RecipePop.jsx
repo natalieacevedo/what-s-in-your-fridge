@@ -14,13 +14,17 @@ function RecipePop({recipe, missedIngredients}) {
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
   const [allInfo, setAllInfo] = useState([]);
+  const { key } = useContext(FavoriteContext);
 
   console.log(missedIngredients);
   const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
   const currentlyFavorite = isFavorite(recipe.id);
 
+  
+
   function recipeDetails(id) {
-    axios.get(`http://localhost:5000/api/recipe/${id}`).then((response) => {
+    axios.get(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${key}`)
+      .then((response) => {
       let detailsWithNoTags = response.data.summary.replace(
         /<\/?[^>]+(>|$)/g,
         ""

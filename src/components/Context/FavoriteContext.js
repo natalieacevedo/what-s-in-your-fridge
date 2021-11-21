@@ -6,6 +6,7 @@ const FavoriteContext = createContext({});
 export default FavoriteContext;
 
 export const FavoriteContextProvider = ({ children }) => {
+    const key = '9a80ca7559ae40028969f263ebab42a0';
 
     const [favorites, setFavorites] = useState({});
 
@@ -30,7 +31,7 @@ export const FavoriteContextProvider = ({ children }) => {
     return (
 
         <FavoriteContext.Provider
-            value={{ favorites, isFavorite, addFavorite, removeFavorite }}>
+            value={{ favorites, isFavorite, addFavorite, removeFavorite,key }}>
             {children}
         </FavoriteContext.Provider>
    

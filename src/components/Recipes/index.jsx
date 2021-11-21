@@ -1,25 +1,28 @@
-import {React, useEffect, useState} from 'react'
+import {React, useEffect, useState,useContext} from 'react'
 import axios from 'axios';
 import  { Card, Container, Row }  from 'react-bootstrap';
 import RecipePop from './RecipePop';
 import Footer from "../Footer";
 import Navbar1 from '../Navbar';
-import "./Recipes-style.css"
+import "./Recipes-style.css";
+import FavoriteContext from "../Context/FavoriteContext";
 
 const Recipes = (props) => {
 
   const [recipes, updateRecipes] = useState([]);
 
-  //const [details, setDetails] = useState([]);
+  const { key } = useContext(FavoriteContext);
 
 
   let allIngredientsforTheRecipe = props.match.params.ingredients;
-  
+
+ 
   function ListOfRecipes() {
     axios
-      .get(`http://localhost:5000/api/listofrecipes/${allIngredientsforTheRecipe}`)
+      .get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${allIngredientsforTheRecipe}&number=10&apiKey=${key}`)
 
       .then((response) => {
+        console.log(response.data);
         return response.data;
       })
       .then((data) => {
