@@ -37,7 +37,7 @@ function Favorite() {
                         )}
                     </Row>
                 ) : 
-                <h1>You don't have any favourites yet</h1> 
+                <h1>You don't have any favourites yet :(</h1> 
                 
                 }
               </Container>
