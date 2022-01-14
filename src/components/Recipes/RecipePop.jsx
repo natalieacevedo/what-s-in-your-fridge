@@ -16,7 +16,6 @@ function RecipePop({recipe, missedIngredients}) {
   const [allInfo, setAllInfo] = useState([]);
   const { key } = useContext(FavoriteContext);
 
-  console.log(missedIngredients);
   const { isFavorite, addFavorite, removeFavorite } = useContext(FavoriteContext);
   const currentlyFavorite = isFavorite(recipe.id);
 
@@ -45,7 +44,7 @@ function RecipePop({recipe, missedIngredients}) {
   useEffect(() => recipeDetails(recipe.id), [recipe.id]);
 
   const SmileyClick = () => {
-    console.log(currentlyFavorite);
+    
     if (currentlyFavorite) {
       removeFavorite(recipe.id);
     } else {
