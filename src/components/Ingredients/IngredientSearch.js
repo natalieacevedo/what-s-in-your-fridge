@@ -9,7 +9,7 @@ function IngredientSearch({ searchIngredients }) {
   return (
     <div className="search-div">
       <img
-        // src="https://trello.com/1/cards/61969b6238caf307d4f81dad/attachments/61977224e8b35b6a6b128caa/download/finallogobig1newsize.pngg"
+        
        src={logo}
         width="50%"
         height="50%"
