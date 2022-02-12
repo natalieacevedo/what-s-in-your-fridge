@@ -1,9 +1,10 @@
-  { "homepage": "https://natalieacevedo.github.io/what-s-in-your-fridge",
-    "name": "2021-09-lisbon-webdev-project2-group2",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "dependencies": {
+{
+  "homepage": "https://natalieacevedo.github.io/what-s-in-your-fridge",
+  "name": "2021-09-lisbon-webdev-project2-group2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
