@@ -1,9 +1,9 @@
-{
-  "name": "2021-09-lisbon-webdev-project2-group2",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {
+  { "homepage": "https://natalieacevedo.github.io/what-s-in-your-fridge",
+    "name": "2021-09-lisbon-webdev-project2-group2",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -20,6 +20,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
