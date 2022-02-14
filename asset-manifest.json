@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/what-s-in-your-fridge/static/css/main.7f0336fc.chunk.css",
-    "main.js": "/what-s-in-your-fridge/static/js/main.f055d841.chunk.js",
-    "main.js.map": "/what-s-in-your-fridge/static/js/main.f055d841.chunk.js.map",
-    "runtime-main.js": "/what-s-in-your-fridge/static/js/runtime-main.fcf97144.js",
-    "runtime-main.js.map": "/what-s-in-your-fridge/static/js/runtime-main.fcf97144.js.map",
-    "static/css/2.7cb124c9.chunk.css": "/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css",
-    "static/js/2.2661eafe.chunk.js": "/what-s-in-your-fridge/static/js/2.2661eafe.chunk.js",
-    "static/js/2.2661eafe.chunk.js.map": "/what-s-in-your-fridge/static/js/2.2661eafe.chunk.js.map",
-    "index.html": "/what-s-in-your-fridge/index.html",
-    "static/css/2.7cb124c9.chunk.css.map": "/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css.map",
-    "static/css/main.7f0336fc.chunk.css.map": "/what-s-in-your-fridge/static/css/main.7f0336fc.chunk.css.map",
-    "static/js/2.2661eafe.chunk.js.LICENSE.txt": "/what-s-in-your-fridge/static/js/2.2661eafe.chunk.js.LICENSE.txt",
-    "static/media/auchangelogo.7970db2d.png": "/what-s-in-your-fridge/static/media/auchangelogo.7970db2d.png",
-    "static/media/homePage.css": "/what-s-in-your-fridge/static/media/backgroundHome.c25039c5.png",
-    "static/media/continente.logo.716b9461.png": "/what-s-in-your-fridge/static/media/continente.logo.716b9461.png",
-    "static/media/facefoodcolor.1b97a9f8.png": "/what-s-in-your-fridge/static/media/facefoodcolor.1b97a9f8.png",
-    "static/media/finallogobig1newsize.ab8f1790.png": "/what-s-in-your-fridge/static/media/finallogobig1newsize.ab8f1790.png",
-    "static/media/pingodocelogo.d0aba61d.png": "/what-s-in-your-fridge/static/media/pingodocelogo.d0aba61d.png"
+    "main.css": "/natalieacevedo/what-s-in-your-fridge/static/css/main.e115a260.chunk.css",
+    "main.js": "/natalieacevedo/what-s-in-your-fridge/static/js/main.2fe72489.chunk.js",
+    "main.js.map": "/natalieacevedo/what-s-in-your-fridge/static/js/main.2fe72489.chunk.js.map",
+    "runtime-main.js": "/natalieacevedo/what-s-in-your-fridge/static/js/runtime-main.107399b9.js",
+    "runtime-main.js.map": "/natalieacevedo/what-s-in-your-fridge/static/js/runtime-main.107399b9.js.map",
+    "static/css/2.7cb124c9.chunk.css": "/natalieacevedo/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css",
+    "static/js/2.6d22ba71.chunk.js": "/natalieacevedo/what-s-in-your-fridge/static/js/2.6d22ba71.chunk.js",
+    "static/js/2.6d22ba71.chunk.js.map": "/natalieacevedo/what-s-in-your-fridge/static/js/2.6d22ba71.chunk.js.map",
+    "index.html": "/natalieacevedo/what-s-in-your-fridge/index.html",
+    "static/css/2.7cb124c9.chunk.css.map": "/natalieacevedo/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css.map",
+    "static/css/main.e115a260.chunk.css.map": "/natalieacevedo/what-s-in-your-fridge/static/css/main.e115a260.chunk.css.map",
+    "static/js/2.6d22ba71.chunk.js.LICENSE.txt": "/natalieacevedo/what-s-in-your-fridge/static/js/2.6d22ba71.chunk.js.LICENSE.txt",
+    "static/media/auchangelogo.7970db2d.png": "/natalieacevedo/what-s-in-your-fridge/static/media/auchangelogo.7970db2d.png",
+    "static/media/homePage.css": "/natalieacevedo/what-s-in-your-fridge/static/media/backgroundHome.c25039c5.png",
+    "static/media/continente.logo.716b9461.png": "/natalieacevedo/what-s-in-your-fridge/static/media/continente.logo.716b9461.png",
+    "static/media/facefoodcolor.1b97a9f8.png": "/natalieacevedo/what-s-in-your-fridge/static/media/facefoodcolor.1b97a9f8.png",
+    "static/media/finallogobig1newsize.ab8f1790.png": "/natalieacevedo/what-s-in-your-fridge/static/media/finallogobig1newsize.ab8f1790.png",
+    "static/media/pingodocelogo.d0aba61d.png": "/natalieacevedo/what-s-in-your-fridge/static/media/pingodocelogo.d0aba61d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.fcf97144.js",
+    "static/js/runtime-main.107399b9.js",
     "static/css/2.7cb124c9.chunk.css",
-    "static/js/2.2661eafe.chunk.js",
-    "static/css/main.7f0336fc.chunk.css",
-    "static/js/main.f055d841.chunk.js"
+    "static/js/2.6d22ba71.chunk.js",
+    "static/css/main.e115a260.chunk.css",
+    "static/js/main.2fe72489.chunk.js"
   ]
 }
