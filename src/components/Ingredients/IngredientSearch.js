@@ -23,17 +23,17 @@ function IngredientSearch({ searchIngredients }) {
         onChange={(e) => changeUserInput(e.target.value)}
       />
 
-      <div className="center-buttons-middle">
-        <a className="btn-search" href="#">
+      <div className="center-buttons-middle btn-search">
+        {/* <a className="btn-search" href="#"> */}
           <span className="wave"></span>
           <span
-            className="text btn-search"
+            className="text"
             id="button-text-color"
             onClick={() => searchIngredients(userInput)}
           >
             Search Ingredients
           </span>
-        </a>
+        {/* </a> */}
       </div>
     </div>
   );

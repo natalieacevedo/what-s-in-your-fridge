@@ -1,4 +1,4 @@
-import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
+import { Switch, Route, HashRouter as Router} from "react-router-dom";
 import IngredientRoot from "./components/Ingredients";
 import Home from "./components/Home";
 import Recipes from "./components/Recipes";
@@ -11,7 +11,7 @@ import {FavoriteContextProvider } from "./components/Context/FavoriteContext";
 function App() {
   return (
     <FavoriteContextProvider>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
    
       <Switch>
         <Route exact path="/" component={Home} />
