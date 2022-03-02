@@ -1,4 +1,5 @@
 # Welcome to the my What's in your fridge project!
+Check it out here: [What's in your fridge?](https://natalieacevedo.github.io/what-s-in-your-fridge/#/)
 ---
 
 This project was created with the intention of practicing all features of react, from react router, to using most of the most popular hooks *(useContext, useEffect,etc)*.
@@ -11,7 +12,3 @@ The reason behind the app is to have a website were the user can input whatever 
 The user can also save their favorite recipes and storage them in their browser's local storage.
 ---
 
-here is the link to the website, enjoy what's in your frigde 😃
----
-
-[What's in your fridge?](https://natalieacevedo.github.io/what-s-in-your-fridge/#/)
