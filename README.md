@@ -1,4 +1,4 @@
-#Welcome to the my What's in your fridge project!.
+# Welcome to the my What's in your fridge project!
 ---
 
 This project was created with the intention of practicing all features of react, from react router, to using most of the most popular hooks *(useContext, useEffect,etc)*.
