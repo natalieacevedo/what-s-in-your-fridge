@@ -1,14 +1,13 @@
 # Welcome to the my What's in your fridge project!
 Check it out here: [What's in your fridge?](https://natalieacevedo.github.io/what-s-in-your-fridge/#/)
 ---
-
-This project was created with the intention of practicing all features of react, from react router, to using most of the most popular hooks *(useContext, useEffect,etc)*.
+Our goal with this project was to practice all the features of react, such as react router, useContext, useEffect, etc. When you come from a background of working with vanilla Javascript, developing a "react-mindset" takes practice. This project enabled us to do that effectively.
 ---
 
-What's in your frige was made by three programmers using Trello for project management. I developed most of the App's functionality. Bootstrap and vanila css were used for the styling. 
----
-The reason behind the app is to have a website were the user can input whatever ingredients she/he has in their fridge, then according to their input, the app displays a list of recipes. The user also gets a list of the ingredients she is missing for the chosen recipe, with a link to where they can be bought.
----
-The user can also save their favorite recipes and storage them in their browser's local storage.
+During a month-long period, I and three other developers developed the project from start to finish. Trello was used for project management, while Git and GitHub were used for code sharing. Most of the App's functionality and architecture were developed by me. Vanilla CSS and Bootstrap were implemented for the styling.
 ---
 
+The idea behind the application is to have a website where a user can type in whatever ingredients are in their fridge. In return, the application will give them a list of recipes based on their input. In addition, he's given a list of the ingredients that are missing for the recipe, along with a link to where to buy them.
+---
+Users can also save their favorite recipes in the browser's local storage for later reference.
+---
