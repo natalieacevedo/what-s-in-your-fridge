@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/what-s-in-your-fridge/static/css/main.a1ed8d08.chunk.css",
-    "main.js": "/what-s-in-your-fridge/static/js/main.000b68ab.chunk.js",
-    "main.js.map": "/what-s-in-your-fridge/static/js/main.000b68ab.chunk.js.map",
+    "main.css": "/what-s-in-your-fridge/static/css/main.2c14aa10.chunk.css",
+    "main.js": "/what-s-in-your-fridge/static/js/main.54f9f76f.chunk.js",
+    "main.js.map": "/what-s-in-your-fridge/static/js/main.54f9f76f.chunk.js.map",
     "runtime-main.js": "/what-s-in-your-fridge/static/js/runtime-main.fcf97144.js",
     "runtime-main.js.map": "/what-s-in-your-fridge/static/js/runtime-main.fcf97144.js.map",
     "static/css/2.7cb124c9.chunk.css": "/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css",
-    "static/js/2.d237adc3.chunk.js": "/what-s-in-your-fridge/static/js/2.d237adc3.chunk.js",
-    "static/js/2.d237adc3.chunk.js.map": "/what-s-in-your-fridge/static/js/2.d237adc3.chunk.js.map",
+    "static/js/2.33d0266c.chunk.js": "/what-s-in-your-fridge/static/js/2.33d0266c.chunk.js",
+    "static/js/2.33d0266c.chunk.js.map": "/what-s-in-your-fridge/static/js/2.33d0266c.chunk.js.map",
     "index.html": "/what-s-in-your-fridge/index.html",
     "static/css/2.7cb124c9.chunk.css.map": "/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css.map",
-    "static/css/main.a1ed8d08.chunk.css.map": "/what-s-in-your-fridge/static/css/main.a1ed8d08.chunk.css.map",
-    "static/js/2.d237adc3.chunk.js.LICENSE.txt": "/what-s-in-your-fridge/static/js/2.d237adc3.chunk.js.LICENSE.txt",
+    "static/css/main.2c14aa10.chunk.css.map": "/what-s-in-your-fridge/static/css/main.2c14aa10.chunk.css.map",
+    "static/js/2.33d0266c.chunk.js.LICENSE.txt": "/what-s-in-your-fridge/static/js/2.33d0266c.chunk.js.LICENSE.txt",
     "static/media/auchangelogo.7970db2d.png": "/what-s-in-your-fridge/static/media/auchangelogo.7970db2d.png",
     "static/media/homePage.css": "/what-s-in-your-fridge/static/media/backgroundHome.c25039c5.png",
     "static/media/continente.logo.716b9461.png": "/what-s-in-your-fridge/static/media/continente.logo.716b9461.png",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.fcf97144.js",
     "static/css/2.7cb124c9.chunk.css",
-    "static/js/2.d237adc3.chunk.js",
-    "static/css/main.a1ed8d08.chunk.css",
-    "static/js/main.000b68ab.chunk.js"
+    "static/js/2.33d0266c.chunk.js",
+    "static/css/main.2c14aa10.chunk.css",
+    "static/js/main.54f9f76f.chunk.js"
   ]
 }
