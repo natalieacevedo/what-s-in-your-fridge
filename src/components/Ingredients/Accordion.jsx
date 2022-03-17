@@ -5,6 +5,7 @@ import "../../checkbox.scss";
 import "../Home/homePage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ingredientsData from "./ingredientsTableData";
+import "./ingredient.module.css";
 
 function AccordionFunctionality({
   selectIngredient,
@@ -24,7 +25,7 @@ function AccordionFunctionality({
             className="Accordion-body"
             style={{ backgroundColor: "#ddefff" }}
           >
-            <ul>
+            <ul className="parent_list">
               {el.arr.map((ingredient) => {
                 let isSelected = selectedIngredients.indexOf(ingredient) !== -1;
 

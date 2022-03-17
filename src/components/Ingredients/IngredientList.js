@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import SwiperCore, { Navigation } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/modules/navigation/navigation.scss";
+import "./ingredient.module.css";
 
 SwiperCore.use([Navigation]);
 
@@ -13,7 +14,6 @@ function IngredientsList({
   selectIngredient,
   removeIngredient,
 }) {
-  const navigation = { prevEl: ".arrow1", nextEl: ".arrow2" };
   const items = ingredients.map((el) => {
     let selected = selectedIngredients.indexOf(el.name) !== -1;
     const onClick = () => {
@@ -36,7 +36,7 @@ function IngredientsList({
 
   return (
     <div>
-      <h1>Choose Ingredients Please</h1>
+      <h1 className="mainIngredientTitle">Choose Ingredients Please</h1>
 
       <ul className="search-ul">
         <Swiper
@@ -52,19 +52,6 @@ function IngredientsList({
           }}
         >
           <div className="swiper-items">{items}</div>
-          {/* <div className="navigation">
-            <div className="arrow1Cointainer">
-              <div className="arrow1">
-                <span class="material-icons arrows">arrow_back_ios</span>
-              </div>
-            </div>
-            <div className="arrow2Cointainer">
-              <div className="arrow2">
-                {" "}
-                <span class="material-icons arrows">arrow_forward_ios</span>
-              </div>
-            </div>
-          </div> */}
         </Swiper>
       </ul>
 
