@@ -36,7 +36,7 @@ function IngredientsList({
 
   return (
     <div>
-      <h1 className="mainIngredientTitle">Choose Ingredients Please</h1>
+      <h1 className="mainIngredientTitle">Or choose Ingredients</h1>
 
       <ul className="search-ul">
         <Swiper
