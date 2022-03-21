@@ -10,55 +10,39 @@ function Favorite() {
   const { favorites } = useContext(FavoriteContext);
 
   console.log(favorites);
+let diffUnd = favorites !== undefined && favorites !== null;
 
-  // for (let property in favorites) {
-  //   localStorage.setItem("favoritesSaved", JSON.stringify(favorites[property]));
-  // }
+return (
+  <>
+    <Navbar1 />
+    <br></br>
+    <br></br>
 
-  // let savedFavorites = localStorage.getItem("favoritesSaved");
-  // console.log(savedFavorites);
-
-  // let backToObject = JSON.parse(savedFavorites);
-
-  // useEffect(() => {
-  //   for (let property in favorites) {
-  //     localStorage.setItem(
-  //       "favoritesSaved",
-  //       JSON.stringify(favorites[property])
-  //     );
-  //   }
-  // }, [favorites]);
-
-  return (
-    <>
-      <Navbar1 />
-      <br></br>
-      <br></br>
-      <Container className="favourite-container">
-        {Object.values(favorites).length > 0 ? (
-          <Row>
-            {Object.values(favorites).map((el) => (
-              <>
-                <Card>
-                  <div className="new-overflow">
-                    <Card.Img className="custom-overflow" src={el.image} />
-                  </div>
-                  <Card.Body className="text-center">
-                    <Card.Title>{el.title}</Card.Title>
-                    <Card.Text>{el.description}</Card.Text>
-                    <RecipePop recipe={el} />
-                  </Card.Body>
-                </Card>
-              </>
-            ))}
-          </Row>
-        ) : (
-          <h1 className="no favorites">You don't have any favourites yet :(</h1>
-        )}
-      </Container>
-      <Footer />
-    </>
-  );
+    <Container className="favourite-container">
+      {diffUnd && Object.values(favorites).length > 0 ? (
+        <Row>
+          {Object.values(favorites).map((el) => (
+            <>
+              <Card>
+                <div className="new-overflow">
+                  <Card.Img className="custom-overflow" src={el.image} />
+                </div>
+                <Card.Body className="text-center">
+                  <Card.Title>{el.title}</Card.Title>
+                  <Card.Text>{el.description}</Card.Text>
+                  <RecipePop recipe={el} />
+                </Card.Body>
+              </Card>
+            </>
+          ))}
+        </Row>
+      ) : (
+        <h1 className="no favorites">You don't have any favourites yet :(</h1>
+      )}
+    </Container>
+    <Footer />
+  </>
+);
 }
 
 export default Favorite;
