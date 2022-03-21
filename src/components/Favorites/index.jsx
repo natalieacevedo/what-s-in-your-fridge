@@ -9,7 +9,7 @@ import FavoriteContext from "../Context/FavoriteContext";
 function Favorite() {
   const { favorites } = useContext(FavoriteContext);
 
-  /// console.log(favorites);
+  console.log(favorites);
 
   // for (let property in favorites) {
   //   localStorage.setItem("favoritesSaved", JSON.stringify(favorites[property]));
@@ -20,14 +20,14 @@ function Favorite() {
 
   // let backToObject = JSON.parse(savedFavorites);
 
-  useEffect(() => {
-    for (let property in favorites) {
-      localStorage.setItem(
-        "favoritesSaved",
-        JSON.stringify(favorites[property])
-      );
-    }
-  }, [favorites]);
+  // useEffect(() => {
+  //   for (let property in favorites) {
+  //     localStorage.setItem(
+  //       "favoritesSaved",
+  //       JSON.stringify(favorites[property])
+  //     );
+  //   }
+  // }, [favorites]);
 
   return (
     <>
