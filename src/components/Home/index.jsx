@@ -7,12 +7,7 @@ const Home = () => {
   return (
     <div className="total-container">
       <div className="img-container">
-        <img
-          // src="https://trello.com/1/cards/61969b6238caf307d4f81dad/attachments/61977224e8b35b6a6b128caa/download/finallogobig1newsize.png"
-          src={HomeImage}
-          alt="What's in your fridge?"
-          id="fridge-img"
-        />
+        <img src={HomeImage} alt="What's in your fridge?" id="fridge-img" />
       </div>
 
       <div className="home-button-container">

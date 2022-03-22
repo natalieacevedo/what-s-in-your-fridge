@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/what-s-in-your-fridge/static/css/main.2c14aa10.chunk.css",
-    "main.js": "/what-s-in-your-fridge/static/js/main.54f9f76f.chunk.js",
-    "main.js.map": "/what-s-in-your-fridge/static/js/main.54f9f76f.chunk.js.map",
+    "main.js": "/what-s-in-your-fridge/static/js/main.d682b59e.chunk.js",
+    "main.js.map": "/what-s-in-your-fridge/static/js/main.d682b59e.chunk.js.map",
     "runtime-main.js": "/what-s-in-your-fridge/static/js/runtime-main.fcf97144.js",
     "runtime-main.js.map": "/what-s-in-your-fridge/static/js/runtime-main.fcf97144.js.map",
     "static/css/2.7cb124c9.chunk.css": "/what-s-in-your-fridge/static/css/2.7cb124c9.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.7cb124c9.chunk.css",
     "static/js/2.33d0266c.chunk.js",
     "static/css/main.2c14aa10.chunk.css",
-    "static/js/main.54f9f76f.chunk.js"
+    "static/js/main.d682b59e.chunk.js"
   ]
 }

@@ -1,14 +1,10 @@
 .total-container {
 	display: flex;
-
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	/* background: url('https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/617ab7cc7cdd5f40fa493659/download/teste_opacity.png')
-		no-repeat center; */
-		background: url('../../images/backgroundHome.png')
-		no-repeat center;
-
+	background: url('../../images/backgroundHome.png')
+	no-repeat center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: 100vh;
@@ -21,8 +17,7 @@
 	justify-content: center;
 	margin-left: 5%;
 	padding-top: 0%;
-	/* width: 100%; 
-  height: 100%; */
+	
 }
 #fridge-img {
 	width: 100%;
@@ -66,6 +61,7 @@ h1 {
 	border-radius: 10px;
 	padding: 0.4rem;
 	background-color: rgb(254, 238, 237);
+	font-size: 0.7rem;
 }
 
 .checkbox-checkmark-box {
@@ -119,19 +115,7 @@ h3 {
 	top: 30%;
 	z-index: 10;
 }
-/* .arrow1Cointainer {
-  flex: 1;
-}
-.arrow2Cointainer {
-  flex: 1;
-} 
-.arrows {
-  color: red;
-  font-size: 36px;
-}
-.swiper-button-disabled {
-  opacity: 0.3;
-} */
+
 .swiper {
 	width: 80%;
 }
@@ -296,6 +280,7 @@ a.btn-search {
 		0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 .btn-search {
+	cursor:pointer;
 	text-decoration: none;
 	color: #fff;
 	position: relative;
@@ -351,10 +336,9 @@ a.btn-search:hover {
 /* ----------- TABLET VERSION FROM HERE -------------- */
 @media screen and (min-width: 768px) {
 	.total-container {
-		/* background: url('https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png') */
+	
 		background: url('../../images/backgroundHome.png')	no-repeat;
 		background-size: cover;
-
 		background-repeat: no-repeat;
 	}
 
@@ -390,6 +374,7 @@ a.btn-search:hover {
 	.search-input {
 		width: 60%;
 		padding: 0.8rem;
+		
 	}
 	.accordion-item {
 		margin-left: 10%;
@@ -419,9 +404,8 @@ a.btn-search:hover {
 /*------------ DESKTOP VERSION FROM HERE ---------*/
 @media screen and (min-width: 1024px) {
 	.total-container {
-		/* background: url('https://trello.com/1/cards/617a98dfc2dddb4c0a5d8a02/attachments/618d263f0b264183c0614785/download/teste_opacity2.png') */
+		
 		background: url('../../images/backgroundHome.png') no-repeat;
-		/* background-size: 100% 100%; */
 		background-repeat: no-repeat;
 		object-fit: cover;
 		background-position: center; 
@@ -430,9 +414,6 @@ a.btn-search:hover {
 
 	#fridge-img {
 		width: 100vh;
-
-		/* margin-top: 5%;
-    margin-right: 20px; */
 	}
 
 	#desktop-img {
@@ -449,6 +430,7 @@ a.btn-search:hover {
 		margin-top: 1rem;
 		border-radius: 15px;
 		padding: 0.8rem;
+		font-size: 1rem;
 	}
 
 	.accordion-item {
@@ -457,6 +439,7 @@ a.btn-search:hover {
 	}
 	.accordion-body {
 		padding-left: 50px !important;
+		
 	}
 
 	.search-ul {

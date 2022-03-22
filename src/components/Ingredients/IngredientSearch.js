@@ -9,15 +9,14 @@ function IngredientSearch({ searchIngredients }) {
   return (
     <div className="search-div">
       <img
-        
-       src={logo}
+        src={logo}
         width="50%"
         height="50%"
         alt="so...what's in your fridge ?"
         id="desktop-img"
       />
       <input
-        placeholder="Please type your ingredients"
+        placeholder="Please type your ingredients one by one"
         className="search-input"
         type="text"
         onChange={(e) => changeUserInput(e.target.value)}
@@ -25,14 +24,14 @@ function IngredientSearch({ searchIngredients }) {
 
       <div className="center-buttons-middle btn-search">
         {/* <a className="btn-search" href="#"> */}
-          <span className="wave"></span>
-          <span
-            className="text"
-            id="button-text-color"
-            onClick={() => searchIngredients(userInput)}
-          >
-            Search Ingredients
-          </span>
+        <span className="wave"></span>
+        <span
+          className="text"
+          id="button-text-color"
+          onClick={() => searchIngredients(userInput)}
+        >
+          Search Ingredients
+        </span>
         {/* </a> */}
       </div>
     </div>
