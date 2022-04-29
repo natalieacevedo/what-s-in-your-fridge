@@ -7,11 +7,12 @@ Our goal with this project was to practice all the features of react, such as re
 During a month-long period, I and three other developers developed the project from start to finish. Trello was used for project management, while Git and GitHub were used for code sharing. Most of the App's functionality and architecture were developed by me. Vanilla CSS and Bootstrap were implemented for the styling.
 
 
-## What problem does the application solve?
+## What does the application do?
 
-The idea behind the application is to have a website where a user can type in whatever ingredients are in their fridge. In return, the application will give them a list of recipes based on their input. In addition, he's given a list of the ingredients that are missing for the recipe, along with a link to where to buy them.
+What's in your fridge is a website where a user can enter what ingredients are in their refrigerator. Depending on what they enter, the application will provide them with recipes.  The recipe also includes a list of the missing ingredients, along with a link to where the ingredients can be purchased.
 
-Users can also save their favorite recipes in the browser's local storage for later reference.
+Users can also save their favorite recipes to the browser's local storage for later use.
+
 
 
 ## Installation
