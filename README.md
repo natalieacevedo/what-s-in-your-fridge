@@ -4,7 +4,7 @@ Check it out here: [What's in your fridge?](https://natalieacevedo.github.io/wha
 ## Purpose
 
 Our goal with this project was to practice all the features of react, such as react router, useContext, useEffect, etc. When you come from a background of working with vanilla Javascript, developing a "react-mindset" takes practice. This project enabled us to do that effectively.
-During a month-long period, I and three other developers developed the project from start to finish. Trello was used for project management, while Git and GitHub were used for code sharing. Most of the App's functionality and architecture were developed by me. Vanilla CSS and Bootstrap were implemented for the styling.
+During a month-long period, me and three other developers developed the project from start to finish. Trello was used for project management, while Git and GitHub were used for code sharing. Most of the App's functionality and architecture were developed by me. Vanilla CSS and Bootstrap were implemented for the styling.
 
 
 ## What does the application do?
